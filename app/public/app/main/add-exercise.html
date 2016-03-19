@@ -1,0 +1,58 @@
+﻿<div id="add-exercise" class="container-fluid">
+    <div class="page-header">
+        <h4 class="">
+            Add exercise
+        </h4>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': false }">
+        <label>Group</label>
+
+        <div class="btn-group btn-block" uib-dropdown>
+            <button id="split-button" type="button" class="btn btn-default" ng-bind="vm.getMuscleGroupById(vm.exercise.groupId).name">
+            </button>
+            <button type="button" class="btn btn-default" uib-dropdown-toggle>
+                <span class="caret"></span>
+                <span class="sr-only">Split button!</span>
+            </button>
+            <ul uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                <li role="menuitem" ng-repeat="groupId in vm.workout.selectedGroups">
+                    <a ng-click="vm.exercise.groupId = groupId">
+                        {{ vm.getMuscleGroupById(groupId).name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': false }">
+        <label>Name</label>
+        <input type="text" class="form-control input-md" ng-model="vm.exercise.name">
+    </div>
+
+    <div class="form-group">
+        <label>Started</label>
+
+        <div class="start-time">
+            <div class="pull-left">
+                <uib-timepicker ng-model="vm.exercise.started"></uib-timepicker>
+            </div>
+
+            <button type="button"
+                    class="btn btn-default btn-md pull-right"
+                    ng-click="vm.resetDate()">
+                Now
+            </button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Notes</label>
+        <textarea rows="3" class="form-control input-md" ng-model="vm.exercise.notes"></textarea>
+    </div>
+
+    <div class="form-group text-right">
+        <button class="btn btn-primary btn-md" ng-click="vm.addExercise()">Add</button>
+        <button class="btn btn-primary btn-md" ng-click="vm.cancel()">Cancel</button>
+    </div>
+</div>

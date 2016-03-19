@@ -1,0 +1,32 @@
+﻿<div id="login" class="well">
+    <div class="form-group" ng-class="{ 'has-error': vm.isUsernameEmpty() && !!vm.errorMessage }">
+        <input type="text" class="form-control input-lg" placeholder="Username" ng-model="vm.credentials.username">
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': vm.isPasswordEmpty() && !!vm.errorMessage }">
+        <input type="password" class="form-control input-lg" placeholder="Password" ng-model="vm.credentials.password">
+    </div>
+
+    <div class="alert alert-danger" role="alert" ng-show="!!vm.errorMessage">{{ vm.errorMessage }}</div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Remember me
+        </label>
+    </div>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="vm.logIn()">Sign in</button>
+    </div>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="vm.register()">Register</button>
+    </div>
+
+    <div class="form-group">
+        <a class="btn btn-block btn-social btn-lg btn-facebook">
+            <i class="fa fa-facebook"></i>
+            Sign in with Facebook
+        </a>
+    </div>
+</div>
