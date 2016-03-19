@@ -4,7 +4,7 @@ define([
 	"bootstrap",
 	"offline",
 	"offlineSimulateUI",
-	// "app/main/main.module",
+	"app/main/main.module",
 	"app/users/users.module",
 	"app/widgets/widgets.module",
 	"app/common/common.module"],
@@ -13,12 +13,12 @@ define([
 			  bootstrap,
 			  offline,
 			  offlineSimulateUI,
-			  // mainModule,
+			  mainModule,
 			  usersModule,
 			  widgetsModule,
 			  commonModule) {
 
-		var drugsdb = angular.module("drugsdb", ["ngRoute", "ui.bootstrap", "users", "widgets", "common"]);
+		var drugsdb = angular.module("drugsdb", ["ngRoute", "ui.bootstrap", "users", "main", "widgets", "common"]);
 
 		angular.bootstrap(document, ["drugsdb"]);
 	}

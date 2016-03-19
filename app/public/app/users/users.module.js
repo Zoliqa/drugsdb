@@ -1,7 +1,6 @@
-﻿
-define([
-	"angular", 
-	"angularRoute", 
+﻿define([
+	"angular",
+	"angularRoute",
 	"angularResource",
 	"underscore",
 	"bcrypt",
@@ -12,21 +11,21 @@ define([
 	"app/users/user.online.service",
 	"app/users/user.offline.service",
 	"app/users/users.config",
-	"app/users/users.run"], 
-	function (angular, 
-			  angularRoute, 
+	"app/users/users.run"],
+	function (angular,
+			  angularRoute,
 			  angularResource,
 			  _,
 			  bcrypt,
-			  LoginController, 
+			  LoginController,
 			  RegisterController,
-			  ProfileController, 
+			  ProfileController,
 			  userService,
 			  userOnlineService,
 			  userOfflineService,
 			  usersConfig,
 			  usersRun) {
-	
+
 		angular.module("users", ["ngRoute", "ngResource"])
 			.controller("LoginController", LoginController)
 			.controller("RegisterController", RegisterController)
@@ -35,6 +34,7 @@ define([
 			.factory("userOnlineService", userOnlineService)
 			.factory("userOfflineService", userOfflineService)
 			.constant("USER_LOGGED_IN", "USER_LOGGED_IN")
+			.constant("USER_LOGGED_OUT", "USER_LOGGED_OUT")
 			.constant("Offline", Offline)
 			.constant("_", _)
 			.constant("bcrypt", bcrypt)

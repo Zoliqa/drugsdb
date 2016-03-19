@@ -1,12 +1,27 @@
-﻿
-define(["bcrypt", "app/users/users.routes"], function (bcrypt, usersRoutes) {
-	
-	usersConfig.$inject = ["$provide", "$routeProvider"];
+﻿define([], function () {
 
-	function usersConfig($provide, $routeProvider) {
-		$provide.value("bcrypt", bcrypt);
+	usersConfig.$inject = ["$routeProvider"];
 
-		usersRoutes($routeProvider);
+	function usersConfig($routeProvider) {
+		$routeProvider
+			.when("/user/login", {
+				templateUrl: "/public/app/users/login.html",
+				controller: "LoginController",
+				controllerAs: "vm"
+			})
+			.when("/user/register", {
+				templateUrl: "/public/app/users/register.html",
+				controller: "RegisterController",
+				controllerAs: "vm"
+			})
+			.when("/user/profile", {
+				templateUrl: "/public/app/users/profile.html",
+				controller: "ProfileController",
+				controllerAs: "vm"
+			})
+			.otherwise({
+				redirectTo: "/user/login"
+			});
 	}
 
 	return usersConfig;

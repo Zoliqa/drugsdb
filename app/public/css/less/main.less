@@ -1,7 +1,21 @@
 ﻿
 body {
-    .container {
-        margin: 20px auto;
+    .navbar {
+        &.disabled {
+            opacity: 0.5;
+
+            .hider {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 80px;
+            }
+        }
+    }
+
+    .main-content {
+        margin: 80px auto 10px auto;
 
         #login {
             margin: 0 auto;

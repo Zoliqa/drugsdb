@@ -12,7 +12,7 @@ var express = require("express"),
 mongoose.connect(dbUrl);
 
 app.set("views", "./views");
-app.set("view engine", "ejs");
+app.set("view engine", "ejs");  
 
 app.use(session({
 	secret: "secret",
@@ -20,7 +20,7 @@ app.use(session({
 	saveUninitialized: true
 }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(cookieParser());
 app.use(passport.session());

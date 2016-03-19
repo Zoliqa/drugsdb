@@ -1,14 +1,10 @@
-﻿
-define([], 
-	function () { 
+define([], function () {
 
-		function ProfileController(userDataService) {
-		
-			var vm = this;
-		
-			
-		}
+	function ProfileController(userDataService) {
+		var vm = this;
 
-		return ProfileController;
+
 	}
-);
+
+	return ProfileController;
+});
