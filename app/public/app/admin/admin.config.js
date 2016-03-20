@@ -11,7 +11,7 @@ define([], function () {
 				resolve: {
 					auth: function ($q, UNAUTHORIZED, userService) {
 						return userService.current.get().$promise.then(function (user) {
-							if (user._id)
+							if (user._id && user.isAdmin)
 								return true;
 
 							return $q.reject(UNAUTHORIZED);

@@ -1,18 +1,16 @@
-var express = require("express"),
-	passport = require("passport");
-	bodyParser = require("body-parser"),
-	session = require("express-session"),
-	cookieParser = require("cookie-parser"),
-	mongoose = require("mongoose"),
-	passportInit = require("./passport/passport.init"),
-	indexRoutes = require("./routes/index.routes"),
-	dbUrl = "mongodb://localhost:27017/drugsdb",
-	app = express();
-
-mongoose.connect(dbUrl);
+const express      = require("express"),
+	  passport     = require("passport"),
+	  bodyParser   = require("body-parser"),
+	  session      = require("express-session"),
+	  cookieParser = require("cookie-parser"),
+	  passportInit = require("./passport/passport.init"),
+	  indexRoutes  = require("./routes/index.routes"),
+	  connection   = require("./db/connection"),
+	  processFiles = require("./data.import/process.files"),
+	  app          = express();
 
 app.set("views", "./views");
-app.set("view engine", "ejs");  
+app.set("view engine", "ejs");
 
 app.use(session({
 	secret: "secret",

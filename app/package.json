@@ -28,8 +28,11 @@
     "ejs": "^2.4.1",
     "express": "^4.13.3",
     "express-session": "^1.12.1",
-    "mongodb": "^2.0.47",
     "mongoose": "^4.2.4",
-    "passport": "^0.3.0"
+    "passport": "^0.3.0",
+    "adm-zip": "^0.4.7",
+    "q": "^1.4.1",
+    "xmldom": "^0.1.22",
+    "xpath": "0.0.22"
   }
 }
