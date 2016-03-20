@@ -5,15 +5,19 @@ define([], function () {
 
 		this.isDisabled = true;
 		this.logout = logout;
+		this.isAdmin = false;
 
 		(function init() {
 			userService.current.get().$promise.then(function (user) {
-				if (user._id)
+				if (user._id) {
 					vm.isDisabled = false;
+					vm.isAdmin = user.isAdmin;
+				}
 			});
 
 			$rootScope.$on(USER_LOGGED_IN, function (event, data) {
 				vm.isDisabled = false;
+				vm.isAdmin = data.isAdmin;
 			});
 		})();
 

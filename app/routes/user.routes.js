@@ -3,7 +3,7 @@ var express				= require("express"),
 	bcrypt				= require('bcrypt-nodejs'),
 	userQueries			= require("../db/user/user.queries"),
 	passportUtilities	= require("../passport/passport.utilities"),
-	router				= express.Router(); 
+	router				= express.Router();
 
 router.post("/login", function (req, res, next) {
 	userQueries.findByUsername(req.body.username, function (err, user) {
@@ -33,6 +33,18 @@ router.post("/login", function (req, res, next) {
 router.get("/logout", passportUtilities.isAuthenticated, function (req, res) {
 	req.logout();
 	res.json({});
+});
+
+router.get("/:username", function (req, res, next) {
+	userQueries.findByUsername(req.params.username, function (err, user) {
+		if (err)
+			return next(err);
+
+		if (!user)
+			return res.json(null);
+
+		return res.json(user);
+	});
 });
 
 router.get("/", function (req, res, next) {

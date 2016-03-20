@@ -9,8 +9,8 @@ var User = mongoose.model("User", {
 	firstname: String,
 	lastname: String,
 	email: String,
-	gender: Number,
-	birthdate: Date
+	birthdate: Date,
+	isAdmin: Boolean  
 });
 
 module.exports = User;

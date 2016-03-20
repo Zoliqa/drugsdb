@@ -1,32 +1,24 @@
-﻿
-define([], function () { 
+define([], function () {
 
-	function userOnlineService($resource) { // syncService) {
-		var resource = $resource("/user/:id", null, {
+	function userOnlineService($resource) {
+		var resource = $resource("/user/:id/:username", null, {
 			"get": {
 				cache: true
 			},
+			"getByUsername": { method: "GET" },
 			"update": { method: "PUT" },
 			"login": {
 				url: "/user/login",
-				method: "POST"// , 
-				//interceptor: {
-				//	response: function (result) {
-				//		if (result && result.data && result.data._id)
-				//			return syncService.synchronizeData(resource.get, result.data);
-						
-				//		return {};
-				//	}
-				//}
+				method: "POST"
 			},
 			"logout": {
 				url: "/user/logout",
 				method: "GET"
 			}
 		});
-		
+
 		return resource;
 	}
-	
+
 	return userOnlineService;
 });
