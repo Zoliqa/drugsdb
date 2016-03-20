@@ -34,19 +34,11 @@ function parseXml(xml, file) {
 			ingredients: ingredients.reduce((prev, ingredient) => prev + "," + ingredient.code, "").slice(1)
 		});
 
-		let promises = [];
-
-		let promise = drug.save((err, drug) => {
-			if (err)
-				console.log("Db error for drug for file " + file + ", details: " + err);
-			else
-				console.log("Drug saved for file " + file);
-		});
-
-		promises.push(promise);
+		let promise = drug.save();
+		let promises = [promise];
 
 		ingredients.forEach(ingredient => {
-			promise = Substance.findOneAndUpdate({ code: ingredient.code }, ingredient, { upsert: true });
+			let promise = Substance.findOneAndUpdate({ code: ingredient.code }, ingredient, { upsert: true });
 
 			promises.push(promise);
 		});

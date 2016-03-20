@@ -7,7 +7,7 @@ define([], function () {
 
 		function importData() {
 			adminService.importData().then(function (result) {
-				//alert(result);
+				alert(result);
 			}, function () {
 				alert("Error occurred");
 			});
