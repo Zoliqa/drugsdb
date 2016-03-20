@@ -1,6 +1,4 @@
-﻿
-define([],
-	function () {
+﻿define([], function () {
 
 		function LoginController($scope, $location, userService, cacheService, USER_LOGGED_IN, dbService) {
 			var vm = this;

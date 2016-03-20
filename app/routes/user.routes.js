@@ -1,4 +1,3 @@
-﻿
 var express				= require("express"),
 	bcrypt				= require('bcrypt-nodejs'),
 	userQueries			= require("../db/user/user.queries"),
