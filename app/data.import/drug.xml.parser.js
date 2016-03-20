@@ -1,59 +1,63 @@
 "use strict";
 
-const AdmZip    = require("adm-zip"),
-	  dom       = require("xmldom").DOMParser,
-	  xpath     = require("xpath"),
-	  Drug      = require("../db/drug.model.js"),
-	  Substance = require("../db/substance.model.js");
+const AdmZip     = require("adm-zip"),
+	  dom        = require("xmldom").DOMParser,
+	  xpath      = require("xpath"),
+	  q          = require("q"),
+	  Drug       = require("../db/drug.model.js"),
+	  Substance  = require("../db/substance.model.js");
 
 function parseXml(xml, file) {
+	let deferred = q.defer();
+
 	try {
-		var doc = new dom().parseFromString(xml);
-		var select = xpath.useNamespaces({ x: "urn:hl7-org:v3" });
+		let doc = new dom().parseFromString(xml);
+		let select = xpath.useNamespaces({ x: "urn:hl7-org:v3" });
 
 		// var name = select("/x:document/x:title/text()", doc)[0].toString();
-		var name = select("//x:manufacturedProduct/x:name/text()", doc)[0].toString();
-		var producer = select("x:document/x:author/x:assignedEntity/x:representedOrganization/x:name/text()", doc)[0].toString();
-		var ingredientNodes = select("//x:ingredientSubstance", doc);
-		var ingredients = [];
+		let name = select("//x:manufacturedProduct/x:name/text()", doc)[0].toString();
+		let producer = select("x:document/x:author/x:assignedEntity/x:representedOrganization/x:name/text()", doc)[0].toString();
+		let ingredientNodes = select("//x:ingredientSubstance", doc);
+		let ingredients = [];
 
 		for (let i = 0; i < ingredientNodes.length; ++i) {
 			let j = i + 1;
 			let code = select("//x:ingredientSubstance[" + j + "]/x:code/@code", doc)[0].nodeValue;
 			let name = select("//x:ingredientSubstance[" + j + "]/x:name/text()", doc)[0].toString();
 
-			// console.log(code + " " + name);
-
 			ingredients.push({ code: code, name: name });
 		}
 
-		console.log(name + " " + producer);
-
-		var drug = new Drug({
+		let drug = new Drug({
 			name: name,
 			producer: producer,
 			ingredients: ingredients.reduce((prev, ingredient) => prev + "," + ingredient.code, "").slice(1)
 		});
 
-		// console.log(drug);
+		let promises = [];
 
-		drug.save((err, drug) => {
+		let promise = drug.save((err, drug) => {
 			if (err)
 				console.log("Db error for drug for file " + file + ", details: " + err);
 			else
 				console.log("Drug saved for file " + file);
 		});
 
+		promises.push(promise);
+
 		ingredients.forEach(ingredient => {
-			Substance.findOneAndUpdate({ code: ingredient.code }, ingredient, { upsert: true }, (err, substance) => {
-				if (err)
-					console.log("Db error for substance for file " + file + ", detals: " + err);
-			});
+			promise = Substance.findOneAndUpdate({ code: ingredient.code }, ingredient, { upsert: true });
+
+			promises.push(promise);
 		});
+
+		q.all(promises).then(() => deferred.resolve(true), err => deferred.reject(err));
 	}
-	catch(e){
-		console.log("Parse error for file " + file + ", details: " + JSON.stringify(e));
+	catch (e){
+		deferred.reject("Parse error for file " + file + ", details: " + JSON.stringify(e));
 	}
+
+	return deferred.promise;
 }
 
 module.exports = parseXml;

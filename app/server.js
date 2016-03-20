@@ -6,7 +6,6 @@ const express      = require("express"),
 	  passportInit = require("./passport/passport.init"),
 	  indexRoutes  = require("./routes/index.routes"),
 	  connection   = require("./db/connection"),
-	  processFiles = require("./data.import/process.files"),
 	  app          = express();
 
 app.set("views", "./views");

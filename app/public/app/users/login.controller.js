@@ -4,8 +4,8 @@
 			var vm = this;
 
 			vm.credentials = {
-				username: $location.search().username || "",
-				password: ""
+				username: $location.search().username || "a",
+				password: "a"
 			};
 			vm.isUsernameEmpty = isUsernameEmpty;
 			vm.isPasswordEmpty = isPasswordEmpty;

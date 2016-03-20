@@ -22,6 +22,7 @@
     "load-grunt-tasks": "^3.3.0"
   },
   "dependencies": {
+    "adm-zip": "^0.4.7",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.14.1",
     "cookie-parser": "^1.4.0",
@@ -29,8 +30,8 @@
     "express": "^4.13.3",
     "express-session": "^1.12.1",
     "mongoose": "^4.2.4",
+    "mongoose-q": "^0.1.0",
     "passport": "^0.3.0",
-    "adm-zip": "^0.4.7",
     "q": "^1.4.1",
     "xmldom": "^0.1.22",
     "xpath": "0.0.22"
