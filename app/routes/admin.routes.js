@@ -15,21 +15,9 @@ router.post("/import", passportUtilities.isAdminUser, function (req, res, next) 
 	child.on("message", function (message) {
 		res.json({ success: message.success });
 
-		if (message.success) { console.log("starting pig... " + join_substances_drugs_pigPath);
+		if (message.success) {
 			let child2 = child_process.spawn(pigPath, ["-x", "local", join_substances_drugs_pigPath]);
 			child2.stdout.pipe(process.stdout);
-
-			// child2.stdout.on('data', function(data){
-			// 	//console.log('stdout : ' + data);
-			// });
-			//
-			// child2.stderr.on('data', function (data){
-			//  	console.log('stderr : ' + data + " process Home : " + process.env.HOME);
-			// });
-
-			// child_process.exec("pig -x local " + join_substances_drugs_pigPath, function (err, stdout, stderr) {
-			// 	console.log(stdout);
-			// });
 		}
 	});
 });

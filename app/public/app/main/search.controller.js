@@ -1,8 +1,24 @@
-﻿
 define([], function () {
 
-		function SearchController() {
+		function SearchController(searchService) {
 			var vm = this;
+
+			this.searchTerm = "";
+			this.search = search;
+			this.checkKey = checkKey;
+			this.drugs = [];
+
+			function search() {
+				if (vm.searchTerm.trim() !== "")
+					searchService.search(vm.searchTerm).then(function (result) {
+						vm.drugs = result;
+					});
+			}
+
+			function checkKey($event) {
+				if ($event.keyCode === 13)
+					search();
+			}
 		}
 
 		return SearchController;

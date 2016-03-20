@@ -7,7 +7,7 @@ function init(app, passport) {
 	router.get("/", function (req, res) {
 		res.render("index", { title: "DrugsDB" });
 	});
-	
+
 	//
 	// router.get("/favicon.ico", function (req, res) {
 	// 	res.sendFile(path.resolve(__dirname + "/../public/images/favicon.ico"), function (err) {
@@ -23,6 +23,9 @@ function init(app, passport) {
 
 	var adminRoutes = require("./admin.routes");
 	app.use("/admin", adminRoutes);
+
+	var mainRoutes = require("./main.routes");
+	app.use("/main", mainRoutes);
 }
 
 module.exports = init;

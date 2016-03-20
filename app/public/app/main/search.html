@@ -1,1 +1,45 @@
-Search for something...
+<div id="search">
+	<div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+		    <div class="input-group">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown">
+                    	<span id="search_concept">Search by</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#contains">Drug name</a></li>
+                      <li><a href="#its_equal">Producer</a></li>
+                      <li><a href="#greather_than">Ingredient</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#all">All</a></li>
+                    </ul>
+                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">
+                <input type="text" class="form-control btn-lg input-lg" name="x" placeholder="Search term..." ng-model="vm.searchTerm" ng-keypress="vm.checkKey($event)">
+                <span class="input-group-btn">
+                    <button class="btn btn-default btn-lg" type="button" ng-click="vm.search()"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+        </div>
+	</div>
+
+	<table class="table table-hover" id="dev-table" ng-if="vm.drugs.length > 0">
+		<caption>Results</caption>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Producer</th>
+				<th>Ingredients</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="drug in vm.drugs">
+				<td>{{ $index + 1 }}</td>
+				<td>{{ drug.name }}</td>
+				<td>{{ drug.producer }}</td>
+				<td>{{ drug.ingredients }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
