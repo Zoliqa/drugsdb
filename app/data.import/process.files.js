@@ -15,8 +15,6 @@ const fs	          = require("fs"),
 let promises = [];
 
 Drug.remove({})
-.then(() => Substance.remove({}))
-.then(() => SubstanceDrugs.remove({}))
 .then(() => {
 	fs.readdir(dirname, (err, files) => {
 		files.forEach(file => {

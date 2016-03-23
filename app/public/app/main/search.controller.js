@@ -9,6 +9,8 @@ define([], function () {
 			this.drugs = [];
 
 			function search() {
+				vm.drugs.splice(0);
+
 				if (vm.searchTerm.trim() !== "")
 					searchService.search(vm.searchTerm).then(function (result) {
 						vm.drugs = result;

@@ -10,4 +10,7 @@ SubstanceSchema.index({ code: 1 });
 
 const Substance = mongoose.model("Substance", SubstanceSchema);
 
-module.exports = Substance;
+module.exports = {
+	Substance: Substance,
+	SubstanceSchema: SubstanceSchema
+};
