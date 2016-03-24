@@ -15,16 +15,21 @@ function parseXml(xml, file) {
 		let select = xpath.useNamespaces({ x: "urn:hl7-org:v3" });
 
 		let name = select("//x:manufacturedProduct/x:name/text()", doc)[0].toString();
-		let producer = select("x:document/x:author/x:assignedEntity/x:representedOrganization/x:name/text()", doc)[0].toString();
+		let producer_id = select("x:document/x:author/x:assignedEntity/x:representedOrganization/x:id/@extension", doc)[0].nodeValue;
+		let producer_name = select("x:document/x:author/x:assignedEntity/x:representedOrganization/x:name/text()", doc)[0].toString();
 		let ingredientNodes = select("//x:ingredientSubstance", doc);
 
 		let drug = new Drug({
 			name: name,
-			producer: producer,
+			producer_id: producer_id,
+			producer_name: producer_name,
 			ingredients: []
 		});
 
 		for (let i = 0; i < ingredientNodes.length; ++i) {
+			// let code = select(".//x:ingredientSubstance/x:code/@code", ingredientNodes[i])[0].nodeValue;
+			// let name = select(".//x:ingredientSubstance/x:code/text()", ingredientNodes[i])[0].toString();
+
 			let j = i + 1;
 			let code = select("//x:ingredientSubstance[" + j + "]/x:code/@code", doc)[0].nodeValue;
 			let name = select("//x:ingredientSubstance[" + j + "]/x:name/text()", doc)[0].toString();
@@ -37,18 +42,7 @@ function parseXml(xml, file) {
 			drug.ingredients.push(substance);
 		}
 
-		drug.save().then(() => deferred.resolve, err => deferred.reject(err));
-
-		// let promise = drug.save();
-		// let promises = [promise];
-		//
-		// ingredients.forEach(ingredient => {
-		// 	let promise = Substance.findOneAndUpdate({ code: ingredient.code }, ingredient, { upsert: true });
-		//
-		// 	promises.push(promise);
-		// });
-		//
-		// q.all(promises).then(() => deferred.resolve(true), err => deferred.reject(err));
+		drug.save().then(deferred.resolve, deferred.reject);
 	}
 	catch (e) {
 		console.log(e);

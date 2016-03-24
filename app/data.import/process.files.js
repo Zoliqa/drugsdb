@@ -1,20 +1,22 @@
 "use strict";
 
-const fs	          = require("fs"),
-	  q	         	  = require("q"),
-	  AdmZip          = require("adm-zip"),
-	  dom        	  = require("xmldom").DOMParser,
-	  xpath    	 	  = require("xpath"),
-	  parseXml   	  = require("./drug.xml.parser.js"),
-	  connection  	  = require("../db/connection"),
-	  Drug       	  = require("../db/drug.model.js"),
-	  Substance  	  = require("../db/substance.model.js"),
-	  SubstanceDrugs  = require("../db/substance.drugs.model.js"),
-	  dirname    	  = process.argv[2];
+const fs	     = require("fs"),
+	  q	         = require("q"),
+	  AdmZip     = require("adm-zip"),
+	  dom        = require("xmldom").DOMParser,
+	  xpath    	 = require("xpath"),
+	  parseXml   = require("./drug.xml.parser"),
+	  connection = require("../db/connection"),
+	  Drug       = require("../db/drug.model"),
+	  substance  = require("../db/substance.model"),
+	  producer   = require("../db/producer.model"),
+	  dirname    = process.argv[2];
 
 let promises = [];
 
 Drug.remove({})
+.then(() => substance.Substance.remove({}))
+.then(() => producer.Producer.remove({}))
 .then(() => {
 	fs.readdir(dirname, (err, files) => {
 		files.forEach(file => {

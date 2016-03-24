@@ -4,7 +4,8 @@ const mongoose = require("mongoose"),
 
 const DrugSchema = new Schema({
 	name: String,
-	producer: String,
+	producer_id: String,
+	producer_name: String,
 	ingredients: [substance.SubstanceSchema]
 })
 

@@ -6,7 +6,6 @@ function createSubstancesBag(substancesTuple) {
 		var substance = substancesTuple.get(i);
 
 		substancesBag.push({
-			id: substance.get("_id"),
 			name: substance.get("name"),
 			code: substance.get("code")
 		});

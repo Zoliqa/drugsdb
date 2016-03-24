@@ -4,6 +4,8 @@ const mongoose = require("mongoose"),
 const SubstanceSchema = new Schema({
 	code: String,
 	name: String
+}, {
+	collection: "substances"
 });
 
 SubstanceSchema.index({ code: 1 });
