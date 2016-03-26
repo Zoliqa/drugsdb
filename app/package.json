@@ -30,9 +30,10 @@
     "express": "^4.13.3",
     "express-session": "^1.12.1",
     "mongoose": "^4.2.4",
-    "mongoose-q": "^0.1.0",
     "passport": "^0.3.0",
     "q": "^1.4.1",
+    "winston": "^2.2.0",
+    "winston-mongodb": "^1.4.0",
     "xmldom": "^0.1.22",
     "xpath": "0.0.22"
   }

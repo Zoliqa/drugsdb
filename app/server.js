@@ -6,6 +6,7 @@ const express      = require("express"),
 	  passportInit = require("./passport/passport.init"),
 	  indexRoutes  = require("./routes/index.routes"),
 	  connection   = require("./db/connection"),
+	  logger       = require("./logger/logger")
 	  app          = express();
 
 app.set("views", "./views");
