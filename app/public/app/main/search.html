@@ -4,14 +4,14 @@
 		    <div class="input-group">
                 <div class="input-group-btn search-panel">
                     <button type="button" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown">
-                    	<span id="search_concept">Search by</span> <span class="caret"></span>
+                    	<span id="search_concept">Search by</span> <span> {{ vm.searchBy }}</span> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                      <li><a href="#contains">Drug name</a></li>
-                      <li><a href="#its_equal">Producer</a></li>
-                      <li><a href="#greather_than">Ingredient</a></li>
+                      <li><a href="" ng-click="vm.searchBy = vm.searchByOptions.drug">Drug</a></li>
+                      <li><a href="" ng-click="vm.searchBy = vm.searchByOptions.producer">Producer</a></li>
+                      <li><a href="" ng-click="vm.searchBy = vm.searchByOptions.ingredient">Ingredient</a></li>
                       <li class="divider"></li>
-                      <li><a href="#all">All</a></li>
+                      <li><a href="" ng-click="vm.searchBy = vm.searchByOptions.all">All</a></li>
                     </ul>
                 </div>
                 <input type="hidden" name="search_param" value="all" id="search_param">
@@ -30,15 +30,23 @@
 				<th>#</th>
 				<th>Name</th>
 				<th>Producer</th>
-				<th>Ingredients</th>
+				<th>
+					Ingredients
+
+					<input type="checkbox" tooltip="Show vertically" ng-click="vm.toggleDisplayOfIngredients()">
+				</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr ng-repeat="drug in vm.drugs">
 				<td>{{ $index + 1 }}</td>
 				<td>{{ drug.name }}</td>
-				<td>{{ drug.producer }}</td>
-				<td>{{ drug.ingredients }}</td>
+				<td>{{ drug.producer_name }}</td>
+				<td>
+					<a ng-repeat="ingredient in drug.ingredients" href="#" ng-class="{ 'center-block': vm.showIngredientsVertically }">
+						{{ ingredient.name + (!vm.showIngredientsVertically && ";" || "" ) }}
+					</a>
+				</td>
 			</tr>
 		</tbody>
 	</table>
