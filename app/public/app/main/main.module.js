@@ -4,7 +4,10 @@ define([
 	"underscore",
 	"app/main/pageheader.controller",
 	"app/main/search.controller",
-	"app/main/search.service",
+	"app/main/search.all.service",
+	"app/main/search.drug.service",
+	"app/main/search.producer.service",
+	"app/main/search.substance.service",
 	"app/main/main.config",
 	"app/main/main.run"],
 	function (angular,
@@ -12,14 +15,20 @@ define([
 			  _,
 			  PageHeaderController,
 			  SearchController,
-			  searchService,
+			  searchAllService,
+			  searchDrugService,
+			  searchProducerService,
+			  searchSubstanceService,
 			  mainConfig,
 			  mainRun) {
 
 		angular.module("main", ["ngRoute"])
 			.controller("PageHeaderController", PageHeaderController)
 			.controller("SearchController", SearchController)
-			.factory("searchService", searchService)
+			.factory("searchAllService", searchAllService)
+			.factory("searchDrugService", searchDrugService)
+			.factory("searchProducerService", searchProducerService)
+			.factory("searchSubstanceService", searchSubstanceService)
 			.constant("_", _)
 			.constant("UNAUTHORIZED", "UNAUTHORIZED")
 			.config(mainConfig)

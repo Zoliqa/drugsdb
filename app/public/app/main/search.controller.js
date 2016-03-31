@@ -1,28 +1,62 @@
 define([], function () {
 
-		function SearchController(searchService) {
-			var vm = this;
+		function SearchController(searchAllService, searchDrugService, searchProducerService, searchSubstanceService) {
+			var vm = this,
+				searchService;
 
 			this.searchTerm = "";
-			this.searchByOptions = {
-				all: "all",
-				drug: "drug",
-				producer: "producer",
-				ingredient: "ingredient"
-			};
-			this.searchBy = this.searchByOptions.drug;
+			// this.searchByOptions = {
+			// 	all: "all",
+			// 	drug: "drug",
+			// 	producer: "producer",
+			// 	ingredient: "ingredient"
+			// };
+			this.searchBy = "";
 			this.search = search;
 			this.checkKey = checkKey;
-			this.drugs = [];
-			this.showIngredientsVertically = false;
-			this.toggleDisplayOfIngredients = toggleDisplayOfIngredients;
+			this.results = [];
+			this.showListVertically = false;
+			this.toggleDisplayOfList = toggleDisplayOfList;
+			this.reset = reset;
+			this.searchByAll = searchByAll;
+			this.searchByDrug = searchByDrug;
+			this.searchByProducer = searchByProducer;
+			this.searchByIngredient = searchByIngredient;
+
+			(function () {
+				searchByDrug();
+			}());
+
+			function searchByAll() {
+				vm.searchBy = "all";
+
+				vm.searchService = searchAllService;
+			}
+
+			function searchByDrug() {
+				vm.searchBy = "drug";
+
+				vm.searchService = searchDrugService;
+			}
+
+			function searchByProducer() {
+				vm.searchBy = "producer";
+
+				vm.searchService = searchProducerService;
+			}
+
+			function searchByIngredient() {
+				vm.searchBy = "ingredient";
+
+				vm.searchService = searchSubstanceService;
+			}
 
 			function search() {
-				vm.drugs.splice(0);
+				vm.results.splice(0);
 
 				if (vm.searchTerm.trim() !== "")
-					searchService.search(vm.searchTerm).then(function (result) {
-						vm.drugs = result;
+					vm.searchService.search(vm.searchTerm).then(function (results) {
+						vm.results = results;
 					});
 			}
 
@@ -31,8 +65,13 @@ define([], function () {
 					search();
 			}
 
-			function toggleDisplayOfIngredients() {
-				vm.showIngredientsVertically = !vm.showIngredientsVertically;
+			function toggleDisplayOfList() {
+				vm.showListVertically = !vm.showListVertically;
+			}
+
+			function reset() {
+				vm.searchTerm = "";
+				vm.results.splice(0);
 			}
 		}
 

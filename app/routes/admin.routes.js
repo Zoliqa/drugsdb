@@ -45,7 +45,7 @@ router.post("/import", passportUtilities.isAdminUser, function (req, res, next) 
 			child3.stderr.on('data', data => {
 				var log = data.toString();
 
-				logPigQueryResult("create_substances_collection.pig", log);
+				logPigQueryResult("create_producers_collection.pig", log);
 			});
 			child3.on("error", () => logger.error("failed to start child process for create_producers_collection.pig"));
 		}

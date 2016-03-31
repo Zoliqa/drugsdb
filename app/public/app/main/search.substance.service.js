@@ -1,6 +1,6 @@
 ﻿define([], function () {
 
-	function searchService($http, $q) {
+	function searchSubstanceService($http, $q) {
 		var service = {
 			search: search
 		};
@@ -10,7 +10,7 @@
 		function search(term) {
 			var deferred = $q.defer();
 
-			$http.post("/main/search", { term: term }).then(function (result) {
+			$http.post("/main/searchsubstance", { term: term }).then(function (result) {
 				deferred.resolve(result.data);
 			}, deferred.reject);
 
@@ -18,5 +18,5 @@
 		}
 	}
 
-	return searchService;
+	return searchSubstanceService;
 });
