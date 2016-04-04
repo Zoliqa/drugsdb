@@ -23,33 +23,7 @@
         </div>
 	</div>
 
-	<ng-include src="'/public/app/main/results/' + vm.searchBy + '.html'"></ng-include>
+	<ng-include src="vm.getResultsTemplateName()" ng-if="vm.results.length > 0"></ng-include>
 
-	<!-- <table class="table table-hover" ng-if="vm.drugs.length > 0">
-		<caption>Results</caption>
-		<thead>
-			<tr>
-				<th>#</th>
-				<th>Name</th>
-				<th>Producer</th>
-				<th role="button" ng-click="vm.toggleDisplayOfIngredients()">
-					Ingredients
-
-					<input type="checkbox" tooltip="Show vertically" role="button">
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="drug in vm.drugs">
-				<td>{{ $index + 1 }}</td>
-				<td>{{ drug.name }}</td>
-				<td>{{ drug.producer_name }}</td>
-				<td>
-					<a ng-repeat="ingredient in drug.ingredients" href="#" ng-class="{ 'center-block': vm.showIngredientsVertically }">
-						{{ ingredient.name + (!vm.showIngredientsVertically && ";" || "" ) }}
-					</a>
-				</td>
-			</tr>
-		</tbody>
-	</table> -->
+	<p class="text-danger text-center" ng-if="vm.results.length === 0">No results found</p>
 </div>

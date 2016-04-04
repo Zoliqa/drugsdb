@@ -4,7 +4,6 @@
 		<tr>
 			<th>#</th>
 			<th>Name</th>
-			<th>Code</th>
 			<th role="button" ng-click="vm.toggleDisplayOfList()">
 				Drugs
 
@@ -13,12 +12,11 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="substance in vm.results">
+		<tr ng-repeat="producer in vm.results">
 			<td>{{ $index + 1 }}</td>
-			<td>{{ substance.name }}</td>
-			<td>{{ substance.code }}</td>
+			<td>{{ producer.producer_name }}</td>
 			<td>
-				<a role="button" ng-repeat="drug in substance.drugs" ng-class="{ 'center-block': vm.showListVertically }" ng-click="vm.handleDrugClick(drug.name)">
+				<a role="button" ng-repeat="drug in producer.drugs" ng-class="{ 'center-block': vm.showListVertically }" ng-click="vm.handleDrugClick(drug.name)">
 					{{ drug.name + (!vm.showListVertically && ";" || "" ) }}
 				</a>
 			</td>

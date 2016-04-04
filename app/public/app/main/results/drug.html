@@ -16,10 +16,14 @@
 		<tr ng-repeat="drug in vm.results">
 			<td>{{ $index + 1 }}</td>
 			<td>{{ drug.name }}</td>
-			<td>{{ drug.producer_name }}</td>
 			<td>
-				<a ng-repeat="ingredient in drug.ingredients" href="#" ng-class="{ 'center-block': vm.showListVertically }">
-					{{ ingredient.name + (!vm.showIngredientsVertically && ";" || "" ) }}
+				<a role="button" ng-click="vm.handleProducerClick(drug.producer_name)">
+					{{ drug.producer_name }}
+				</a>
+			</td>
+			<td>
+				<a role="button" ng-repeat="ingredient in drug.ingredients" ng-class="{ 'center-block': vm.showListVertically }" ng-click="vm.handleIngredientClick(ingredient.name)">
+					{{ ingredient.name + (!vm.showListVertically && ";" || "" ) }}
 				</a>
 			</td>
 		</tr>
