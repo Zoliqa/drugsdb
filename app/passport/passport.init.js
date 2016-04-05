@@ -1,4 +1,4 @@
-const userQueries = require("../db/user/user.queries");
+const userQueries = require("../db/user.queries");
 
 function init(passport) {
 	passport.serializeUser(function (user, done) {

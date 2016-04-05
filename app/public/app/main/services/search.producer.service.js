@@ -2,7 +2,8 @@
 
 	function searchProducerService($http, $q) {
 		var service = {
-			search: search
+			search: search,
+			name: "searchProducerService"
 		};
 
 		return service;

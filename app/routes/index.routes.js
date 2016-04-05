@@ -1,7 +1,5 @@
-﻿
-var express = require('express'),
-	router  = express.Router(),
-	path	= require("path");
+﻿var express = require('express'),
+	router  = express.Router();
 
 function init(app, passport) {
 	router.get("/", function (req, res) {
@@ -26,6 +24,9 @@ function init(app, passport) {
 
 	var mainRoutes = require("./main.routes");
 	app.use("/main", mainRoutes);
+
+	var searchEntryRoutes = require("./search.entry.routes");
+	app.use("/searchentry", searchEntryRoutes);
 }
 
 module.exports = init;

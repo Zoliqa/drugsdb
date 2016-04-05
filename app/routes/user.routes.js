@@ -1,6 +1,6 @@
 var express				= require("express"),
 	bcrypt				= require('bcrypt-nodejs'),
-	userQueries			= require("../db/user/user.queries"),
+	userQueries			= require("../db/user.queries"),
 	passportUtilities	= require("../passport/passport.utilities"),
 	router				= express.Router();
 
@@ -17,7 +17,7 @@ router.post("/login", function (req, res, next) {
 				return next(err);
 
 			if (!result)
-				return res.json(null);
+				return res.json(null); 
 
 			req.logIn(user, function (err) {
 				if (err)

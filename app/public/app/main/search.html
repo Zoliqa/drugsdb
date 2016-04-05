@@ -23,7 +23,9 @@
         </div>
 	</div>
 
-	<ng-include src="vm.getResultsTemplateName()" ng-if="vm.results.length > 0"></ng-include>
+	<div class="results">
+		<ng-include src="vm.getResultsTemplateName()" ng-if="vm.results.length > 0"></ng-include>
 
-	<p class="text-danger text-center" ng-if="vm.results.length === 0">No results found</p>
+		<p class="text-danger text-center" ng-if="vm.results.length === 0">No results found</p>
+	</div>
 </div>

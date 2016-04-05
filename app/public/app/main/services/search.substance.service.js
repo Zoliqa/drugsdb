@@ -2,7 +2,8 @@
 
 	function searchSubstanceService($http, $q) {
 		var service = {
-			search: search
+			search: search,
+			name: "searchSubstanceService"
 		};
 
 		return service;

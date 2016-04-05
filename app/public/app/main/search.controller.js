@@ -1,6 +1,6 @@
 define([], function () {
 
-		function SearchController($injector, searchAllService, searchDrugService, searchProducerService, searchSubstanceService) {
+		function SearchController($injector, searchEntryService, searchAllService, searchDrugService, searchProducerService, searchSubstanceService) {
 			var vm = this,
 				searchService;
 
@@ -35,7 +35,6 @@ define([], function () {
 
 			function searchByDrug() {
 				vm.results = null;
-				vm.searchTerm = "";
 				vm.searchBy = "drug";
 				vm.searchService = searchDrugService;
 			}
@@ -50,7 +49,6 @@ define([], function () {
 
 			function searchByProducer() {
 				vm.results = null;
-				vm.searchTerm = "";
 				vm.searchBy = "producer";
 				vm.searchService = searchProducerService;
 			}
@@ -65,7 +63,6 @@ define([], function () {
 
 			function searchByIngredient(ingredientName) {
 				vm.results = null;
-				vm.searchTerm = "";
 				vm.searchBy = "ingredient";
 				vm.searchService = searchSubstanceService;
 			}
@@ -82,6 +79,16 @@ define([], function () {
 				if (vm.searchTerm.trim() !== "")
 					vm.searchService.search(vm.searchTerm).then(function (results) {
 						vm.results = results;
+
+						var searchEntry = {
+							type: vm.searchService.name,
+							term: vm.searchTerm,
+							date: new Date()
+						};
+
+						searchEntryService.save(searchEntry).$promise.catch(function () {
+							console.log("error saving searchEntry");
+						});
 					});
 			}
 
@@ -96,7 +103,7 @@ define([], function () {
 
 			function reset() {
 				vm.searchTerm = "";
-				vm.results.splice(0);
+				vm.results = null;
 			}
 
 			function getResultsTemplateName() {
