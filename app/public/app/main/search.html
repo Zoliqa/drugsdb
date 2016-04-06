@@ -4,12 +4,12 @@
 		    <div class="input-group search-box">
                 <div class="input-group-btn">
                     <button type="button" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown">
-                    	<span id="search_concept">Search by</span> <span> {{ vm.searchBy }}</span> <span class="caret"></span>
+                    	<span id="search_concept">Search by</span> <span> {{ vm.searchService.description }}</span> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
                       <li><a href="" ng-click="vm.searchByDrug()">Drug</a></li>
                       <li><a href="" ng-click="vm.searchByProducer()">Producer</a></li>
-                      <li><a href="" ng-click="vm.searchByIngredient()">Ingredient</a></li>
+                      <li><a href="" ng-click="vm.searchBySubstance()">Substance</a></li>
                       <li class="divider"></li>
                       <li><a href="" ng-click="vm.searchByAll()">All</a></li>
                     </ul>

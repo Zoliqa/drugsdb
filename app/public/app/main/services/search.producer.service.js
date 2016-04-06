@@ -3,7 +3,9 @@
 	function searchProducerService($http, $q) {
 		var service = {
 			search: search,
-			name: "searchProducerService"
+			name: "searchProducerService",
+			description: "producer",
+			template: "producer"
 		};
 
 		return service;

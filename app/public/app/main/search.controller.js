@@ -1,11 +1,10 @@
 define([], function () {
 
-		function SearchController($injector, searchEntryService, searchAllService, searchDrugService, searchProducerService, searchSubstanceService) {
+		function SearchController($scope, $location, $injector, searchEntryService, searchAllService, searchDrugService, searchProducerService, searchSubstanceService) {
 			var vm = this,
 				searchService;
 
 			this.searchTerm = "";
-			this.searchBy = "";
 			this.search = search;
 			this.checkKey = checkKey;
 			this.results = null;
@@ -17,25 +16,47 @@ define([], function () {
 			this.handleDrugClick = handleDrugClick;
 			this.searchByProducer = searchByProducer;
 			this.handleProducerClick = handleProducerClick;
-			this.searchByIngredient = searchByIngredient;
-			this.handleIngredientClick = handleIngredientClick;
+			this.searchBySubstance = searchBySubstance;
+			this.handleSubstanceClick = handleSubstanceClick;
 			this.getResultsTemplateName = getResultsTemplateName;
 
 			(function () {
 				searchByDrug();
 
-				var service = $injector.get("searchDrugService");
+				var actualLocation = "";
+
+				function checkSearchParams() {
+					try {
+						var name = $location.search().type;
+
+						vm.searchService = $injector.get(name);
+						vm.searchTerm = $location.search().term;
+
+						search();
+					}
+					catch(e) {}
+				}
+
+				$scope.$on('$locationChangeSuccess', function(){
+				  	actualLocation = JSON.stringify($location.search());
+				});
+
+				$scope.$watch(function () {
+					return JSON.stringify($location.search());
+				}, function (newLocation) {
+					if (actualLocation === newLocation)
+						checkSearchParams();
+				});
+
+				checkSearchParams();
 			}());
 
 			function searchByAll() {
-				vm.searchBy = "all";
-
 				vm.searchService = searchAllService;
 			}
 
 			function searchByDrug() {
 				vm.results = null;
-				vm.searchBy = "drug";
 				vm.searchService = searchDrugService;
 			}
 
@@ -49,7 +70,6 @@ define([], function () {
 
 			function searchByProducer() {
 				vm.results = null;
-				vm.searchBy = "producer";
 				vm.searchService = searchProducerService;
 			}
 
@@ -61,22 +81,21 @@ define([], function () {
 				search();
 			}
 
-			function searchByIngredient(ingredientName) {
+			function searchBySubstance() {
 				vm.results = null;
-				vm.searchBy = "ingredient";
 				vm.searchService = searchSubstanceService;
 			}
 
-			function handleIngredientClick(ingredientName) {
-				searchByIngredient();
+			function handleSubstanceClick(substanceName) {
+				searchBySubstance();
 
-				vm.searchTerm = ingredientName;
+				vm.searchTerm = substanceName;
 
 				search();
 			}
 
 			function search() {
-				if (vm.searchTerm.trim() !== "")
+				if (vm.searchTerm.trim() !== "") {
 					vm.searchService.search(vm.searchTerm).then(function (results) {
 						vm.results = results;
 
@@ -90,6 +109,12 @@ define([], function () {
 							console.log("error saving searchEntry");
 						});
 					});
+
+					$location.search({
+						type: vm.searchService.name,
+						term: vm.searchTerm
+					});
+				}
 			}
 
 			function checkKey($event) {
@@ -107,7 +132,7 @@ define([], function () {
 			}
 
 			function getResultsTemplateName() {
-				return "/public/app/main/results/" + vm.searchBy + ".html";
+				return "/public/app/main/results/" + vm.searchService.template + ".html";
 			}
 		}
 

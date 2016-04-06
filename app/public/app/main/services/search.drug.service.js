@@ -3,7 +3,9 @@
 	function searchDrugService($http, $q) {
 		var service = {
 			search: search,
-			name: "searchDrugService"
+			name: "searchDrugService",
+			description: "drug",
+			template: "drug"
 		};
 
 		return service;

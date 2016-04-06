@@ -19,7 +19,10 @@ function create(userId, newSearchEntry, next) {
 		_id: userId
 	}, {
 		$push: {
-			searches: newSearchEntry
+			searches: {
+				$each: [newSearchEntry]
+			},
+			$position: 0
 		}
 	}, err => {
 		if (err)

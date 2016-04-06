@@ -21,7 +21,10 @@
 				</a>
 			</td>
 			<td>
-				<a role="button" ng-repeat="ingredient in drug.ingredients" ng-class="{ 'center-block': vm.showListVertically }" ng-click="vm.handleIngredientClick(ingredient.name)">
+				<a role="button"
+				   ng-repeat="ingredient in drug.ingredients"
+				   ng-class="{ 'center-block': vm.showListVertically }"
+				   ng-click="vm.handleSubstanceClick(ingredient.name)">
 					{{ ingredient.name + (!vm.showListVertically && ";" || "" ) }}
 				</a>
 			</td>

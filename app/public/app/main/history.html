@@ -1,3 +1,21 @@
 <div id="history">
-	History...
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Criteria</th>
+				<th>Term</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="searchEntry in vm.searchEntries" role="button" ng-click="vm.selectEntry(searchEntry)">
+				<td>{{ $index + 1 }}</td>
+				<td>{{ searchEntry.service.description }}</td>
+				<td>{{ searchEntry.term }}</td>
+				<td>{{ searchEntry.date | date: "short" }}</td>
+			</tr>
+		</tbody>
+	</table>
+
 </div>

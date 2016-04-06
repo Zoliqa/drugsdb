@@ -17,7 +17,8 @@ define([], function () {
 							return $q.reject(UNAUTHORIZED);
 						});
 					}
-				}
+				},
+				reloadOnSearch: false
 			})
 			.when("/history", {
 				templateUrl: "/public/app/main/history.html",
