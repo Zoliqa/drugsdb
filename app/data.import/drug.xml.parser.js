@@ -23,7 +23,8 @@ function parseXml(xml, file) {
 			name: name,
 			producer_id: producer_id,
 			producer_name: producer_name,
-			ingredients: []
+			ingredients: [],
+			additionalInfos: []
 		});
 
 		for (let i = 0; i < ingredientNodes.length; ++i) {
@@ -40,6 +41,28 @@ function parseXml(xml, file) {
 			});
 
 			drug.ingredients.push(substance);
+		}
+
+		let warningSectionNodes = select("//x:section[x:code[@code='34071-1']]", doc);
+
+		if (warningSectionNodes.length > 0) {
+			let baseSectionElement = warningSectionNodes[0];
+
+			let code = select("string(./x:code/@code)", baseSectionElement);
+			let title = select("string(./x:title)", baseSectionElement);
+			let text = select("string(./x:text)", baseSectionElement);
+
+			console.log(code + title + text);
+
+			let childSectionElements = select(".//x:section", baseSectionElement);
+
+			childSectionElements.forEach(childSection => {
+				let code = select("string(./x:code/@code)", childSection);
+				let title = select("string(./x:title)", childSection);
+				let text = select("string(./x:text)", childSection);
+
+				console.log(code + title + text);
+			});
 		}
 
 		drug.save().then(deferred.resolve, deferred.reject);
