@@ -21,9 +21,7 @@ define([], function () {
 			this.getResultsTemplateName = getResultsTemplateName;
 
 			(function () {
-				searchByDrug();
-
-				var actualLocation = "";
+				var actualSearchParams = "";
 
 				function checkSearchParams() {
 					try {
@@ -34,17 +32,22 @@ define([], function () {
 
 						search();
 					}
-					catch(e) {}
+					catch(e) {
+						searchByDrug();
+					}
 				}
 
+				// when hisory buttons are used (back or forward), this function will be called first, then the next function inside the watch which will
+				// detect that the search params are the same; otherwise, if we set a new value for the search params the next function inside the watch will be called
+				// first, followed by this function 
 				$scope.$on('$locationChangeSuccess', function(){
-				  	actualLocation = JSON.stringify($location.search());
+				  	actualSearchParams = JSON.stringify($location.search());
 				});
 
 				$scope.$watch(function () {
 					return JSON.stringify($location.search());
-				}, function (newLocation) {
-					if (actualLocation === newLocation)
+				}, function (newSearchParams) {
+					if (actualSearchParams === newSearchParams)
 						checkSearchParams();
 				});
 

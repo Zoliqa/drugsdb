@@ -21,4 +21,13 @@ router.get("/", passportUtilities.isAuthenticated, function (req, res, next) {
 	});
 });
 
+router.delete("/:id", passportUtilities.isAuthenticated, function (req, res, next) {
+	searchEntryQueries.remove(req.user._id, req.params.id, err => {
+		if (err)
+			return next(err);
+
+		return res.json(null);
+	});
+});
+
 module.exports = router;

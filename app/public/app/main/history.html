@@ -6,6 +6,7 @@
 				<th>Criteria</th>
 				<th>Term</th>
 				<th>Date</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -14,6 +15,9 @@
 				<td>{{ searchEntry.service.description }}</td>
 				<td>{{ searchEntry.term }}</td>
 				<td>{{ searchEntry.date | date: "short" }}</td>
+				<td>
+					<span class="glyphicon glyphicon-remove" role="button" ng-click="vm.removeEntry(searchEntry); $event.stopPropagation()"></span>
+				</td>
 			</tr>
 		</tbody>
 	</table>

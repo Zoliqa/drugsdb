@@ -5,6 +5,7 @@ define([], function () {
 
 			this.searchEntries = [];
 			this.selectEntry = selectEntry;
+			this.removeEntry = removeEntry;
 
 			(function init() {
 				searchEntryService.query().$promise.then(function (searchEntries) {
@@ -26,6 +27,16 @@ define([], function () {
 				$location.path("/search").search({
 					type: searchEntry.service.name,
 					term: searchEntry.term
+				});
+			}
+
+			function removeEntry(searchEntry) {
+				searchEntryService.remove({ id: searchEntry._id }).$promise.then(function () {
+					var index = _.findIndex(vm.searchEntries, function (searchEntry2) {
+						return searchEntry2._id === searchEntry._id;
+					});
+
+					vm.searchEntries.splice(index, 1);
 				});
 			}
 		}

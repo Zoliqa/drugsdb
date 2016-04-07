@@ -20,9 +20,9 @@ function create(userId, newSearchEntry, next) {
 	}, {
 		$push: {
 			searches: {
-				$each: [newSearchEntry]
+				$each: [newSearchEntry],
+				$position: 0
 			},
-			$position: 0
 		}
 	}, err => {
 		if (err)
@@ -33,8 +33,8 @@ function create(userId, newSearchEntry, next) {
 }
 
 function remove(userId, searchEntryId, next) {
-	User.findOneAndRemove({
-		_id: id
+	User.findOneAndUpdate({
+		_id: userId
 	}, {
 		$pull: {
 			searches: {
