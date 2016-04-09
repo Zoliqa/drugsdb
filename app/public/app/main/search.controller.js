@@ -27,12 +27,14 @@ define([], function () {
 				try {
 					var name = $location.search().type;
 
-					vm.searchService = $injector.get(name);
 					vm.searchTerm = $location.search().term;
+					vm.searchService = $injector.get(name);
 
 					search();
 				}
 				catch(e) {
+					$location.search("type", "");
+
 					searchByDrug();
 				}
 			}
