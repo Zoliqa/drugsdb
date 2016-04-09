@@ -13,7 +13,7 @@
 	<tbody>
 		<tr ng-repeat="producer in vm.results">
 			<td>{{ $index + 1 }}</td>
-			<td>{{ producer.producer_name }}</td>
+			<td>{{ producer.producerName }}</td>
 			<td>
 				<a role="button" ng-repeat="drug in producer.drugs" ng-class="{ 'center-block': vm.showListVertically }" ng-click="vm.handleDrugClick(drug.name)">
 					{{ drug.name + (!vm.showListVertically && ";" || "" ) }}

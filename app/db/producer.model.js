@@ -2,8 +2,8 @@ const mongoose = require("mongoose"),
 	  Schema   = mongoose.Schema;
 
 const ProducerSchema = new Schema({
-	producer_id: String,
-	producer_name: String,
+	producerId: String,
+	producerName: String,
 	drugs: [{
 		name: String,
 		ingredients: Array

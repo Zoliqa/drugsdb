@@ -3,7 +3,7 @@ var producer = require("./producer.model");
 
 function search(term, next) {
 	producer.Producer.find({
-		producer_name: {
+		producerName: {
 			$regex: new RegExp(".*" + term + ".*", "i")
 		}
 	}, (err, producers) => {
