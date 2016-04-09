@@ -7,7 +7,9 @@ const express      = require("express"),
 	  indexRoutes  = require("./routes/index.routes"),
 	  connection   = require("./db/connection"),
 	  logger       = require("./logger/logger")
-	  app          = express();
+	  app          = express(),
+	  server	   = require("http").createServer(app),
+	  io		   = require("socket.io")(server);
 
 app.set("views", "./views");
 app.set("view engine", "ejs");
@@ -27,10 +29,18 @@ passportInit(passport);
 
 app.use("/public", express.static(__dirname + "/public"));
 
-indexRoutes(app, passport);
+indexRoutes(app, passport, io);
+
+// io.on('connection', function(socket) {
+//   	console.log('a user connected');
+//
+// 	setTimeout(() => socket.emit("progress", 50), 2000);
+// });
 
 if (!module.parent) {
-	app.listen(4000);
+	// app.listen(4000);
+
+	server.listen(4000);
 }
 
 module.exports = app;

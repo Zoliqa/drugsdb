@@ -1,7 +1,7 @@
 ﻿var express = require('express'),
 	router  = express.Router();
 
-function init(app, passport) {
+function init(app, passport, io) {
 	router.get("/", function (req, res) {
 		res.render("index", { title: "DrugsDB" });
 	});
@@ -19,7 +19,7 @@ function init(app, passport) {
 	var userRoutes = require("./user.routes");
 	app.use("/user", userRoutes);
 
-	var adminRoutes = require("./admin.routes");
+	var adminRoutes = require("./admin.routes")(io);
 	app.use("/admin", adminRoutes);
 
 	var mainRoutes = require("./main.routes");

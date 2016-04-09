@@ -13,7 +13,8 @@
 			"bcrypt": "public/lib/bcryptjs/dist/bcrypt",
 			"offline": "public/lib/offline/offline",
 			"offlineSimulateUI": "public/lib/offlinejs-simulate-ui/offline-simulate-ui.min",
-			"dexie": "public/lib/dexie/dist/latest/Dexie"
+			"dexie": "public/lib/dexie/dist/latest/Dexie",
+			"io": "public/lib/socket.io-client/socket.io"
 		},
 
 		shim: {
