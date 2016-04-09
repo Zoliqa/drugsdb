@@ -5,6 +5,7 @@ define([
 	"app/main/pageheader.controller",
 	"app/main/search.controller",
 	"app/main/history.controller",
+	"app/main/drug.details.controller",
 	"app/main/services/search.all.service",
 	"app/main/services/search.drug.service",
 	"app/main/services/search.producer.service",
@@ -18,6 +19,7 @@ define([
 			  PageHeaderController,
 			  SearchController,
 			  HistoryController,
+			  DrugDetailsController,
 			  searchAllService,
 			  searchDrugService,
 			  searchProducerService,
@@ -30,6 +32,7 @@ define([
 			.controller("PageHeaderController", PageHeaderController)
 			.controller("SearchController", SearchController)
 			.controller("HistoryController", HistoryController)
+			.controller("DrugDetailsController", DrugDetailsController)
 			.factory("searchAllService", searchAllService)
 			.factory("searchDrugService", searchDrugService)
 			.factory("searchProducerService", searchProducerService)

@@ -1,6 +1,8 @@
 define([], function () {
 
-	function SearchController($scope, $location, $injector, searchEntryService, searchAllService, searchDrugService, searchProducerService, searchSubstanceService) {
+	function SearchController(
+		$scope, $location, $injector, $uibModal, searchEntryService, searchAllService, searchDrugService, searchProducerService, searchSubstanceService) {
+
 		var vm = this,
 			searchService;
 
@@ -19,6 +21,7 @@ define([], function () {
 		this.searchBySubstance = searchBySubstance;
 		this.handleSubstanceClick = handleSubstanceClick;
 		this.getResultsTemplateName = getResultsTemplateName;
+		this.showDrugDetails = showDrugDetails;
 
 		(function () {
 			var actualSearchParams = "";
@@ -138,6 +141,21 @@ define([], function () {
 
 		function getResultsTemplateName() {
 			return "/public/app/main/results/" + vm.searchService.template + ".html";
+		}
+
+		function showDrugDetails(drug) {
+			$uibModal.open({
+				templateUrl: "/public/app/main/drug.details.html",
+				// size: "lg",
+				windowClass: "fullscreen",
+				controller: "DrugDetailsController",
+				controllerAs: "vm",
+				resolve: {
+					drug: function () {
+						return drug;
+					}
+				}
+			});
 		}
 	}
 

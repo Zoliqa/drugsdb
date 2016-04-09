@@ -9,6 +9,7 @@
 
 				<input type="checkbox" tooltip="Show vertically" role="button" ng-checked="vm.showListVertically">
 			</th>
+			<th></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -27,6 +28,9 @@
 				   ng-click="vm.handleSubstanceClick(ingredient.name)">
 					{{ ingredient.name + (!vm.showListVertically && ";" || "" ) }}
 				</a>
+			</td>
+			<td>
+				<span role="button" class="glyphicon glyphicon-open" ng-click="vm.showDrugDetails(drug)"></span>
 			</td>
 		</tr>
 	</tbody>

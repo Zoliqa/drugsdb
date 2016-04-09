@@ -1,0 +1,42 @@
+<div id="drug-details">
+	<div class="modal-header">
+        <h3 class="modal-title">Drug details</h3>
+    </div>
+    <div class="modal-body">
+		<div class="row">
+			<div class="col-xs-2">
+				<label>Name</label>
+			</div>
+			<div class="col-xs-10">{{ vm.drug.name }}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2">
+				<label>Producer</label>
+			</div>
+			<div class="col-xs-10">{{ vm.drug.producerName }}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2">
+				<label>Ingredients</label>
+			</div>
+			<div class="col-xs-10">
+				<span ng-repeat="substance in vm.drug.ingredients">{{ substance.name + "; "}}</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2">
+				<label>Additional information</label>
+			</div>
+			<div class="col-xs-10">
+				<uib-tabset>
+	                <uib-tab ng-repeat="addInfo in vm.drug.additionalInfos" heading="{{ addInfo.title || addInfo.name || 'Warning' }}" select="vm.selectAdditionalInfo(addInfo)">
+						{{ addInfo.text }}
+					</uib-tab>
+				</uib-tabset>
+			</div>
+		</div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="vm.close()">Close</button>
+    </div>
+</div>
