@@ -4,7 +4,7 @@ const express						   = require("express"),
 	  child_process     			   = require('child_process'),
 	  passportUtilities                = require("../passport/passport.utilities"),
 	  logger 						   = require("../logger/logger"),
-
+	  q 							   = require("q"),
 	  router			               = express.Router(),
 	  process_files_jsPath             = process.cwd() + "/data.import/process.files.js",
 	  create_substances_collection_pig = process.cwd() + "/data.import/pig.queries/create_substances_collection.pig",
@@ -22,12 +22,24 @@ function logPigQueryResult(message, log) {
 
 function init(io) {
 	router.post("/import", passportUtilities.isAdminUser, function (req, res, next) {
-		let processFiles = require("../data.import/process.files");
+		res.json({ started: true });
+
+		let deferred = q.defer();
+
+		io.on("connection", function(socket) {
+			deferred.resolve(socket);
+
+			socket.on("forceDisconnect", () => {
+				socket.disconnect();
+
+				console.log("user disconnected");
+			});
+		});
 
 		let child = child_process.fork(process_files_jsPath, [drugsInputDir]);
 
 		child.on("message", function (message) {
-			res.json({ success: message.success });
+			deferred.promise.then(socket => socket.emit("progress", 1/3));
 
 			if (message.success)
 				logger.info("import to drugs collection is done");
@@ -42,22 +54,22 @@ function init(io) {
 					logPigQueryResult("create_substances_collection.pig", log);
 				});
 				child2.on("error", () => logger.error("failed to start child process for create_substances_collection.pig"));
+				child2.on("close", code => {
+			  		deferred.promise.then(socket => socket.emit("progress", 1/3));
+				});
 
 				let child3 = child_process.spawn(pigPath, ["-x", "local", create_producers_collection_pig]);
-				child3.stderr.on('data', data => {
+				child3.stderr.on("data", data => {
 					var log = data.toString();
 
 					logPigQueryResult("create_producers_collection.pig", log);
 				});
 				child3.on("error", () => logger.error("failed to start child process for create_producers_collection.pig"));
+				child3.on("close", code => {
+					deferred.promise.then(socket => socket.emit("progress", 1/3));
+				});
 			}
 		});
-	});
-
-	io.on('connection', function(socket) {
-		console.log('a user connected');
-
-		setTimeout(() => socket.emit("progress", 50), 2000);
 	});
 
 	return router;

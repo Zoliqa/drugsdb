@@ -146,8 +146,7 @@ define([], function () {
 		function showDrugDetails(drug) {
 			$uibModal.open({
 				templateUrl: "/public/app/main/drug.details.html",
-				// size: "lg",
-				windowClass: "",
+				windowClass: "fullscreen",
 				controller: "DrugDetailsController",
 				controllerAs: "vm",
 				resolve: {

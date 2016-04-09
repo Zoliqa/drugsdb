@@ -31,16 +31,7 @@ app.use("/public", express.static(__dirname + "/public"));
 
 indexRoutes(app, passport, io);
 
-// io.on('connection', function(socket) {
-//   	console.log('a user connected');
-//
-// 	setTimeout(() => socket.emit("progress", 50), 2000);
-// });
-
-if (!module.parent) {
-	// app.listen(4000);
-
+if (!module.parent)
 	server.listen(4000);
-}
 
 module.exports = app;
