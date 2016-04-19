@@ -29,7 +29,8 @@
 			    },
 			    files: [
 			      	"public/app/**/*",
-					"public/css/**/*"
+					"public/css/**/*",
+					"views/index.ejs"
 			    ]
 		  	},
 			less: {

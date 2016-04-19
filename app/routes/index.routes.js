@@ -3,7 +3,7 @@
 
 function init(app, passport, io) {
 	router.get("/", function (req, res) {
-		res.render("index", { title: "DrugsDB" });
+		res.render("index", { title: "DrugsDB", NODE_ENV: process.env.NODE_ENV });
 	});
 
 	//

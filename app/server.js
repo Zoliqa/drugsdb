@@ -11,6 +11,8 @@ const express      = require("express"),
 	  server	   = require("http").createServer(app),
 	  io		   = require("socket.io")(server);
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
