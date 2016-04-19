@@ -1,0 +1,1875 @@
+/home/zoliqa/Downloads/public_mm/bin/SKRrun.14 /home/zoliqa/Downloads/public_mm/bin/metamap14.BINARY.Linux --lexicon db -Z 2014AA --XMLf
+Berkeley DB databases (USAbase 2014AA strict model) are open.
+Static variants will come from table varsan in /home/zoliqa/Downloads/public_mm/DB/DB.USAbase.2014AA.strict.
+Derivational Variants: Adj/noun ONLY.
+Variant generation mode: static.
+Established connection $stream(-178639016) to TAGGER Server on localhost.
+
+metamap14.BINARY.Linux (2014)
+
+Control options:
+  composite_phrases=4
+  lexicon=db
+  mm_data_year=2014AA
+  XMLf
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MMOs PUBLIC "-//NLM//DTD MetaMap Machine Output//EN" "http://metamap.nlm.nih.gov/DTD/MMOtoXML_v5.dtd">
+<MMOs>
+ <MMO>
+  <CmdLine>
+   <Command>metamap14.BINARY.Linux --lexicon db -Z 2014AA --XMLf</Command>
+   <Options Count="5">
+    <Option>
+     <OptName>lexicon</OptName>
+     <OptValue>db</OptValue>
+    </Option>
+    <Option>
+     <OptName>mm_data_year</OptName>
+     <OptValue>2014AA</OptValue>
+    </Option>
+    <Option>
+     <OptName>XMLf</OptName>
+    </Option>
+    <Option>
+     <OptName>infile</OptName>
+     <OptValue>user_input</OptValue>
+    </Option>
+    <Option>
+     <OptName>outfile</OptName>
+     <OptValue>user_output</OptValue>
+    </Option>
+   </Options>
+  </CmdLine>
+  <AAs Count="0" />
+  <Negations Count="0" />
+  <Utterances Count="1">
+   <Utterance>
+    <PMID>00000000</PMID>
+    <UttSection>tx</UttSection>
+    <UttNum>1</UttNum>
+    <UttText>Allergy alert: Ibuprofen may cause a severe allergic reaction with paracetamol</UttText>
+    <UttStartPos>0</UttStartPos>
+    <UttLength>78</UttLength>
+    <Phrases Count="6">
+     <Phrase>
+      <PhraseText>Allergy alert</PhraseText>
+      <SyntaxUnits Count="2">
+       <SyntaxUnit>
+        <SyntaxType>mod</SyntaxType>
+        <LexMatch>allergy</LexMatch>
+        <InputMatch>Allergy</InputMatch>
+        <LexCat>noun</LexCat>
+        <Tokens Count="1">
+         <Token>allergy</Token>
+        </Tokens>
+       </SyntaxUnit>
+       <SyntaxUnit>
+        <SyntaxType>head</SyntaxType>
+        <LexMatch>alert</LexMatch>
+        <InputMatch>alert</InputMatch>
+        <LexCat>noun</LexCat>
+        <Tokens Count="1">
+         <Token>alert</Token>
+        </Tokens>
+       </SyntaxUnit>
+      </SyntaxUnits>
+      <PhraseStartPos>0</PhraseStartPos>
+      <PhraseLength>13</PhraseLength>
+      <Candidates Total="9" Excluded="1" Pruned="0" Remaining="8" />
+      <Mappings Count="15">
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C0002111</CandidateCUI>
+          <CandidateMatched>Allergy</CandidateMatched>
+          <CandidatePreferred>Allergy Specialty</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>bmod</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="2">
+           <Source>MTH</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C0239110</CandidateCUI>
+          <CandidateMatched>ALERT</CandidateMatched>
+          <CandidatePreferred>Consciousness clear</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>fndg</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>DXP</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C0002111</CandidateCUI>
+          <CandidateMatched>Allergy</CandidateMatched>
+          <CandidatePreferred>Allergy Specialty</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>bmod</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="2">
+           <Source>MTH</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3665546</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>ftcn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>NCI</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C0002111</CandidateCUI>
+          <CandidateMatched>Allergy</CandidateMatched>
+          <CandidatePreferred>Allergy Specialty</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>bmod</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="2">
+           <Source>MTH</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3669039</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert:Type:Point in time:^Patient:Nominal</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>clna</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>LNC</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C0020517</CandidateCUI>
+          <CandidateMatched>Allergy</CandidateMatched>
+          <CandidatePreferred>Hypersensitivity</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>patf</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="14">
+           <Source>CCS</Source>
+           <Source>CHV</Source>
+           <Source>CST</Source>
+           <Source>ICD10CM</Source>
+           <Source>ICF</Source>
+           <Source>ICPC</Source>
+           <Source>LNC</Source>
+           <Source>MSH</Source>
+           <Source>MTH</Source>
+           <Source>NCI</Source>
+           <Source>NLMSubSyn</Source>
+           <Source>OMIM</Source>
+           <Source>SNMI</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C0239110</CandidateCUI>
+          <CandidateMatched>ALERT</CandidateMatched>
+          <CandidatePreferred>Consciousness clear</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>fndg</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>DXP</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C0020517</CandidateCUI>
+          <CandidateMatched>Allergy</CandidateMatched>
+          <CandidatePreferred>Hypersensitivity</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>patf</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="14">
+           <Source>CCS</Source>
+           <Source>CHV</Source>
+           <Source>CST</Source>
+           <Source>ICD10CM</Source>
+           <Source>ICF</Source>
+           <Source>ICPC</Source>
+           <Source>LNC</Source>
+           <Source>MSH</Source>
+           <Source>MTH</Source>
+           <Source>NCI</Source>
+           <Source>NLMSubSyn</Source>
+           <Source>OMIM</Source>
+           <Source>SNMI</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3665546</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>ftcn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>NCI</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C0020517</CandidateCUI>
+          <CandidateMatched>Allergy</CandidateMatched>
+          <CandidatePreferred>Hypersensitivity</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>patf</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="14">
+           <Source>CCS</Source>
+           <Source>CHV</Source>
+           <Source>CST</Source>
+           <Source>ICD10CM</Source>
+           <Source>ICF</Source>
+           <Source>ICPC</Source>
+           <Source>LNC</Source>
+           <Source>MSH</Source>
+           <Source>MTH</Source>
+           <Source>NCI</Source>
+           <Source>NLMSubSyn</Source>
+           <Source>OMIM</Source>
+           <Source>SNMI</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3669039</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert:Type:Point in time:^Patient:Nominal</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>clna</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>LNC</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C0489531</CandidateCUI>
+          <CandidateMatched>allergy</CandidateMatched>
+          <CandidatePreferred>History of allergies</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>fndg</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="4">
+           <Source>CHV</Source>
+           <Source>HL7V3.0</Source>
+           <Source>MTH</Source>
+           <Source>NLMSubSyn</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C0239110</CandidateCUI>
+          <CandidateMatched>ALERT</CandidateMatched>
+          <CandidatePreferred>Consciousness clear</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>fndg</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>DXP</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C0489531</CandidateCUI>
+          <CandidateMatched>allergy</CandidateMatched>
+          <CandidatePreferred>History of allergies</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>fndg</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="4">
+           <Source>CHV</Source>
+           <Source>HL7V3.0</Source>
+           <Source>MTH</Source>
+           <Source>NLMSubSyn</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3665546</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>ftcn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>NCI</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C0489531</CandidateCUI>
+          <CandidateMatched>allergy</CandidateMatched>
+          <CandidatePreferred>History of allergies</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>fndg</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="4">
+           <Source>CHV</Source>
+           <Source>HL7V3.0</Source>
+           <Source>MTH</Source>
+           <Source>NLMSubSyn</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3669039</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert:Type:Point in time:^Patient:Nominal</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>clna</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>LNC</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C1314973</CandidateCUI>
+          <CandidateMatched>ALLERGY</CandidateMatched>
+          <CandidatePreferred>Response to antigens</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>clna</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>LNC</Source>
+           <Source>MTH</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C0239110</CandidateCUI>
+          <CandidateMatched>ALERT</CandidateMatched>
+          <CandidatePreferred>Consciousness clear</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>fndg</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>DXP</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C1314973</CandidateCUI>
+          <CandidateMatched>ALLERGY</CandidateMatched>
+          <CandidatePreferred>Response to antigens</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>clna</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>LNC</Source>
+           <Source>MTH</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3665546</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>ftcn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>NCI</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C1314973</CandidateCUI>
+          <CandidateMatched>ALLERGY</CandidateMatched>
+          <CandidatePreferred>Response to antigens</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>clna</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>LNC</Source>
+           <Source>MTH</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3669039</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert:Type:Point in time:^Patient:Nominal</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>clna</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>LNC</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C3539909</CandidateCUI>
+          <CandidateMatched>Allergy</CandidateMatched>
+          <CandidatePreferred>Allergic disposition</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>dsyn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>MTH</Source>
+           <Source>SNOMEDCT_US</Source>
+           <Source>SNOMEDCT_VET</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C0239110</CandidateCUI>
+          <CandidateMatched>ALERT</CandidateMatched>
+          <CandidatePreferred>Consciousness clear</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>fndg</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>DXP</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C3539909</CandidateCUI>
+          <CandidateMatched>Allergy</CandidateMatched>
+          <CandidatePreferred>Allergic disposition</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>dsyn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>MTH</Source>
+           <Source>SNOMEDCT_US</Source>
+           <Source>SNOMEDCT_VET</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3665546</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>ftcn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>NCI</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-888</MappingScore>
+        <MappingCandidates Total="2">
+         <Candidate>
+          <CandidateScore>-694</CandidateScore>
+          <CandidateCUI>C3539909</CandidateCUI>
+          <CandidateMatched>Allergy</CandidateMatched>
+          <CandidatePreferred>Allergic disposition</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergy</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>dsyn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>MTH</Source>
+           <Source>SNOMEDCT_US</Source>
+           <Source>SNOMEDCT_VET</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>0</StartPos>
+            <Length>7</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-861</CandidateScore>
+          <CandidateCUI>C3669039</CandidateCUI>
+          <CandidateMatched>Alert</CandidateMatched>
+          <CandidatePreferred>Alert:Type:Point in time:^Patient:Nominal</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>alert</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>clna</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>LNC</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>8</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+      </Mappings>
+     </Phrase>
+     <Phrase>
+      <PhraseText>:</PhraseText>
+      <SyntaxUnits Count="1">
+       <SyntaxUnit>
+        <SyntaxType>punc</SyntaxType>
+        <InputMatch>:</InputMatch>
+        <Tokens Count="0" />
+       </SyntaxUnit>
+      </SyntaxUnits>
+      <PhraseStartPos>13</PhraseStartPos>
+      <PhraseLength>1</PhraseLength>
+      <Candidates Total="0" Excluded="0" Pruned="0" Remaining="0" />
+      <Mappings Count="0" />
+     </Phrase>
+     <Phrase>
+      <PhraseText>Ibuprofen</PhraseText>
+      <SyntaxUnits Count="1">
+       <SyntaxUnit>
+        <SyntaxType>head</SyntaxType>
+        <LexMatch>ibuprofen</LexMatch>
+        <InputMatch>Ibuprofen</InputMatch>
+        <LexCat>noun</LexCat>
+        <Tokens Count="1">
+         <Token>ibuprofen</Token>
+        </Tokens>
+       </SyntaxUnit>
+      </SyntaxUnits>
+      <PhraseStartPos>15</PhraseStartPos>
+      <PhraseLength>9</PhraseLength>
+      <Candidates Total="2" Excluded="1" Pruned="0" Remaining="1" />
+      <Mappings Count="1">
+       <Mapping>
+        <MappingScore>-1000</MappingScore>
+        <MappingCandidates Total="1">
+         <Candidate>
+          <CandidateScore>-1000</CandidateScore>
+          <CandidateCUI>C0020740</CandidateCUI>
+          <CandidateMatched>Ibuprofen</CandidateMatched>
+          <CandidatePreferred>Ibuprofen</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>ibuprofen</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="2">
+           <SemType>orch</SemType>
+           <SemType>phsu</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>MSH</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>15</StartPos>
+            <Length>9</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+      </Mappings>
+     </Phrase>
+     <Phrase>
+      <PhraseText>may</PhraseText>
+      <SyntaxUnits Count="1">
+       <SyntaxUnit>
+        <SyntaxType>modal</SyntaxType>
+        <LexMatch>may</LexMatch>
+        <InputMatch>may</InputMatch>
+        <LexCat>modal</LexCat>
+        <Tokens Count="1">
+         <Token>may</Token>
+        </Tokens>
+       </SyntaxUnit>
+      </SyntaxUnits>
+      <PhraseStartPos>25</PhraseStartPos>
+      <PhraseLength>3</PhraseLength>
+      <Candidates Total="0" Excluded="0" Pruned="0" Remaining="0" />
+      <Mappings Count="0" />
+     </Phrase>
+     <Phrase>
+      <PhraseText>cause</PhraseText>
+      <SyntaxUnits Count="1">
+       <SyntaxUnit>
+        <SyntaxType>verb</SyntaxType>
+        <LexMatch>cause</LexMatch>
+        <InputMatch>cause</InputMatch>
+        <LexCat>verb</LexCat>
+        <Tokens Count="1">
+         <Token>cause</Token>
+        </Tokens>
+       </SyntaxUnit>
+      </SyntaxUnits>
+      <PhraseStartPos>29</PhraseStartPos>
+      <PhraseLength>5</PhraseLength>
+      <Candidates Total="2" Excluded="0" Pruned="0" Remaining="2" />
+      <Mappings Count="2">
+       <Mapping>
+        <MappingScore>-1000</MappingScore>
+        <MappingCandidates Total="1">
+         <Candidate>
+          <CandidateScore>-1000</CandidateScore>
+          <CandidateCUI>C0015127</CandidateCUI>
+          <CandidateMatched>cause</CandidateMatched>
+          <CandidatePreferred>Etiology aspects</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>cause</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>ftcn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>MSH</Source>
+           <Source>MTH</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>29</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-1000</MappingScore>
+        <MappingCandidates Total="1">
+         <Candidate>
+          <CandidateScore>-1000</CandidateScore>
+          <CandidateCUI>C1524003</CandidateCUI>
+          <CandidateMatched>Cause</CandidateMatched>
+          <CandidatePreferred>Science of Etiology</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>cause</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>cnce</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>1</TextMatchStart>
+            <TextMatchEnd>1</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="2">
+           <Source>MTH</Source>
+           <Source>NCI</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>29</StartPos>
+            <Length>5</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+      </Mappings>
+     </Phrase>
+     <Phrase>
+      <PhraseText>a severe allergic reaction with paracetamol</PhraseText>
+      <SyntaxUnits Count="5">
+       <SyntaxUnit>
+        <SyntaxType>det</SyntaxType>
+        <LexMatch>a</LexMatch>
+        <InputMatch>a</InputMatch>
+        <LexCat>det</LexCat>
+        <Tokens Count="1">
+         <Token>a</Token>
+        </Tokens>
+       </SyntaxUnit>
+       <SyntaxUnit>
+        <SyntaxType>mod</SyntaxType>
+        <LexMatch>severe</LexMatch>
+        <InputMatch>severe</InputMatch>
+        <LexCat>adj</LexCat>
+        <Tokens Count="1">
+         <Token>severe</Token>
+        </Tokens>
+       </SyntaxUnit>
+       <SyntaxUnit>
+        <SyntaxType>head</SyntaxType>
+        <LexMatch>allergic reaction</LexMatch>
+        <InputMatch>allergic reaction</InputMatch>
+        <LexCat>noun</LexCat>
+        <Tokens Count="2">
+         <Token>allergic</Token>
+         <Token>reaction</Token>
+        </Tokens>
+       </SyntaxUnit>
+       <SyntaxUnit>
+        <SyntaxType>prep</SyntaxType>
+        <LexMatch>with</LexMatch>
+        <InputMatch>with</InputMatch>
+        <LexCat>prep</LexCat>
+        <Tokens Count="1">
+         <Token>with</Token>
+        </Tokens>
+       </SyntaxUnit>
+       <SyntaxUnit>
+        <SyntaxType>mod</SyntaxType>
+        <LexMatch>paracetamol</LexMatch>
+        <InputMatch>paracetamol</InputMatch>
+        <LexCat>noun</LexCat>
+        <Tokens Count="1">
+         <Token>paracetamol</Token>
+        </Tokens>
+       </SyntaxUnit>
+      </SyntaxUnits>
+      <PhraseStartPos>35</PhraseStartPos>
+      <PhraseLength>43</PhraseLength>
+      <Candidates Total="8" Excluded="0" Pruned="0" Remaining="8" />
+      <Mappings Count="3">
+       <Mapping>
+        <MappingScore>-725</MappingScore>
+        <MappingCandidates Total="3">
+         <Candidate>
+          <CandidateScore>-783</CandidateScore>
+          <CandidateCUI>C3242604</CandidateCUI>
+          <CandidateMatched>severe reaction</CandidateMatched>
+          <CandidatePreferred>severe reaction</CandidatePreferred>
+          <MatchedWords Count="2">
+           <MatchedWord>severe</MatchedWord>
+           <MatchedWord>reaction</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>qlco</SemType>
+          </SemTypes>
+          <MatchMaps Count="2">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+           <MatchMap>
+            <TextMatchStart>4</TextMatchStart>
+            <TextMatchEnd>4</TextMatchEnd>
+            <ConcMatchStart>2</ConcMatchStart>
+            <ConcMatchEnd>2</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="2">
+           <Source>HL7V3.0</Source>
+           <Source>NLMSubSyn</Source>
+          </Sources>
+          <ConceptPIs Count="2">
+           <ConceptPI>
+            <StartPos>37</StartPos>
+            <Length>6</Length>
+           </ConceptPI>
+           <ConceptPI>
+            <StartPos>53</StartPos>
+            <Length>8</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-753</CandidateScore>
+          <CandidateCUI>C0700624</CandidateCUI>
+          <CandidateMatched>Allergic</CandidateMatched>
+          <CandidatePreferred>Allergic</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>allergic</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>ftcn</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>3</TextMatchStart>
+            <TextMatchEnd>3</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="1">
+           <Source>SNMI</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>44</StartPos>
+            <Length>8</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-586</CandidateScore>
+          <CandidateCUI>C0000970</CandidateCUI>
+          <CandidateMatched>Paracetamol</CandidateMatched>
+          <CandidatePreferred>Acetaminophen</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>paracetamol</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="2">
+           <SemType>orch</SemType>
+           <SemType>phsu</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>6</TextMatchStart>
+            <TextMatchEnd>6</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="6">
+           <Source>MSH</Source>
+           <Source>MTH</Source>
+           <Source>NCI</Source>
+           <Source>NLMSubSyn</Source>
+           <Source>PDQ</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>67</StartPos>
+            <Length>11</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-725</MappingScore>
+        <MappingCandidates Total="3">
+         <Candidate>
+          <CandidateScore>-586</CandidateScore>
+          <CandidateCUI>C0205082</CandidateCUI>
+          <CandidateMatched>Severe</CandidateMatched>
+          <CandidatePreferred>Severe (severity modifier)</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>severe</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>qlco</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>NLMSubSyn</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>37</StartPos>
+            <Length>6</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-790</CandidateScore>
+          <CandidateCUI>C0020517</CandidateCUI>
+          <CandidateMatched>Allergic reaction, NOS</CandidateMatched>
+          <CandidatePreferred>Hypersensitivity</CandidatePreferred>
+          <MatchedWords Count="2">
+           <MatchedWord>allergic</MatchedWord>
+           <MatchedWord>reaction</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>patf</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>3</TextMatchStart>
+            <TextMatchEnd>4</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>2</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="14">
+           <Source>CCS</Source>
+           <Source>CHV</Source>
+           <Source>CST</Source>
+           <Source>ICD10CM</Source>
+           <Source>ICF</Source>
+           <Source>ICPC</Source>
+           <Source>LNC</Source>
+           <Source>MSH</Source>
+           <Source>MTH</Source>
+           <Source>NCI</Source>
+           <Source>NLMSubSyn</Source>
+           <Source>OMIM</Source>
+           <Source>SNMI</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>44</StartPos>
+            <Length>17</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-586</CandidateScore>
+          <CandidateCUI>C0000970</CandidateCUI>
+          <CandidateMatched>Paracetamol</CandidateMatched>
+          <CandidatePreferred>Acetaminophen</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>paracetamol</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="2">
+           <SemType>orch</SemType>
+           <SemType>phsu</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>6</TextMatchStart>
+            <TextMatchEnd>6</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="6">
+           <Source>MSH</Source>
+           <Source>MTH</Source>
+           <Source>NCI</Source>
+           <Source>NLMSubSyn</Source>
+           <Source>PDQ</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>67</StartPos>
+            <Length>11</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+       <Mapping>
+        <MappingScore>-725</MappingScore>
+        <MappingCandidates Total="3">
+         <Candidate>
+          <CandidateScore>-586</CandidateScore>
+          <CandidateCUI>C0205082</CandidateCUI>
+          <CandidateMatched>Severe</CandidateMatched>
+          <CandidatePreferred>Severe (severity modifier)</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>severe</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>qlco</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>2</TextMatchStart>
+            <TextMatchEnd>2</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="3">
+           <Source>CHV</Source>
+           <Source>NLMSubSyn</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>37</StartPos>
+            <Length>6</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-790</CandidateScore>
+          <CandidateCUI>C1527304</CandidateCUI>
+          <CandidateMatched>Allergic Reaction</CandidateMatched>
+          <CandidatePreferred>Allergic Reaction</CandidatePreferred>
+          <MatchedWords Count="2">
+           <MatchedWord>allergic</MatchedWord>
+           <MatchedWord>reaction</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="1">
+           <SemType>patf</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>3</TextMatchStart>
+            <TextMatchEnd>4</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>2</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>yes</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="2">
+           <Source>MSH</Source>
+           <Source>MTH</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>44</StartPos>
+            <Length>17</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+         <Candidate>
+          <CandidateScore>-586</CandidateScore>
+          <CandidateCUI>C0000970</CandidateCUI>
+          <CandidateMatched>Paracetamol</CandidateMatched>
+          <CandidatePreferred>Acetaminophen</CandidatePreferred>
+          <MatchedWords Count="1">
+           <MatchedWord>paracetamol</MatchedWord>
+          </MatchedWords>
+          <SemTypes Count="2">
+           <SemType>orch</SemType>
+           <SemType>phsu</SemType>
+          </SemTypes>
+          <MatchMaps Count="1">
+           <MatchMap>
+            <TextMatchStart>6</TextMatchStart>
+            <TextMatchEnd>6</TextMatchEnd>
+            <ConcMatchStart>1</ConcMatchStart>
+            <ConcMatchEnd>1</ConcMatchEnd>
+            <LexVariation>0</LexVariation>
+           </MatchMap>
+          </MatchMaps>
+          <IsHead>no</IsHead>
+          <IsOverMatch>no</IsOverMatch>
+          <Sources Count="6">
+           <Source>MSH</Source>
+           <Source>MTH</Source>
+           <Source>NCI</Source>
+           <Source>NLMSubSyn</Source>
+           <Source>PDQ</Source>
+           <Source>SNOMEDCT_US</Source>
+          </Sources>
+          <ConceptPIs Count="1">
+           <ConceptPI>
+            <StartPos>67</StartPos>
+            <Length>11</Length>
+           </ConceptPI>
+          </ConceptPIs>
+          <Status>0</Status>
+          <Negated>0</Negated>
+         </Candidate>
+        </MappingCandidates>
+       </Mapping>
+      </Mappings>
+     </Phrase>
+    </Phrases>
+   </Utterance>
+  </Utterances>
+ </MMO>
+</MMOs>

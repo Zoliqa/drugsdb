@@ -10,6 +10,6 @@ function createSubstancesBag(substancesTuple) {
 			code: substance.get("code")
 		});
 	}
-
+ 
 	return substancesBag;
 }

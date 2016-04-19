@@ -18,7 +18,7 @@ function logPigQueryResult(message, log) {
 
 	if (/error/i.exec(log))
 		logger.error(message, log);
-}
+} 
 
 function init(io) {
 	router.post("/import", passportUtilities.isAdminUser, function (req, res, next) {

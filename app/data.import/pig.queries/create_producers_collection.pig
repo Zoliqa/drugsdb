@@ -16,4 +16,4 @@ producersDrugs = FOREACH producersGrouped GENERATE MIN(drugs2.producerId) AS pro
 												   MIN(drugs2.producerName) AS producerName,
 												   drugs2.(name, ingredients) AS drugs:{t:(name, ingredients)};
 
-STORE producersDrugs INTO 'mongodb://localhost:27017/drugsdb.producers' USING com.mongodb.hadoop.pig.MongoStorage();
+STORE producersDrugs INTO 'mongodb://localhost:27017/drugsdb.producers' USING com.mongodb.hadoop.pig.MongoStorage(); 

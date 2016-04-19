@@ -1,0 +1,114 @@
+/home/zoliqa/Downloads/public_mm/bin/SKRrun.14 /home/zoliqa/Downloads/public_mm/bin/metamap14.BINARY.Linux --lexicon db -Z 2014AA -+
+Berkeley DB databases (USAbase 2014AA strict model) are open.
+Static variants will come from table varsan in /home/zoliqa/Downloads/public_mm/DB/DB.USAbase.2014AA.strict.
+Derivational Variants: Adj/noun ONLY.
+Variant generation mode: static.
+Established connection $stream(-178811048) to TAGGER Server on localhost.
+
+metamap14.BINARY.Linux (2014)
+
+Control options:
+  composite_phrases=4
+  lexicon=db
+  mm_data_year=2014AA
+  bracketed_output
+Processing 00000000.tx.1: Allergy alert: Ibuprofen may cause a severe allergic reaction with paracetamol
+
+Phrase: Allergy alert
+>>>>> Phrase
+allergy alert
+<<<<< Phrase
+>>>>> Mappings
+Meta Mapping (888):
+   694   Allergy (Allergic disposition) [Disease or Syndrome]
+   861   Alert [Functional Concept]
+Meta Mapping (888):
+   694   Allergy (Allergic disposition) [Disease or Syndrome]
+   861   Alert (Alert:Type:Point in time:^Patient:Nominal) [Clinical Attribute]
+Meta Mapping (888):
+   694   Allergy (Allergic disposition) [Disease or Syndrome]
+   861   ALERT (Consciousness clear) [Finding]
+Meta Mapping (888):
+   694   Allergy (Allergy Specialty) [Biomedical Occupation or Discipline]
+   861   Alert [Functional Concept]
+Meta Mapping (888):
+   694   Allergy (Allergy Specialty) [Biomedical Occupation or Discipline]
+   861   Alert (Alert:Type:Point in time:^Patient:Nominal) [Clinical Attribute]
+Meta Mapping (888):
+   694   Allergy (Allergy Specialty) [Biomedical Occupation or Discipline]
+   861   ALERT (Consciousness clear) [Finding]
+Meta Mapping (888):
+   694   allergy (History of allergies) [Finding]
+   861   Alert [Functional Concept]
+Meta Mapping (888):
+   694   allergy (History of allergies) [Finding]
+   861   Alert (Alert:Type:Point in time:^Patient:Nominal) [Clinical Attribute]
+Meta Mapping (888):
+   694   allergy (History of allergies) [Finding]
+   861   ALERT (Consciousness clear) [Finding]
+Meta Mapping (888):
+   694   Allergy (Hypersensitivity) [Pathologic Function]
+   861   Alert [Functional Concept]
+Meta Mapping (888):
+   694   Allergy (Hypersensitivity) [Pathologic Function]
+   861   Alert (Alert:Type:Point in time:^Patient:Nominal) [Clinical Attribute]
+Meta Mapping (888):
+   694   Allergy (Hypersensitivity) [Pathologic Function]
+   861   ALERT (Consciousness clear) [Finding]
+Meta Mapping (888):
+   694   ALLERGY (Response to antigens) [Clinical Attribute]
+   861   Alert [Functional Concept]
+Meta Mapping (888):
+   694   ALLERGY (Response to antigens) [Clinical Attribute]
+   861   Alert (Alert:Type:Point in time:^Patient:Nominal) [Clinical Attribute]
+Meta Mapping (888):
+   694   ALLERGY (Response to antigens) [Clinical Attribute]
+   861   ALERT (Consciousness clear) [Finding]
+<<<<< Mappings
+
+Phrase: :
+>>>>> Phrase
+<<<<< Phrase
+
+Phrase: Ibuprofen
+>>>>> Phrase
+ibuprofen
+<<<<< Phrase
+>>>>> Mappings
+Meta Mapping (1000):
+  1000   Ibuprofen [Organic Chemical,Pharmacologic Substance]
+<<<<< Mappings
+
+Phrase: may
+>>>>> Phrase
+<<<<< Phrase
+
+Phrase: cause
+>>>>> Phrase
+cause
+<<<<< Phrase
+>>>>> Mappings
+Meta Mapping (1000):
+  1000   cause (Etiology aspects) [Functional Concept]
+Meta Mapping (1000):
+  1000   Cause (Science of Etiology) [Conceptual Entity]
+<<<<< Mappings
+
+Phrase: a severe allergic reaction with paracetamol
+>>>>> Phrase
+a severe allergic reaction with paracetamol
+<<<<< Phrase
+>>>>> Mappings
+Meta Mapping (725):
+   783   severe reaction [Qualitative Concept]
+   753   Allergic [Functional Concept]
+   586   Paracetamol (Acetaminophen) [Organic Chemical,Pharmacologic Substance]
+Meta Mapping (725):
+   586   Severe (Severe (severity modifier)) [Qualitative Concept]
+   790   Allergic Reaction [Pathologic Function]
+   586   Paracetamol (Acetaminophen) [Organic Chemical,Pharmacologic Substance]
+Meta Mapping (725):
+   586   Severe (Severe (severity modifier)) [Qualitative Concept]
+   790   Allergic reaction, NOS (Hypersensitivity) [Pathologic Function]
+   586   Paracetamol (Acetaminophen) [Organic Chemical,Pharmacologic Substance]
+<<<<< Mappings

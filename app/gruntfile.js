@@ -1,16 +1,18 @@
-﻿
-module.exports = function (grunt) {
-
+﻿module.exports = function (grunt) {
 	require("load-grunt-tasks")(grunt);
 
 	grunt.initConfig({
-		nodemon: {
-			dev: {
-				script: "server.js"
+		express: {
+			options: {
+		  	},
+			web: {
+				options: {
+			  		script: "server.js",
+				}
 			}
 		},
 		less: {
-			development: {
+			dev: {
 				options: {
 					compress: true,
 					optimization: 2
@@ -21,17 +23,44 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
-			styles: {
+		  	frontend: {
+			    options: {
+			      	livereload: true
+			    },
+			    files: [
+			      	"public/app/**/*",
+					"public/css/**/*"
+			    ]
+		  	},
+			less: {
 				files: ["public/css/**/*.less"],
-				tasks: ["less"],
+				tasks: ["less:dev"],
 				options: {
 					nospawn: true
 				}
-			}
+			},
+		  	server: {
+			    files: [
+			      	"data.import/**/*",
+					"db/**/*",
+					"logger/**/*",
+					"passport/**/*",
+					"routes/**/*",
+					"gruntfile.js",
+					"server.js"
+			    ],
+			    tasks: [
+      				"express:web"
+			    ],
+			    options: {
+		      		nospawn: true,
+			      	atBegin: true
+			    }
+		  	}
 		},
 		concurrent: {
 			dev: {
-				tasks: ["nodemon:dev", "watch:styles"],
+				tasks: ["watch:frontend", "watch:less", "watch:server"],
 				options: {
 					logConcurrentOutput: true
 				}
