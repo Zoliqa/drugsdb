@@ -1,11 +1,13 @@
-const mongoose = require("mongoose"),
-	  Schema   = mongoose.Schema;
+const mongoose      = require("mongoose"),
+	  Schema        = mongoose.Schema,
+	  keywordModel  = require("./keyword.model");
 
 const AdditionalInfoSchema = new Schema({
 	code: String,
 	name: String,
 	title: String,
-	text: String
+	text: String,
+	keywords: [keywordModel.KeywordSchema]
 }, {
 	collection: "additionalInfos"
 });

@@ -10,7 +10,8 @@ const fs	     = require("fs"),
 	  Drug       = require("../db/drug.model"),
 	  substance  = require("../db/substance.model"),
 	  producer   = require("../db/producer.model"),
-	  dirname    = process.argv[2]; //"/home/zoliqa/Documents/drugsdb/input/selected/";
+	  dirname    = "/home/zoliqa/Documents/drugsdb/input/selected/";
+	  //dirname    = process.argv[2];
 
 let promises = [];
 

@@ -1,12 +1,12 @@
 "use strict";
 
-const AdmZip     	      = require("adm-zip"),
-	  dom        	      = require("xmldom").DOMParser,
+const dom        	      = require("xmldom").DOMParser,
 	  xpath      	      = require("xpath"),
 	  q          	      = require("q"),
 	  Drug       	 	  = require("../db/drug.model"),
 	  substanceModel      = require("../db/substance.model"),
-	  additionalInfoModel = require("../db/additional.info.model");
+	  additionalInfoModel = require("../db/additional.info.model"),
+	  parseWarnings       = require("./warnings.parser");
 
 function parseXml(xml, file) {
 	let deferred = q.defer();
@@ -40,11 +40,18 @@ function parseXml(xml, file) {
 			drug.ingredients.push(substance);
 		});
 
+		let reUnknownSymbols = /[^a-zA-Z,_+-\.,!@#$%^&*();\/|<> ]+/g,
+		    reHtmlTags = /<.*?((\/>)|(<\/[^>]+>))/g;
+
 		function addAdditionalInfoToDrug(sectionElement) {
 			let code = select("string(./x:code/@code)", sectionElement);
 			let name = select("string(./x:code/@displayName)", sectionElement);
 			let title = select("string(./x:title)", sectionElement);
 			let text = select("string(./x:text)", sectionElement);
+
+			// TODO: fix replacement of html tags inside the text string
+			text = text.replace(reHtmlTags, " ");
+			text = text.replace(reUnknownSymbols, " ");
 
 			let additionalInfo = additionalInfoModel.AdditionalInfo({
 				code: code,
@@ -65,7 +72,9 @@ function parseXml(xml, file) {
 			childSectionElements.forEach(addAdditionalInfoToDrug);
 		}
 
-		drug.save().then(deferred.resolve, deferred.reject);
+		let promises = drug.additionalInfos.map(additionalInfo => parseWarnings(additionalInfo));
+
+		q.all(promises).then(() => drug.save()).then(deferred.resolve).catch(deferred.reject);
 	}
 	catch (e) {
 		console.log(e);
