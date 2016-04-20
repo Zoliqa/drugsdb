@@ -1,1 +1,1 @@
-﻿echo "Symptoms may include: hives facial swelling asthma (wheezing) shock skin reddening rash blistersIf an allergic reaction occurs, stop use and seek medical help right away"  | ./bin/metamap14 -J sosy,dsyn --1XMLf > out.xml
+﻿echo "Symptoms may include: hives facial swelling asthma (wheezing) shock skin reddening rash blistersIf an allergic reaction occurs, stop use and seek medical help right away"  | ./metamap14 -J sosy,dsyn --XMLf > out.xml
