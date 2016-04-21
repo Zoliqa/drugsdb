@@ -8,8 +8,8 @@ const dom        	= require("xmldom").DOMParser,
 	  metamapPath	= "/home/zoliqa/Downloads/public_mm/bin/metamap14",
 	  metamapArgs	= "-J sosy,dsyn,orch,phsu --XMLf";
 
-function parseWarnings(additionalInfo) {
-	let echo      = child_process.spawn("echo", [additionalInfo.text]),
+function parseWarnings(text) {
+	let echo      = child_process.spawn("echo", [text]),
 		metamap   = child_process.spawn(metamapPath, [metamapArgs]),
 		xmlResult = "",
 		xmlParsed = false,
@@ -45,11 +45,7 @@ function parseWarnings(additionalInfo) {
 			if (!xmlParsed) {
 				xmlParsed = true;
 
-				parseXml(xmlResult).then(keywords => {
-					additionalInfo.keywords = keywords;
-
-					deferred.resolve();
-				}, deferred.reject);
+				parseXml(xmlResult).then(deferred.resolve, deferred.reject);
 			}
 		}
 	});

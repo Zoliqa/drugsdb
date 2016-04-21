@@ -1,8 +1,7 @@
-﻿
-var producer = require("./producer.model");
+const producerModel = require("./producer.model");
 
 function search(term, next) {
-	producer.Producer.find({
+	producerModel.Producer.find({
 		producerName: {
 			$regex: new RegExp(".*" + term + ".*", "i")
 		}

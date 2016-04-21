@@ -1,0 +1,1 @@
+db.getCollection('drugs').find({ $where: "this.additionalInfos.filter(addInfo => addInfo.keywords.length > 0).length > 0" })

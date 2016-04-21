@@ -1,8 +1,7 @@
-﻿
-var substance = require("./substance.model");
+const substanceModel = require("./substance.model");
 
 function search(term, next) {
-	substance.Substance.find({
+	substanceModel.Substance.find({
 		name: {
 			$regex: new RegExp(".*" + term + ".*", "i")
 		}

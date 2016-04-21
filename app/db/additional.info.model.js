@@ -7,6 +7,7 @@ const AdditionalInfoSchema = new Schema({
 	name: String,
 	title: String,
 	text: String,
+	warningsXml: String,
 	keywords: [keywordModel.KeywordSchema]
 }, {
 	collection: "additionalInfos"

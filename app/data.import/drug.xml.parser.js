@@ -72,9 +72,11 @@ function parseXml(xml, file) {
 			childSectionElements.forEach(addAdditionalInfoToDrug);
 		}
 
-		let promises = drug.additionalInfos.map(additionalInfo => parseWarnings(additionalInfo));
+		// let promises = drug.additionalInfos.map(additionalInfo => parseWarnings(additionalInfo));
 
-		q.all(promises).then(() => drug.save()).then(deferred.resolve).catch(deferred.reject);
+		// q.all(promises).then(() => drug.save()).then(deferred.resolve).catch(deferred.reject);
+
+		drug.save().then(deferred.resolve).catch(deferred.reject);
 	}
 	catch (e) {
 		console.log(e);
