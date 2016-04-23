@@ -1,6 +1,6 @@
 define([], function () {
 
-	function userOnlineService($resource) {
+	function userOnlineService($resource, cacheService) {
 		var resource = $resource("/user/:id/:username", null, {
 			"get": {
 				cache: true
@@ -13,7 +13,14 @@ define([], function () {
 			},
 			"logout": {
 				url: "/user/logout",
-				method: "GET"
+				method: "GET",
+				interceptor: {
+	                response: function (data) {
+						cacheService.invalidate("/user");
+	                },
+	                responseError: function (data) {
+	                }
+	            }
 			}
 		});
 
