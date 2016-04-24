@@ -1,0 +1,21 @@
+PREFIX terms: <http://purl.org/dc/terms/>
+
+SELECT ?name, ?comment 
+WHERE {
+
+{ ?subject a <http://dbpedia.org/ontology/Disease> . }
+
+UNION 
+
+{ ?subject terms:subject <http://dbpedia.org/resource/Category:Medical_signs> . }
+
+
+?subject dbpedia2:name ?name . 
+?subject rdfs:comment ?comment .
+
+FILTER(regex(?name, "urticaria", "i"))
+FILTER(lang(?name) = "en")
+FILTER(lang(?comment) = "en")
+}
+ORDER BY strlen(?name)
+LIMIT 1

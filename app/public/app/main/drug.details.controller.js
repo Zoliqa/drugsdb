@@ -1,11 +1,27 @@
 define([], function () {
 
-	function DrugDetailsController($uibModalInstance, _, drug) {
+	function DrugDetailsController($uibModalInstance, _, drug, dbpediaService) {
 		var vm = this;
 
 		this.drug = drug;
 		this.close = close;
 		this.getTypeDescriptions = getTypeDescriptions;
+
+		(function init() {
+			_.each(drug.additionalInfos, function (additionalInfo) {
+				additionalInfo.keywords = _.filter(additionalInfo.keywords, function (keyword) {
+					if (keyword.semTypes[0] === "sosy" || keyword.semTypes[0] === "dsyn") {
+						dbpediaService.search(keyword.candidatePreferred).then(function (result) {
+							keyword.description = result.description;
+						});
+
+						return true;
+					}
+
+					return false;
+				});
+			});
+		})();
 
 		function close() {
 			$uibModalInstance.dismiss();

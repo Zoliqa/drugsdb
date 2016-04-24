@@ -29,29 +29,31 @@
 			</div>
 			<div class="col-xs-10">
 				<uib-tabset>
-	                <uib-tab ng-repeat="addInfo in vm.drug.additionalInfos" heading="{{ addInfo.title || addInfo.name || 'Warning' }}" select="vm.selectAdditionalInfo(addInfo)">
+	                <uib-tab ng-repeat="addInfo in vm.drug.additionalInfos"
+							 heading="{{ addInfo.title || addInfo.name || 'Warning' }}"
+							 select="vm.selectAdditionalInfo(addInfo)">
 						<div class="row">
-							<div class="col-xs-6">{{ addInfo.text }}</div>
-							<div class="col-xs-6">
-								<table class="table">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Keyword</th>
-											<th>Type</th>
-											<th>Description</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr ng-repeat="keyword in addInfo.keywords">
-											<td>{{ $index + 1 }}</td>
-											<td>{{ keyword.candidateMatched }}</td>
-											<td>{{ vm.getTypeDescriptions(keyword.semTypes) }}</td>
-											<td></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+							{{ addInfo.text }}
+						</div>
+						<div>
+							<table class="table">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Keyword</th>
+										<th>Type</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="keyword in addInfo.keywords">
+										<td>{{ $index + 1 }}</td>
+										<td>{{ keyword.candidateMatched }}</td>
+										<td>{{ vm.getTypeDescriptions(keyword.semTypes) }}</td>
+										<td>{{ keyword.description }}</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</uib-tab>
 				</uib-tabset>
