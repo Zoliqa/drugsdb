@@ -1,6 +1,6 @@
 define([], function () {
 
-	function DrugDetailsController($uibModalInstance, _, drug, dbpediaService) {
+	function DrugDetailsController($uibModalInstance, _, drug, termService) {
 		var vm = this;
 
 		this.drug = drug;
@@ -11,8 +11,10 @@ define([], function () {
 			_.each(drug.additionalInfos, function (additionalInfo) {
 				additionalInfo.keywords = _.filter(additionalInfo.keywords, function (keyword) {
 					if (keyword.semTypes[0] === "sosy" || keyword.semTypes[0] === "dsyn") {
-						dbpediaService.search(keyword.candidatePreferred).then(function (result) {
-							keyword.description = result.description;
+						termService.current.then(function (termServiceCurrent) {
+							termServiceCurrent.search(keyword.candidatePreferred).then(function (result) {
+								keyword.description = result.description;
+							});
 						});
 
 						return true;

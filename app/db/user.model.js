@@ -11,6 +11,7 @@ var User = mongoose.model("User", {
 	email: String,
 	birthdate: Date,
 	isAdmin: Boolean,
+	termServiceProvider: String,
 	searches: [searchEntry.SearchEntrySchema]
 });
 

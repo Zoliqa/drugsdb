@@ -3,7 +3,11 @@ define([], function () {
 	function RegisterController($location, bcrypt, userService) {
 		var vm = this;
 
-		vm.user = {
+		this.termServiceProviders = {
+			"termDbpediaService": "DBPedia",
+			"termMedlinePlusService": "MedlinePlus"
+		};
+		this.user = {
 			username: "",
 			password: "",
 			confirmedPassword: "",
@@ -11,11 +15,13 @@ define([], function () {
 			lastname: "",
 			email: "",
 			birthdate: new Date(),
+			termServiceProvider: Object.keys(vm.termServiceProviders)[0],
 			isAdmin: false
 		};
-		vm.errorMessage = "";
-		vm.register = register;
-		vm.cancel = cancel;
+		this.errorMessage = "";
+		this.register = register;
+		this.cancel = cancel;
+		this.selectTermServiceProvider = selectTermServiceProvider;
 
 		function register() {
 			if (vm.user.password !== vm.user.confirmedPassword) {
@@ -41,6 +47,10 @@ define([], function () {
 		function cancel () {
 			$location.path("/login");
 		};
+
+		function selectTermServiceProvider(termServiceProviderKey) {
+			vm.user.termServiceProvider = termServiceProviderKey;
+		}
 	}
 
 	return RegisterController;

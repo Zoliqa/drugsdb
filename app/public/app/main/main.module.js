@@ -11,7 +11,9 @@ define([
 	"app/main/services/search.producer.service",
 	"app/main/services/search.substance.service",
 	"app/main/services/search.entry.service",
-	"app/main/services/dbpedia.service",
+	"app/main/services/term.service",
+	"app/main/services/term.dbpedia.service",
+	"app/main/services/term.medlineplus.service",
 	"app/main/main.config",
 	"app/main/main.run"],
 	function (angular,
@@ -26,7 +28,9 @@ define([
 			  searchProducerService,
 			  searchSubstanceService,
 			  searchEntryService,
-			  dbpediaService,
+			  termService,
+			  termDbpediaService,
+			  termMedlinePlusService,
 			  mainConfig,
 			  mainRun) {
 
@@ -40,7 +44,9 @@ define([
 			.factory("searchProducerService", searchProducerService)
 			.factory("searchSubstanceService", searchSubstanceService)
 			.factory("searchEntryService", searchEntryService)
-			.factory("dbpediaService", dbpediaService)
+			.factory("termService", termService)
+			.factory("termDbpediaService", termDbpediaService)
+			.factory("termMedlinePlusService", termMedlinePlusService)
 			.constant("_", _)
 			.constant("UNAUTHORIZED", "UNAUTHORIZED")
 			.config(mainConfig)

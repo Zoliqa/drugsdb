@@ -1,6 +1,6 @@
 ﻿define([], function () {
 
-	function dbpediaService($http, $q) {
+	function termDpediaService($http, $q) {
 		var service = {
 			search: search
 		};
@@ -44,5 +44,5 @@
 		}
 	}
 
-	return dbpediaService;
+	return termDpediaService;
 });

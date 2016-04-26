@@ -36,10 +36,37 @@
     <div class="form-group">
         <label>Birthdate</label>
 
-        <input type="date" ng-model="vm.user.birthdate" />
+        <input type="date" ng-model="vm.user.birthdate" class="form-control" />
     </div>
 
-    <div class="form-group text-right">
+    <div class="form-group">
+        <label>Search term provider</label>
+
+        <!-- <select ng-model="vm.user.termServiceProvider" class="form-control">
+            <option value="termDbpediaService">DBpedia</option>
+            <option value="termMedlinePlusService">MedlinePlus</option>
+        </select> -->
+
+        <div>
+            <div class="btn-group" uib-dropdown dropdown-append-to-body>
+                <button id="btn-append-to-body" type="button" class="btn btn-primary" uib-dropdown-toggle>
+                    {{ vm.termServiceProviders[vm.user.termServiceProvider] }} <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                    <li role="menuitem">
+                        <a  href=""
+                            ng-click="vm.selectTermServiceProvider(name)"
+                            ng-repeat="(name, desc) in vm.termServiceProviders">
+                            {{ desc }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group text-right clearfix">
         <button class="btn btn-primary btn-md" ng-click="vm.register()">Register</button>
         <button class="btn btn-primary btn-md" ng-click="vm.cancel()">Cancel</button>
     </div>

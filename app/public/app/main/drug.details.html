@@ -41,6 +41,7 @@
 									<tr>
 										<th>#</th>
 										<th>Keyword</th>
+										<th> Preferred keyword</th>
 										<th>Type</th>
 										<th>Description</th>
 									</tr>
@@ -49,6 +50,7 @@
 									<tr ng-repeat="keyword in addInfo.keywords">
 										<td>{{ $index + 1 }}</td>
 										<td>{{ keyword.candidateMatched }}</td>
+										<td>{{ keyword.candidatePreferred }}</td>
 										<td>{{ vm.getTypeDescriptions(keyword.semTypes) }}</td>
 										<td>{{ keyword.description }}</td>
 									</tr>
