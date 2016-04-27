@@ -2,6 +2,7 @@ define([
 	"angular",
 	"angularRoute",
 	"underscore",
+	"jquery",
 	"app/main/pageheader.controller",
 	"app/main/search.controller",
 	"app/main/history.controller",
@@ -19,6 +20,7 @@ define([
 	function (angular,
 			  angularRoute,
 			  _,
+			  jquery,
 			  PageHeaderController,
 			  SearchController,
 			  HistoryController,
@@ -48,6 +50,7 @@ define([
 			.factory("termDbpediaService", termDbpediaService)
 			.factory("termMedlinePlusService", termMedlinePlusService)
 			.constant("_", _)
+			.constant("jquery", jquery)
 			.constant("UNAUTHORIZED", "UNAUTHORIZED")
 			.config(mainConfig)
 			.run(mainRun);

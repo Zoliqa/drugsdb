@@ -3,7 +3,9 @@ const express			= require("express"),
 	  producerQueries   = require("../db/producer.queries"),
 	  substanceQueries	= require("../db/substance.queries"),
 	  passportUtilities = require("../passport/passport.utilities"),
-	  router			= express.Router();
+	  router			= express.Router(),
+	  request 			= require("request"),
+	  medlinePlusWsUrl  = "https://wsearch.nlm.nih.gov/ws/query?db=healthTopics&term=";
 
 router.post("/searchall", passportUtilities.isAuthenticated, function (req, res, next) {
 	drugQueries.search(req.body.term, (err, drugs) => {
@@ -38,6 +40,19 @@ router.post("/searchsubstance", passportUtilities.isAuthenticated, function (req
 			return next(err);
 
 		return res.json(substances);
+	});
+});
+
+router.get("/searchmedterm", passportUtilities.isAuthenticated, function (req, res, next) {
+	request(medlinePlusWsUrl + req.query.term, function (error, response, body) {
+		if (error)
+			next(error);
+
+		if (response.statusCode === 200) {
+			res.set("Content-Type", "text/xml");
+
+			return res.send(body);
+		}
 	});
 });
 

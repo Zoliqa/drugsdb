@@ -1,6 +1,6 @@
 ﻿define([], function () {
 
-	function termMedlinePlusService($http, $q) {
+	function termMedlinePlusService($http, $q, jquery) {
 		var service = {
 			search: search
 		};
@@ -8,14 +8,17 @@
 		return service;
 
 		function search(term) {
-			var url = "https://wsearch.nlm.nih.gov/ws/query?db=healthTopics&term=" + term;
+ 			var url = "/main/searchmedterm?term=" + term;
 			var deferred = $q.defer();
 
 			$http.get(url).then(function (result) {
-				var d = result;
+				var xml = jquery.parseXML(result.data);
+				var description = jquery(xml).find("list > document:first > content[name='FullSummary']").text();
+
+				description = description.replace(/<[^>]+>/g, "");
 
 				deferred.resolve({
-					description: ""
+					description: description
 				});
 			}, deferred.reject);
 

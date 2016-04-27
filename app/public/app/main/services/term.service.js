@@ -1,6 +1,6 @@
 ﻿define([], function () {
 
-	function termService($q, $injector, userService) {
+	function termService($q, $injector, userService, termDbpediaService) {
 		var service = {
 			current: null
 		};
@@ -15,7 +15,16 @@
 			service.current = deferred.promise;
 
 			userService.current.get().$promise.then(function (user) {
-				deferred.resolve($injector.get(user.termServiceProvider));
+				var service;
+
+				try {
+					service = $injector.get(user.termServiceProvider)
+				}
+				catch (e) {
+					service = termDbpediaService;
+				}
+
+				deferred.resolve(service);
 			});
 		};
 	}
