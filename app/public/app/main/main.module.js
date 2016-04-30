@@ -15,6 +15,7 @@ define([
 	"app/main/services/term.service",
 	"app/main/services/term.dbpedia.service",
 	"app/main/services/term.medlineplus.service",
+	"app/main/services/levenshtein.distance.service",
 	"app/main/main.config",
 	"app/main/main.run"],
 	function (angular,
@@ -33,6 +34,7 @@ define([
 			  termService,
 			  termDbpediaService,
 			  termMedlinePlusService,
+			  levenhsteinDistanceService,
 			  mainConfig,
 			  mainRun) {
 
@@ -49,6 +51,7 @@ define([
 			.factory("termService", termService)
 			.factory("termDbpediaService", termDbpediaService)
 			.factory("termMedlinePlusService", termMedlinePlusService)
+			.factory("levenhsteinDistanceService", levenhsteinDistanceService)
 			.constant("_", _)
 			.constant("jquery", jquery)
 			.constant("UNAUTHORIZED", "UNAUTHORIZED")
