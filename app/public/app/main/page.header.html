@@ -13,7 +13,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li ng-if="vm.isAdmin">
+                <li ng-if="!!vm.user && vm.user.isAdmin">
                     <a href="#/admin/import">Admin</a>
                 </li>
                 <li>
@@ -31,6 +31,8 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                <span class="pull-left  username hidden-xs">{{ !!vm.user && vm.user.username || "" }}</span>
+
                 <li>
                     <a href="" ng-click="vm.logout()">
                         <span class="glyphicon glyphicon-log-out"></span>

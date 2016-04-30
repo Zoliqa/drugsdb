@@ -66,7 +66,6 @@
       			"		FILTER (lang(?label) = 'en')" +
       			"		FILTER (lang(?comment) = 'en')" +
    				"	}" +
-
 				"}";
 
 			query = query.replace(/KEYWORD/g, term);

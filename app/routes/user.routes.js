@@ -62,8 +62,8 @@ router.post("/", function (req, res, next) {
 	});
 });
 
-router.put("/:id", passportUtilities.isAuthenticated, function (req, res, next) {
-	userQueries.update(req.params.id, req.body, function (err, user) {
+router.put("/", passportUtilities.isAuthenticated, function (req, res, next) {
+	userQueries.update(req.user._id, req.body, function (err, user) {
 		if (err)
 			return next(err);
 
@@ -71,8 +71,8 @@ router.put("/:id", passportUtilities.isAuthenticated, function (req, res, next) 
 	});
 });
 
-router.delete("/:id", passportUtilities.isAuthenticated, function (req, res, next) {
-	userQueries.remove(req.params.id, function (err, user) {
+router.delete("/", passportUtilities.isAuthenticated, function (req, res, next) {
+	userQueries.remove(req.user._id, function (err, user) {
 		if (err)
 			return next(err);
 
