@@ -2,30 +2,28 @@
 
 	function termService($q, $injector, userService, termDbpediaService) {
 		var service = {
-			current: null
+			search: search
 		};
-
-		init();
 
 		return service;
 
-		function init() {
+		function search(term) {
 			var deferred = $q.defer();
 
-			service.current = deferred.promise;
-
 			userService.current.get().$promise.then(function (user) {
-				var service;
+				var serviceImpl;
 
 				try {
-					service = $injector.get(user.termServiceProvider)
+					serviceImpl = $injector.get(user.termServiceProvider)
 				}
 				catch (e) {
-					service = termDbpediaService;
+					serviceImpl = termDbpediaService;
 				}
 
-				deferred.resolve(service);
+				serviceImpl.search(term).then(deferred.resolve, deferred.reject);
 			});
+
+			return deferred.promise;
 		};
 	}
 

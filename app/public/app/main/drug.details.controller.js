@@ -11,10 +11,8 @@ define([], function () {
 			_.each(drug.additionalInfos, function (additionalInfo) {
 				additionalInfo.keywords = _.filter(additionalInfo.keywords, function (keyword) {
 					if (keyword.semTypes[0] === "sosy" || keyword.semTypes[0] === "dsyn") {
-						termService.current.then(function (termServiceCurrent) {
-							termServiceCurrent.search(keyword.candidatePreferred).then(function (result) {
-								keyword.description = result.description;
-							});
+						termService.search(keyword.candidatePreferred).then(function (result) {
+							keyword.description = result.description;
 						});
 
 						return true;
