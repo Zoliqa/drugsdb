@@ -1,0 +1,11 @@
+Ibuprofen may cause a severe allergic reaction, especially in people allergic to aspirin.
+
+Although the administration of clopidogrel 75 mg per day did not modify the pharmacokinetics of S-warfarin (a CYP2C9 substrate) or INR in patients receiving long-term warfarin therapy, coadministration of Plavix with warfarin increases the risk of bleeding because of independent effects on hemostasis.
+
+Plavix use with aspirin was associated with an increase in major bleeding (primarily gastrointestinal and at puncture sites) compared to placebo with aspirin (see <linkHtml href="#Table_1">Table 1</linkHtml>)
+
+Major bleeding event rate for Plavix + aspirin was dose-dependent on aspirin:
+
+Concomitant use of ARAVA and rifampin, a potent inducer of CYP and transporters, increased the plasma concentration of teriflunomide by 40%
+
+Coadministration of ARAVA with warfarin requires close monitoring of the international normalized ratio (INR) because teriflunomide, the active metabolite of ARAVA, may decrease peak INR by approximately 25%.
