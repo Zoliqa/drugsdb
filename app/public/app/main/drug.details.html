@@ -25,6 +25,14 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-2">
+				<label>Interactions</label>
+			</div>
+			<div class="col-xs-10">
+				<span ng-repeat="drug in vm.drug.interactionDrugs">{{ drug + "; "}}</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2">
 				<label>Additional information</label>
 			</div>
 			<div class="col-xs-10">

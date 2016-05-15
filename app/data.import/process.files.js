@@ -11,7 +11,7 @@ const fs	         = require("fs"),
 	  substanceModel = require("../db/substance.model"),
 	  producerModel  = require("../db/producer.model"),
 	  parseWarnings  = require("./warnings.parser"),
-	  //dirname        = "/home/zoliqa/Documents/drugsdb/input/selected2/";
+	  // dirname        = "/home/zoliqa/Documents/drugsdb/input/selected_interactions_debug/";
 	  dirname    = process.argv[2];
 
 let promises = [];
@@ -49,13 +49,29 @@ Drug.remove({})
 
 					drug.additionalInfos.forEach(additionalInfo => {
 						promise = promise.then(() => {
-							return parseWarnings(additionalInfo.text).then(keywords => {
+							return parseWarnings(additionalInfo.text).then(result => {
+								let keywords 		 = result.keywords,
+									interactionDrugs = result.interactionDrugs,
+									reDrugName       = new RegExp(drug.name, "i");
+
+							    interactionDrugs = interactionDrugs.filter(d => {
+									let containsDrugName       = reDrugName.exec(d),
+										reInteractionDrugName  = new RegExp(d, "i"),
+										containsIngredientName = drug.ingredients.some(ingredient => reInteractionDrugName.exec(ingredient.name));
+
+									return !containsDrugName;
+								});
+
 								return Drug.findOneAndUpdate({
 									_id: drug._id,
 									"additionalInfos._id": additionalInfo._id
 								}, {
 									$set: {
-										"additionalInfos.$.keywords": keywords
+										"additionalInfos.$.keywords": keywords,
+
+									},
+									$addToSet: {
+										interactionDrugs: { $each: interactionDrugs }
 									}
 								});
 							});

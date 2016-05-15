@@ -8,7 +8,8 @@ const DrugSchema = new Schema({
 	producerId: String,
 	producerName: String,
 	ingredients: [substanceModel.SubstanceSchema],
-	additionalInfos: [additionalInfoModel.AdditionalInfoSchema]
+	additionalInfos: [additionalInfoModel.AdditionalInfoSchema],
+	interactionDrugs: [String]
 })
 
 const Drug = mongoose.model("Drug", DrugSchema);

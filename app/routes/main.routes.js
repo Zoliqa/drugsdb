@@ -48,11 +48,13 @@ router.get("/searchmedterm", passportUtilities.isAuthenticated, function (req, r
 		if (error)
 			next(error);
 
-		if (response.statusCode === 200) {
+		if (response && response.statusCode === 200) {
 			res.set("Content-Type", "text/xml");
 
 			return res.send(body);
 		}
+
+		return res.send("");
 	});
 });
 
