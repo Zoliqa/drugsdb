@@ -1,7 +1,8 @@
 define([], function () {
 
 	function DrugDetailsController($uibModalInstance, _, drug, termService) {
-		var vm = this;
+		var vm = this,
+			semTypes = ["sosy", "dsyn", "inpo", "patf"];
 
 		this.drug = drug;
 		this.close = close;
@@ -10,7 +11,7 @@ define([], function () {
 		(function init() {
 			_.each(drug.additionalInfos, function (additionalInfo) {
 				additionalInfo.keywords = _.filter(additionalInfo.keywords, function (keyword) {
-					if (keyword.semTypes[0] === "sosy" || keyword.semTypes[0] === "dsyn") {
+					if (semTypes.indexOf(keyword.semTypes[0]) > -1) {
 						termService.search(keyword.candidatePreferred).then(function (result) {
 							keyword.description = result.description;
 						});
@@ -46,6 +47,14 @@ define([], function () {
 
 					case "phsu":
 						description = "pharmacologic substance";
+						break;
+
+					case "inpo":
+						description = "injury or poisoning";
+						break;
+
+					case "patf":
+						description = "pathological function";
 						break;
 				}
 

@@ -40,7 +40,7 @@ function parseXml(xml, file) {
 			drug.ingredients.push(substance);
 		});
 
-		let reUnknownSymbols = /[^a-zA-Z,_+-\.,!@#$%^&*();\/|<> ]+/g,
+		let reUnknownSymbols = /[^a-zA-Z,_+-\.,!@#$%^&*();\/|<> 0-9d]+/g,
 		    reHtmlTags = /<.*?((\/>)|(<\/[^>]+>))/g;
 
 		function addAdditionalInfoToDrug(sectionElement) {
@@ -62,19 +62,15 @@ function parseXml(xml, file) {
 			drug.additionalInfos.push(additionalInfo);
 		}
 
-		let warningSectionElements = select("//x:section[x:code[@code='34071-1']]", doc);
+		// let warningSectionElements = select("//x:section[x:code[@code='34071-1']]", doc);
+		let warningSectionElements = select("//x:section[x:code[contains('34071-1 50570-1 50569-3 50568-5 34073-7', @code)]]", doc);
 
-		if (warningSectionElements.length > 0) {
-			let baseSectionElement = warningSectionElements[0];
-			addAdditionalInfoToDrug(baseSectionElement);
+		warningSectionElements.forEach(warningSectonElement => {
+			addAdditionalInfoToDrug(warningSectonElement);
 
-			let childSectionElements = select(".//x:section", baseSectionElement);
+			let childSectionElements = select(".//x:section", warningSectonElement);
 			childSectionElements.forEach(addAdditionalInfoToDrug);
-		}
-
-		// let promises = drug.additionalInfos.map(additionalInfo => parseWarnings(additionalInfo));
-
-		// q.all(promises).then(() => drug.save()).then(deferred.resolve).catch(deferred.reject);
+		});
 
 		drug.save().then(deferred.resolve).catch(deferred.reject);
 	}

@@ -6,7 +6,7 @@ const dom        	= require("xmldom").DOMParser,
 	  child_process = require("child_process"),
 	  keywordModel	= require("../db/keyword.model"),
 	  metamapPath	= "/home/zoliqa/Downloads/public_mm/bin/metamap14",
-	  metamapArgs	= "-J sosy,dsyn,orch,phsu --XMLf";
+	  metamapArgs	= "-J sosy,dsyn,orch,phsu,inpo -g --XMLf"; // "-J sosy,dsyn,orch,phsu,inpo,patf --XMLf";
 
 function parseWarnings(text) {
 	let echo      = child_process.spawn("echo", [text]),
@@ -61,11 +61,11 @@ function parseXml(xml) {
 	_CandidateElements.forEach(_CandidateElement => {
 		let candidateMatched   = xpath.select("string(./CandidateMatched)", _CandidateElement),
 			candidatePreferred = xpath.select("string(./CandidatePreferred)", _CandidateElement),
-			_SemTypesElements  = xpath.select("./SemTypes", _CandidateElement),
+			_SemTypeElements   = xpath.select("./SemTypes/SemType", _CandidateElement),
 			semTypes		   = [];
 
-		_SemTypesElements.forEach(_SemTypesElement => {
-			let semType = xpath.select("string(./SemType)", _SemTypesElement);
+		_SemTypeElements.forEach(_SemTypeElement => {
+			let semType = xpath.select("string(.)", _SemTypeElement);
 
 			semTypes.push(semType);
 		});
