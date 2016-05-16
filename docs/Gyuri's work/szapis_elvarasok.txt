@@ -1,0 +1,127 @@
+"... nem szükségszeru, hogy a mesteri diplomamunka
+programfejlesztést is tartalmazzon, de nagyon gyakran szokott valamilyen
+program is elkészülni. Viszont kell, hogy legyen a diplomamunkában
+kutató munka, és tudományos munek kell lennie - abban az értelemben,
+hogy tudományos módszerekkel vizsgál meg egy kérdést a hallgató,
+reprodukálható eredményeket mutat be, és (lehetoleg) legyen benne
+valamilyen saját eredmény/gondolat. Ez egy saját összehasonlítási
+szempont, saját kísérlet, saját mérés is lehet, de valami eredetiség
+azért legyen benne. Nem feltétlenül kell ennek a saját eredménynek
+tudományos értelemben vett újdonságnak lennie (mert az már inkább TDK
+dolgozat). Sokan pont azért írnak valamilyen szoftvert a diplomamunka
+részeként, hogy azon keresztül vizsgáljanak meg egy ismert tényt, vagy
+azon mutassanak be egy ismert eredményt, vagy azon végezzenek el egy
+mérést, ami alátámaszt egy kutatási célkituzést."
+
+Üdvözlettel,
+Kupán Pál
+---------------------------------------------------------------------------------------
+Kedves Kollégák!
+
+Én is úgy gondolom, hogy ezt elmondhatod nekik, Pali. Formai követelmények,
+mint a diplomamunkánál, más nincs.
+
+Zoli
+
+>
+> Kozsik Tamás kollégánk okfejtése észszeru és logikusnak tunnik, azonosulni
+> tudok vele. A kérdésem az, hogy a diákoknak van-e valami tartalmi-fogalmi
+> leírása a dolgozattal kapcsolatban. Holnap találkozom velük, az elobbi
+> szempontokat említhetem-e ha lesz kérdésük (márpedig biztos lesz a témával
+> kapcsolatban).
+>
+> Üdvözlettel,
+> Kupán Pál
+>
+>
+>
+>> Kedves Kollégák!
+>>
+>> Mi az ELTÉ-n nem követeljük meg, hogy a mesteri diplomamunka
+>> programfejlesztést is tartalmazzon, de nagyon gyakran szokott valamilyen
+>> program is elkészülni. Viszont kell, hogy legyen a diplomamunkában
+>> kutató munka, és tudományos munek kell lennie - abban az értelemben,
+>> hogy tudományos módszerekkel vizsgál meg egy kérdést a hallgató,
+>> reprodukálható eredményeket mutat be, és (lehetoleg) legyen benne
+>> valamilyen saját eredmény/gondolat. Ez egy saját összehasonlítási
+>> szempont, saját kísérlet, saját mérés is lehet, de valami eredetiség
+>> azért legyen benne. Nem feltétlenül kell ennek a saját eredménynek
+>> tudományos értelemben vett újdonságnak lennie (mert az már inkább TDK
+>> dolgozat). Sokan pont azért írnak valamilyen szoftvert a diplomamunka
+>> részeként, hogy azon keresztül vizsgáljanak meg egy ismert tényt, vagy
+>> azon mutassanak be egy ismert eredményt, vagy azon végezzenek el egy
+>> mérést, ami alátámaszt egy kutatási célkituzést.
+>>
+>> Hát körülbelül így látom én. :)
+>>
+>> Üdvözlettel,
+>> Tamás
+>>
+>> On cs, 2015-06-04 at 22:46 +0300, Kása Zoltán wrote:
+>>> Kedves Kollégák!
+>>>
+>>> Mint a disszertációs bizottság tagjai, a tanszékvezeto megkért
+>>> bennünket,
+>>> hogy fogalmazzunk meg egy választ a lenti kérdésre.
+>>>
+>>> Én nyitott vagyok bármilyen megoldásra. De azért úgy gondolom, hogy
+>>> program nélkül csak akkor fogadható el, ha a dolgozatban van valami
+>>> tudományos eredetiség. Mi errol a véleményetek? Nem tudom, mit jelent a
+>>> kérdésben pontosan az "összehasonlítás". Mit válaszoljunk?
+>>>
+>>>
+>>> Zoli
+>>>
+>>> ---------------------------- Original Message
+>>> ----------------------------
+>>> Subject: disszertacio
+>>> From:    "katai zoltan" <katai_zoltan@ms.sapientia.ro>
+>>> Date:    Wed, June 3, 2015 13:02
+>>> To:      Kása Zoltán <kasa@ms.sapientia.ro>
+>>> --------------------------------------------------------------------------
+>>>
+>>> Kedves Zoli!
+>>>
+>>> A disszertációs bizottságot megkérem, hogy mondjon véleményt ebben a
+>>> kérdésben.
+>>>
+>>> Z.
+>>>
+>>>
+>>> >>>>>>>>>>>>
+>>>
+>>> A másik kérdésem a disszertációmmal kapcsolatos. Tudtam
+>>> egyeztetni több ELTEs oktatóval is témavezetés ügyében. A kérdésem az
+>>> hogy milyen kritériumoknak kell megfeleljen a dolgozat? Lehetséges
+>>> egy összehasonlító elemzést végezni? Kötelezo kódot írni?
+>>> Köszönöm válaszát!
+>>> üdv István
+>>>
+>>> >>>>>>>>>>>>
+------------------------------------------------------------------------------------------------------
+Kedves Végzosök!
+
+Küldöm, amennyit lehet tudni.
+
+Disszertáció idopontja: jún. 24.
+
+A dolgozatról, csak ami a szabályzatban van:
+A disszertáció struktúrájára és tartalmára vonatkozó eloírásokat a kari tanács határozza meg a tantárgyleírás jóváhagyásakor vagy utólagosan, és azt
+a hallgatók rendelkezésére bocsátott Mesteri disszertáció útmutatóban (szerk. megj.: ez természetesen nem létezik) teszik közzé. 
+Ajánlott a kb. 40–50 oldalas terjedelem, A4 lapméret, 12-es Times New Roman betukkel, 1–1.5-es sorközzel szedve.
+
+Bizottság:
+Presedinte: prof. dr. Kása Zoltán
+Membri:
+conf. dr. Kozsik Tamás (ELTE)
+conf. dr. Kupán Pál
+lector dr. Kovács Lehel
+lector dr. Iclanzan Dávid
+Secretar: lector dr. Farkas Csaba
+
+A borító és belso lapok sincsenek még kitalálva, de gondolom, hogy a diplomadolgozathoz hasonló lesz, 
+csak disszertáció néven: http://www.ms.sapientia.ro/hu/zarovizsga/szabalyzatok-es-iratok
+
+Üdv.,
+Kinga
+-------------------------------------------------------------------------------------------------
