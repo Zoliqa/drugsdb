@@ -1,4 +1,4 @@
-const producerModel = require("./producer.model");
+ const producerModel = require("./producer.model");
 
 function search(term, next) {
 	producerModel.Producer.find({

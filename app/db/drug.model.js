@@ -10,7 +10,7 @@ const DrugSchema = new Schema({
 	ingredients: [substanceModel.SubstanceSchema],
 	additionalInfos: [additionalInfoModel.AdditionalInfoSchema],
 	interactionDrugs: [String]
-})
+});
 
 const Drug = mongoose.model("Drug", DrugSchema);
 

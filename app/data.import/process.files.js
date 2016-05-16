@@ -12,7 +12,7 @@ const fs	         = require("fs"),
 	  producerModel  = require("../db/producer.model"),
 	  parseWarnings  = require("./warnings.parser"),
 	  // dirname        = "/home/zoliqa/Documents/drugsdb/input/selected_interactions_debug/";
-	  dirname    = process.argv[2];
+	  dirname    	 = process.argv[2];
 
 let promises = [];
 
