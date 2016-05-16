@@ -1,5 +1,4 @@
-﻿
-var User = require('./user.model');
+const User = require('./user.model');
 
 function findByUsername(username, next) {
 	User.findOne({

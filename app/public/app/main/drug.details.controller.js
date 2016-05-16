@@ -7,6 +7,7 @@ define([], function () {
 		this.drug = drug;
 		this.close = close;
 		this.getTypeDescriptions = getTypeDescriptions;
+		this.searchDrugOrSubstance = searchDrugOrSubstance;
 
 		(function init() {
 			_.each(drug.additionalInfos, function (additionalInfo) {
@@ -62,6 +63,10 @@ define([], function () {
 			}, "");
 
 			return descriptions;
+		}
+
+		function searchDrugOrSubstance(name) {
+			console.log("Search for drug or substance name");
 		}
 	}
 

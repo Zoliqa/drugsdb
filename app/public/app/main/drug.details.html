@@ -28,7 +28,7 @@
 				<label>Interactions</label>
 			</div>
 			<div class="col-xs-10">
-				<span ng-repeat="drug in vm.drug.interactionDrugs">{{ drug + "; "}}</span>
+				<a role="button" ng-repeat="drug in vm.drug.interactionDrugs" ng-click="vm.searchDrugOrSubstance(drug)">{{ drug + "; "}}</a>
 			</div>
 		</div>
 		<div class="row">

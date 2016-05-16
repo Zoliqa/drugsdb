@@ -1,6 +1,6 @@
 ﻿define([], function () {
 
-	function termDpediaService($http, $q, _, levenhsteinDistanceService) {
+	function termDbpediaService($http, $q, _, levenhsteinDistanceService) {
 		var service = {
 			search: search
 		};
@@ -96,5 +96,5 @@
 		}
 	}
 
-	return termDpediaService;
+	return termDbpediaService;
 });
