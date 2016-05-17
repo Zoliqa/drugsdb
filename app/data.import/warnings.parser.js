@@ -104,33 +104,4 @@ function attemptRegexMatch(phraseText) {
 	return !!/concomitant|coadministration/i.exec(phraseText);
 }
 
-function parseXml2(xml) {
-	let doc 			   = new dom().parseFromString(xml),
-		_CandidateElements = xpath.select("//Candidate", doc),
-		keywords 		   = [];
-
-	_CandidateElements.forEach(_CandidateElement => {
-		let candidateMatched   = xpath.select("string(./CandidateMatched)", _CandidateElement),
-			candidatePreferred = xpath.select("string(./CandidatePreferred)", _CandidateElement),
-			_SemTypeElements   = xpath.select("./SemTypes/SemType", _CandidateElement),
-			semTypes		   = [];
-
-		_SemTypeElements.forEach(_SemTypeElement => {
-			let semType = xpath.select("string(.)", _SemTypeElement);
-
-			semTypes.push(semType);
-		});
-
-		let keyword = new keywordModel.Keyword({
-			candidateMatched: candidateMatched,
-			candidatePreferred: candidatePreferred,
-			semTypes: semTypes
-		});
-
-		keywords.push(keyword);
-	});
-
-	return q.resolve(keywords);
-}
-
 module.exports = parseWarnings;
