@@ -11,7 +11,7 @@ const fs	         = require("fs"),
 	  substanceModel = require("../db/substance.model"),
 	  producerModel  = require("../db/producer.model"),
 	  parseWarnings  = require("./warnings.parser"),
-	  // dirname        = "/home/zoliqa/Documents/drugsdb/input/selected_interactions_debug/";
+	  // dirname        = "/home/zoliqa/Documents/drugsdb/input/selected/";
 	  dirname    	 = process.argv[2];
 
 let promises = [];
@@ -54,12 +54,13 @@ Drug.remove({})
 									interactionDrugs = result.interactionDrugs,
 									reDrugName       = new RegExp(drug.name, "i");
 
-							    interactionDrugs = interactionDrugs.filter(d => {
+							    let filteredDrugs = interactionDrugs.filter(d => {
 									let containsDrugName       = reDrugName.exec(d),
 										reInteractionDrugName  = new RegExp(d, "i"),
 										containsIngredientName = drug.ingredients.some(ingredient => reInteractionDrugName.exec(ingredient.name));
 
-									return !containsDrugName;
+									// allow ingredients to be included because it may have a DDI effect with the current drug
+									return !containsDrugName; // && !containsIngredientName;
 								});
 
 								return Drug.findOneAndUpdate({
@@ -71,7 +72,7 @@ Drug.remove({})
 
 									},
 									$addToSet: {
-										interactionDrugs: { $each: interactionDrugs }
+										interactionDrugs: { $each: filteredDrugs }
 									}
 								});
 							});

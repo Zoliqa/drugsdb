@@ -6,7 +6,7 @@ const dom        	= require("xmldom").DOMParser,
 	  child_process = require("child_process"),
 	  keywordModel	= require("../db/keyword.model"),
 	  metamapPath	= "/home/zoliqa/Downloads/public_mm/bin/metamap14",
-	  metamapArgs	= "-J sosy,dsyn,orch,phsu,inpo -g --XMLf"; // "-J sosy,dsyn,orch,phsu,inpo,patf --XMLf";
+	  metamapArgs	= "-J sosy,dsyn,orch,phsu,inpo,patf --XMLf"; // "-J sosy,dsyn,orch,phsu,inpo,patf --XMLf";
 
 function parseWarnings(text) {
 	let echo      = child_process.spawn("echo", [text]),

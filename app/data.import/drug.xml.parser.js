@@ -63,7 +63,7 @@ function parseXml(xml, file) {
 		}
 
 		// let warningSectionElements = select("//x:section[x:code[@code='34071-1']]", doc);
-		let warningSectionElements = select("//x:section[x:code[contains('34071-1 50570-1 50569-3 50568-5 34073-7', @code)]]", doc);
+		let warningSectionElements = select("//x:section[x:code[contains('34071-1 50570-1 50569-3 50568-5 34073-7 43685-7', @code)]]", doc);
 
 		warningSectionElements.forEach(warningSectonElement => {
 			addAdditionalInfoToDrug(warningSectonElement);
