@@ -1,8 +1,9 @@
 ﻿const Finding = require('./finding.model');
 
-function save(name, next) {
+function save(name, semTypes) {
 	return Finding.findOneAndUpdate({
-		name: name
+		name: name,
+		semTypes: semTypes
 	}, {
 		$inc: {
 			count: 1
@@ -10,15 +11,13 @@ function save(name, next) {
 	}, {
 		upsert: true
 	});
+}
 
-	// (err, finding) => {
-	// 	if (err)
-	// 		return next(err);
-	//
-	// 	return next(null, finding);
-	// });
+function removeAll() {
+	return Finding.remove({});
 }
 
 module.exports = {
-	save: save
+	save: save,
+	removeAll: removeAll
 };

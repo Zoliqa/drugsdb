@@ -10,9 +10,9 @@ const express						   = require("express"),
 	  create_substances_collection_pig = process.cwd() + "/data.import/pig.queries/create_substances_collection.pig",
 	  create_producers_collection_pig  = process.cwd() + "/data.import/pig.queries/create_producers_collection.pig",
   	  pigPath                          = "/home/zoliqa/Downloads/pig/pig-0.15.0/bin/pig",
-	  // drugsInputDir                    = process.cwd() + "/../input/selected_interactions";
+	  drugsInputDir                    = process.cwd() + "/../input/selected";
 	  //drugsInputDir                    = process.cwd() + "/../input/all/dm_spl_monthly_update_jan2016/homeopathic";
-	  drugsInputDir                    = process.cwd() + "/../input/all/dm_spl_monthly_update_jan2016";
+	  // drugsInputDir                    = process.cwd() + "/../input/all/dm_spl_monthly_update_jan2016";
 
 function logPigQueryResult(message, log) {
 	if (/success!/i.exec(log))

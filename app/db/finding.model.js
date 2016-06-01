@@ -3,6 +3,7 @@ const mongoose = require("mongoose"),
 
 const FindingSchema = new Schema({
 	name: String,
+	semTypes: [String],
 	count: Number
 });
 
