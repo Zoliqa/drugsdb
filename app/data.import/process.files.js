@@ -8,19 +8,22 @@ const fs	         = require("fs"),
 	  parseXml       = require("./drug.xml.parser"),
 	  connection     = require("../db/connection"),
 	  Drug           = require("../db/drug.model"),
-	  substanceModel = require("../db/substance.model"),
-	  producerModel  = require("../db/producer.model"),
+	  SubstanceModel = require("../db/substance.model"),
+	  ProducerModel  = require("../db/producer.model"),
+	  findingQueries = require("../db/finding.queries"),
 	  parseWarnings  = require("./warnings.parser"),
 	  // dirname        = "/home/zoliqa/Documents/drugsdb/input/selected/";
 	  dirname    	 = process.argv[2];
 
 let promises = [];
 
+console.log("started");
+
 Drug.remove({})
-.then(() => substanceModel.Substance.remove({}))
-.then(() => producerModel.Producer.remove({}))
+.then(() => SubstanceModel.Substance.remove({}))
+.then(() => ProducerModel.Producer.remove({}))
 .then(() => {
-	fs.readdir(dirname, (err, files) => { console.log("readdir started")
+	fs.readdir(dirname, (err, files) => { console.log("readdir started");
 		files.forEach(file => {
 			if (file.endsWith(".zip")) {
 				let zip = new AdmZip(dirname + "/" + file);
@@ -74,6 +77,10 @@ Drug.remove({})
 									$addToSet: {
 										interactionDrugs: { $each: filteredDrugs }
 									}
+								}).then(() => {
+									var promises = keywords.map(keyword => findingQueries.save(keyword.candidatePreferred));
+
+									return q.all(promises);
 								});
 							});
 						});
@@ -83,5 +90,9 @@ Drug.remove({})
 				promise.then(() => process.send({ success: true })).catch(() => process.send({ success: false }));
 			});
 		});
-	}).catch(() => process.send({ success: false }));
+	});// .catch(() => process.send({ success: false }));
+}).catch((ex) => {
+	console.log(ex);
+
+	process.send({ success: false });
 });
