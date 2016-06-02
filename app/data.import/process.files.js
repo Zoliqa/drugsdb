@@ -83,7 +83,7 @@ drugQueries.removeAll()
 			});
 
 			return drugQueries.update(drug._id, additionalInfo._id, keywords, filteredDrugs).then(() => {
-				return q.all(keywords.map(keyword => findingQueries.save(keyword.candidatePreferred, keyword.semTypes)));
+				return q.all(keywords.map(keyword => findingQueries.save(keyword.candidateMatched, keyword.candidatePreferred, keyword.semTypes)));
 			});;
 		})
 	});

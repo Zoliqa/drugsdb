@@ -1,8 +1,9 @@
 ﻿const Finding = require('./finding.model');
 
-function save(name, semTypes) {
+function save(matchedName, preferredName, semTypes) {
 	return Finding.findOneAndUpdate({
-		name: name,
+		matchedName: matchedName,
+		preferredName: preferredName,
 		semTypes: semTypes
 	}, {
 		$inc: {
