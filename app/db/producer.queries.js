@@ -13,6 +13,11 @@ function search(term, next) {
 	});
 }
 
+function removeAll() {
+	return producerModel.Producer.remove({});
+}
+
 module.exports = {
-	search: search
+	search: search,
+    removeAll: removeAll
 };

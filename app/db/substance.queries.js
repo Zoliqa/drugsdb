@@ -13,6 +13,11 @@ function search(term, next) {
 	});
 }
 
+function removeAll() {
+	return substanceModel.Substance.remove({});
+}
+
 module.exports = {
-	search: search
+	search: search,
+	removeAll: removeAll
 };

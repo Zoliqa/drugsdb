@@ -1,5 +1,24 @@
 ﻿const Drug = require('./drug.model');
 
+function findAll() {
+	return Drug.find({});
+}
+
+function update(drugId, additionalInfoId, keywords, interactionDrugs) {
+	return Drug.findOneAndUpdate({
+		_id: drugId,
+		"additionalInfos._id": additionalInfoId
+	}, {
+		$set: {
+			"additionalInfos.$.keywords": keywords,
+
+		},
+		$addToSet: {
+			interactionDrugs: { $each: interactionDrugs }
+		}
+	});
+}
+
 function search(term, next) {
 	Drug.find({
 		name: {
@@ -13,6 +32,13 @@ function search(term, next) {
 	});
 }
 
+function removeAll() {
+	return Drug.remove({});
+}
+
 module.exports = {
-	search: search
+	findAll: findAll,
+	update: update,
+	search: search,
+	removeAll: removeAll
 };
