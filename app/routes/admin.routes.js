@@ -9,8 +9,9 @@ const express						   = require("express"),
 	  process_files_jsPath             = process.cwd() + "/data.import/process.files.js",
 	  create_substances_collection_pig = process.cwd() + "/data.import/pig.queries/create_substances_collection.pig",
 	  create_producers_collection_pig  = process.cwd() + "/data.import/pig.queries/create_producers_collection.pig",
+	  create_findings_collection_pig  = process.cwd() + "/data.import/pig.queries/create_findings_collection.pig",
   	  pigPath                          = "/home/zoliqa/Downloads/pig/pig-0.15.0/bin/pig",
-	  drugsInputDir                    = process.cwd() + "/../input/selected_interactions";
+	  drugsInputDir                    = process.cwd() + "/../input/selected";
 	  //drugsInputDir                    = process.cwd() + "/../input/all/dm_spl_monthly_update_jan2016/homeopathic";
 	  // drugsInputDir                    = process.cwd() + "/../input/all/dm_spl_monthly_update_jan2016";
 
@@ -41,7 +42,7 @@ function init(io) {
 		let child = child_process.fork(process_files_jsPath, [drugsInputDir]);
 
 		child.on("message", function (message) {
-			deferred.promise.then(socket => socket.emit("progress", 1/3));
+			deferred.promise.then(socket => socket.emit("progress", 1/4));
 
 			if (message.success)
 				logger.info("import to drugs collection is done");
@@ -57,7 +58,7 @@ function init(io) {
 				});
 				child2.on("error", () => logger.error("failed to start child process for create_substances_collection.pig"));
 				child2.on("close", code => {
-			  		deferred.promise.then(socket => socket.emit("progress", 1/3));
+			  		deferred.promise.then(socket => socket.emit("progress", 1/4));
 				});
 
 				let child3 = child_process.spawn(pigPath, ["-x", "local", create_producers_collection_pig]);
@@ -68,7 +69,18 @@ function init(io) {
 				});
 				child3.on("error", () => logger.error("failed to start child process for create_producers_collection.pig"));
 				child3.on("close", code => {
-					deferred.promise.then(socket => socket.emit("progress", 1/3));
+					deferred.promise.then(socket => socket.emit("progress", 1/4));
+				});
+
+				let child4 = child_process.spawn(pigPath, ["-x", "local", create_findings_collection_pig]);
+				child4.stderr.on("data", data => {
+					var log = data.toString();
+
+					logPigQueryResult("create_findings_collection.pig", log);
+				});
+				child4.on("error", () => logger.error("failed to start child process for create_findings_collection.pig"));
+				child4.on("close", code => {
+					deferred.promise.then(socket => socket.emit("progress", 1/4));
 				});
 			}
 		});

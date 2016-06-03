@@ -2,9 +2,12 @@ const mongoose = require("mongoose"),
 	  Schema   = mongoose.Schema;
 
 const FindingSchema = new Schema({
-	name: String,
-	semTypes: [String],
-	count: Number
+	candidateMatched: String,
+	candidatePreferred: String,
+	semType: String,
+	drugs: [{
+		name: String
+	}]
 });
 
 const Finding = mongoose.model("Finding", FindingSchema);

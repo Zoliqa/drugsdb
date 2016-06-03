@@ -1,0 +1,43 @@
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<file create_findings_collection.pig, line 22, column 57> Invalid field projection. Projected field [drugsFlatDistinct] does not exist in schema: group:bytearray,drugsFlatWithGroupDistinct:bag{:tuple(name:chararray,candidateMatched:chararray,candidatePreferred:chararray,semType:chararray,groupName:bytearray)}.
+
+org.apache.pig.impl.logicalLayer.FrontendException: ERROR 1001: Unable to describe schema for alias findingsWithDrugs
+	at org.apache.pig.PigServer.dumpSchema(PigServer.java:823)
+	at org.apache.pig.tools.grunt.GruntParser.processDescribe(GruntParser.java:321)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:416)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.exec(Grunt.java:81)
+	at org.apache.pig.Main.run(Main.java:631)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+Caused by: org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<file create_findings_collection.pig, line 22, column 57> Invalid field projection. Projected field [drugsFlatDistinct] does not exist in schema: group:bytearray,drugsFlatWithGroupDistinct:bag{:tuple(name:chararray,candidateMatched:chararray,candidatePreferred:chararray,semType:chararray,groupName:bytearray)}.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.compile(PigServer.java:1767)
+	at org.apache.pig.PigServer$Graph.access$300(PigServer.java:1443)
+	at org.apache.pig.PigServer.buildStorePlan(PigServer.java:1339)
+	at org.apache.pig.PigServer.getOperatorForAlias(PigServer.java:1418)
+	at org.apache.pig.PigServer.dumpSchema(PigServer.java:806)
+	... 13 more
+================================================================================
