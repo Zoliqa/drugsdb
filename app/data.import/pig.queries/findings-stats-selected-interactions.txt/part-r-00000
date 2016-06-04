@@ -1,0 +1,489 @@
+condition;Disease;dsyn;{(10 Person ANSI 
+                        ),(Warfarin Sodium),(7 Select Naproxen Sodium),(SINGULAIR
+                        ),(Arava),(Absorica),(Activase),(DragonTabs
+                        ),(Migranow),(Plavix)};10
+Symptoms;Symptoms;sosy;{(DragonTabs
+                        ),(7 Select Naproxen Sodium),(10 Person ANSI 
+                        ),(Migranow),(Ambien),(Absorica),(SINGULAIR
+                        ),(Warfarin Sodium),(Arava)};9
+Exposure, NOS;Injury due to exposure to external cause;inpo;{(Absorica),(Plavix),(Migranow),(Ambien),(Warfarin Sodium),(Arava)};6
+Stroke;Cerebrovascular accident;dsyn;{(Plavix),(7 Select Naproxen Sodium),(Migranow),(10 Person ANSI 
+                        ),(DragonTabs
+                        )};5
+Ill;Malaise;sosy;{(7 Select Naproxen Sodium),(DragonTabs
+                        ),(Ambien),(10 Person ANSI 
+                        ),(Arava)};5
+Vomiting;Vomiting;sosy;{(Ambien),(Actidose),(Absorica),(Migranow),(10 Person ANSI 
+                        )};5
+Diabetes;Diabetes;dsyn;{(Arava),(Migranow),(Absorica),(10 Person ANSI 
+                        )};4
+Nausea;Nausea;sosy;{(Migranow),(10 Person ANSI 
+                        ),(Ambien),(Absorica)};4
+Diabetes;Diabetes Mellitus;dsyn;{(Arava),(10 Person ANSI 
+                        ),(Absorica),(Migranow)};4
+Finding;Signs and Symptoms;sosy;{(Plavix),(Ambien),(Migranow),(Absorica)};4
+Impairment;Impaired health;patf;{(SINGULAIR
+                        ),(Xyzal),(Ambien),(Absorica)};4
+Allergic reaction, NOS;Hypersensitivity;patf;{(10 Person ANSI 
+                        ),(DragonTabs
+                        ),(7 Select Naproxen Sodium),(Absorica)};4
+Asthma;Asthma;dsyn;{(10 Person ANSI 
+                        ),(7 Select Naproxen Sodium),(SINGULAIR
+                        ),(DragonTabs
+                        )};4
+Bleeding;Hemorrhage;patf;{(Activase),(Warfarin Sodium),(Plavix),(DragonTabs
+                        )};4
+Impaired;Impaired health;patf;{(Absorica),(Plavix),(Ambien),(Warfarin Sodium)};4
+Allergic Reaction;Allergic Reaction;patf;{(10 Person ANSI 
+                        ),(7 Select Naproxen Sodium),(Absorica),(DragonTabs
+                        )};4
+arrested;Cardiac Arrest;dsyn;{(Arava),(Plavix),(Ambien),(Absorica)};4
+Hive;Urticaria;dsyn;{(10 Person ANSI 
+                        ),(DragonTabs
+                        ),(7 Select Naproxen Sodium)};3
+heartburn;Heartburn acidity;sosy;{(7 Select Naproxen Sodium),(DragonTabs
+                        ),(10 Person ANSI 
+                        )};3
+Shock;Shock;patf;{(7 Select Naproxen Sodium),(10 Person ANSI 
+                        ),(DragonTabs
+                        )};3
+Hive;Welts;sosy;{(DragonTabs
+                        ),(10 Person ANSI 
+                        ),(7 Select Naproxen Sodium)};3
+Pain;Pain;sosy;{(DragonTabs
+                        ),(7 Select Naproxen Sodium),(10 Person ANSI 
+                        )};3
+Liver Cirrhosis;Liver Cirrhosis;dsyn;{(DragonTabs
+                        ),(7 Select Naproxen Sodium),(10 Person ANSI 
+                        )};3
+stomach bleeding;Gastric hemorrhage;dsyn;{(DragonTabs
+                        ),(10 Person ANSI 
+                        ),(7 Select Naproxen Sodium)};3
+DEFECT;THYROID HORMONE PLASMA MEMBRANE TRANSPORT DEFECT;dsyn;{(Warfarin Sodium),(Absorica),(Activase)};3
+Kidney disease;Kidney Diseases;dsyn;{(10 Person ANSI 
+                        ),(DragonTabs
+                        ),(7 Select Naproxen Sodium)};3
+ANGIO-EDEMA;Angioedema;patf;{(Plavix),(Activase),(Ambien)};3
+facial swellings;Facial edema;patf;{(10 Person ANSI 
+                        ),(DragonTabs
+                        ),(7 Select Naproxen Sodium)};3
+Ulcers, Stomach;Gastric ulcer;dsyn;{(DragonTabs
+                        ),(7 Select Naproxen Sodium),(10 Person ANSI 
+                        )};3
+HEART BURN;Heartburn;sosy;{(DragonTabs
+                        ),(10 Person ANSI 
+                        ),(7 Select Naproxen Sodium)};3
+Hypertension;Hypertensive disease;dsyn;{(Warfarin Sodium),(Migranow),(Activase)};3
+Hypersensitivity;Hypersensitivity;patf;{(Plavix),(Arava),(Migranow)};3
+Agitation;Agitation;sosy;{(SINGULAIR
+                        ),(Ambien),(Migranow)};3
+Wheezing;Wheezing;sosy;{(7 Select Naproxen Sodium),(10 Person ANSI 
+                        ),(DragonTabs
+                        )};3
+bleeding problems;Hemorrhage;patf;{(DragonTabs
+                        ),(7 Select Naproxen Sodium),(10 Person ANSI 
+                        )};3
+Drug effect;Drug effect disorder;patf;{(Ambien),(Absorica),(SINGULAIR
+                        )};3
+Disorders;Disease;dsyn;{(Arava),(Absorica),(Migranow)};3
+Diarrhea;Diarrhea;sosy;{(Actidose),(Migranow),(Warfarin Sodium)};3
+Blood Pressure, High;Hypertensive disease;dsyn;{(10 Person ANSI 
+                        ),(7 Select Naproxen Sodium),(DragonTabs
+                        )};3
+Disorder;Disease;dsyn;{(Ambien),(Arava),(Absorica)};3
+Heart attack;Myocardial Infarction;dsyn;{(DragonTabs
+                        ),(7 Select Naproxen Sodium),(10 Person ANSI 
+                        )};3
+Heart disease;Heart Diseases;dsyn;{(10 Person ANSI 
+                        ),(7 Select Naproxen Sodium),(DragonTabs
+                        )};3
+Disease;Disease;dsyn;{(Warfarin Sodium),(Arava),(Activase)};3
+SWELLING;Edema;patf;{(DragonTabs
+                        ),(7 Select Naproxen Sodium),(10 Person ANSI 
+                        )};3
+side pain;side pain;sosy;{(7 Select Naproxen Sodium),(DragonTabs
+                        )};2
+Stomach upset;Upset stomach;sosy;{(7 Select Naproxen Sodium),(DragonTabs
+                        )};2
+Skin Rash;Exanthema;dsyn;{(DragonTabs
+                        ),(7 Select Naproxen Sodium)};2
+Nervous;Nervousness;sosy;{(Xyzal),(Ambien)};2
+Delivery complications;Complication of delivery;patf;{(DragonTabs
+                        ),(7 Select Naproxen Sodium)};2
+Toxic Epidermal Necrolysis;Toxic Epidermal Necrolysis;dsyn;{(Arava),(Absorica)};2
+Painful;Pain;sosy;{(DragonTabs
+                        ),(7 Select Naproxen Sodium)};2
+Black stools;Melena;patf;{(DragonTabs
+                        ),(7 Select Naproxen Sodium)};2
+Stomach Pain;Stomach ache;sosy;{(7 Select Naproxen Sodium),(DragonTabs
+                        )};2
+trauma;trauma qualifier;inpo;{(Warfarin Sodium),(Activase)};2
+Acute myocardial infarction;Acute myocardial infarction;dsyn;{(Activase),(Migranow)};2
+Hemorrhage, Intracranial;Intracranial Hemorrhages;patf;{(Ambien),(Activase)};2
+Pancreatitis;Pancreatitis;dsyn;{(Absorica),(Activase)};2
+FRACTURES;Fracture;inpo;{(Absorica),(Ambien)};2
+Blister;Bulla;patf;{(7 Select Naproxen Sodium),(10 Person ANSI 
+                        )};2
+Abdominal Pain;Abdominal Pain;sosy;{(Absorica),(Migranow)};2
+Cerebrovascular disease;Cerebrovascular Disorders;patf;{(Activase),(Warfarin Sodium)};2
+Eosinophilia;Eosinophilic disorder;dsyn;{(SINGULAIR
+                        ),(Arava)};2
+Congenital Malformation;Neonatal Deformity;dsyn;{(Warfarin Sodium),(Absorica)};2
+Rash;Exanthema;dsyn;{(10 Person ANSI 
+                        ),(Plavix)};2
+Faint;Syncope;sosy;{(7 Select Naproxen Sodium),(DragonTabs
+                        )};2
+vomit;Vomiting;sosy;{(7 Select Naproxen Sodium),(DragonTabs
+                        )};2
+Obesity;Obesity;dsyn;{(Migranow),(Absorica)};2
+Trauma;Traumatic injury;inpo;{(Warfarin Sodium),(Activase)};2
+adverse events;Adverse event;patf;{(Migranow),(Absorica)};2
+Eosinophilia;Eosinophilia;dsyn;{(SINGULAIR
+                        ),(Arava)};2
+Teratogenicity;Teratogenesis;patf;{(Absorica),(Arava)};2
+allergy ibuprofen;Ibuprofen allergy;patf;{(10 Person ANSI 
+                        ),(DragonTabs
+                        )};2
+acquired condition;Acquired disease;dsyn;{(Migranow),(Absorica)};2
+Myocardial Infarction;Myocardial Infarction;dsyn;{(Migranow),(Activase)};2
+Rhabdomyolysis;Rhabdomyolysis;patf;{(Activase),(Absorica)};2
+Fatigue;Fatigue;sosy;{(Xyzal),(Absorica)};2
+Trauma;Wounds and Injuries;inpo;{(Activase),(Warfarin Sodium)};2
+Vasculitis;Vasculitis;dsyn;{(SINGULAIR
+                        ),(Warfarin Sodium)};2
+Toxicity;Toxic effect;inpo;{(Absorica),(Arava)};2
+anaphylaxis;anaphylaxis;patf;{(Migranow),(Ambien)};2
+Symptom, NOS;Symptoms;sosy;{(Activase),(Ambien)};2
+Eosinophilia;Disorder characterized by eosinophilia;dsyn;{(Arava),(SINGULAIR
+                        )};2
+Ophthalmia;Endophthalmitis;dsyn;{(Warfarin Sodium),(10 Person ANSI 
+                        )};2
+Black stools;Feces color: tarry;sosy;{(7 Select Naproxen Sodium),(DragonTabs
+                        )};2
+Insomnia;Sleeplessness;sosy;{(SINGULAIR
+                        ),(Ambien)};2
+trauma;Injury wounds;inpo;{(Warfarin Sodium),(Activase)};2
+Restlessness;Agitation;sosy;{(Absorica),(SINGULAIR
+                        )};2
+Dyspnea;Dyspnea;sosy;{(Ambien),(Arava)};2
+Stevens-Johnson Syndrome;Stevens-Johnson Syndrome;dsyn;{(Arava),(Absorica)};2
+Gastrointestinal bleeding;Gastrointestinal Hemorrhage;patf;{(Warfarin Sodium),(Plavix)};2
+Heparin-induced thrombocytopenia with thrombosis;Heparin-induced thrombocytopenia with thrombosis;dsyn;{(Warfarin Sodium)};1
+syndrome child;Congenital Hemidysplasia with Ichthyosiform Erythroderma and Limb Defects;dsyn;{(10 Person ANSI 
+                        )};1
+Mild chronic obstructive pulmonary disease;Mild chronic obstructive pulmonary disease;dsyn;{(Ambien)};1
+MICROANGIOPATHIC HEMOLYTIC ANEMIA;Congenital Thrombotic Thrombocytopenic Purpura;dsyn;{(Plavix)};1
+Central nervous system depression;Central nervous system depression (disorder);dsyn;{(Ambien)};1
+Microangiopathic haemolytic anaemia;Microangiopathic hemolytic anemia;dsyn;{(Plavix)};1
+Musculoskeletal Abnormalities;Congenital musculoskeletal anomalies;cgab;{(Absorica)};1
+Heparin-induced thrombocytopenia;Heparin-induced thrombocytopenia;dsyn;{(Warfarin Sodium)};1
+opacities;Abnormally opaque structure (morphologic abnormality);patf;{(Absorica)};1
+Pneumocystis jiroveci pneumonia;Pneumocystis jiroveci pneumonia;dsyn;{(Arava)};1
+Vitamin K Deficiency;Vitamin K deficiency coagulation disorder;dsyn;{(Warfarin Sodium)};1
+Protein C Deficiency, Acquired;Protein C Deficiency, Acquired;dsyn;{(Warfarin Sodium)};1
+Fructose Intolerance;Hereditary fructose intolerance syndrome;dsyn;{(Actidose)};1
+ischemic myocardial disease;dilated ischemic cardiomyopathy;dsyn;{(Migranow)};1
+CNS DEPRESSION;Central nervous system depression (disorder);dsyn;{(Ambien)};1
+Allergic vasculitis;Vasculitis, Leukocytoclastic, Cutaneous;dsyn;{(Absorica)};1
+extra-pulmonary tuberculosis;Tuberculosis, extrapulmonary;dsyn;{(Arava)};1
+Premature epiphyseal closure;Premature epiphyseal closure;patf;{(Absorica)};1
+Acute bacterial endocarditis;Acute bacterial endocarditis;dsyn;{(Activase)};1
+Haemorrhagic pancreatitis;Acute hemorrhagic pancreatitis;dsyn;{(Absorica)};1
+Drug-induced osteomalacia;Osteomalacia secondary to drug;dsyn;{(Absorica)};1
+deep vein thrombosis;Deep vein thrombosis of lower limb;dsyn;{(Activase)};1
+cutaneous allergic reactions;Cutaneous hypersensitivity;dsyn;{(Absorica)};1
+Disorder of lipid metabolism;Lipid Metabolism Disorders;dsyn;{(Absorica)};1
+Inflammatory bowel disease;Inflammatory Bowel Diseases;dsyn;{(Absorica)};1
+Gastrointestinal symptoms NOS;Gastrointestinal symptom;sosy;{(Migranow)};1
+genitourinary bleeding;Genitourinary tract hemorrhage;patf;{(Activase)};1
+Interstitial lung disease;Lung Diseases, Interstitial;dsyn;{(Arava)};1
+Immunosuppression;Decreased Immunologic Activity [PE];patf;{(Arava)};1
+Disorder of keratinisation;Disorder of keratinization;dsyn;{(Absorica)};1
+ischaemic myocardial disease;Ischemic cardiomyopathy;dsyn;{(Migranow)};1
+Lipid Metabolism Disorder;Lipid Metabolism Disorders;dsyn;{(Absorica)};1
+Benign Intracranial Hypertension;Pseudotumor Cerebri;dsyn;{(Absorica)};1
+Transient Ischemic Attack;Transient Ischemic Attack;dsyn;{(Migranow)};1
+Respiratory Insufficiency;Respiratory Insufficiency;patf;{(Ambien)};1
+Drug-induced osteoporosis;Drug-induced osteoporosis;patf;{(Absorica)};1
+Coronary Artery Vasospasm;Coronary Artery Vasospasm;dsyn;{(Migranow)};1
+Calcification of ligament;Calcification of ligament;patf;{(Absorica)};1
+exposures;Injury due to exposure to external cause;inpo;{(Arava)};1
+IMMUNO-DEFICIENCY;Immunologic Deficiency Syndromes;dsyn;{(Arava)};1
+purple toes syndrome;Cholesterol embolus syndrome;dsyn;{(Warfarin Sodium)};1
+mental status changes;Change in mental status NOS;sosy;{(Migranow)};1
+coronary artery disease;Coronary Arteriosclerosis;dsyn;{(Migranow)};1
+Ventricular Fibrillation;Ventricular Fibrillation;dsyn;{(Migranow)};1
+Tachycardia, Ventricular;Tachycardia, Ventricular;patf;{(Migranow)};1
+Retinal Artery Occlusion;Retinal Artery Occlusion;dsyn;{(Activase)};1
+Opportunistic Infections;Opportunistic Infections;dsyn;{(Arava)};1
+Latent Tuberculosis Infection;Latent Tuberculosis;dsyn;{(Arava)};1
+Ischemic Stroke;Ischemic Cerebrovascular Accident;dsyn;{(Activase)};1
+Hallucinations, Auditory;Hallucinations, Auditory;sosy;{(Ambien)};1
+Cerebrovascular accident;Cerebrovascular accident;dsyn;{(Migranow)};1
+Spinal Cord Infarction;Infarction of spinal cord;dsyn;{(Activase)};1
+Purple toe syndrome;Cholesterol embolus syndrome;dsyn;{(Activase)};1
+Coronary (artery) disease;Coronary heart disease;dsyn;{(Migranow)};1
+bone marrow suppression;bone marrow suppression;inpo;{(Arava)};1
+Subarachnoid Hemorrhage;Subarachnoid Hemorrhage;dsyn;{(Migranow)};1
+Serotonin syndrome;Malignant Carcinoid Syndrome;dsyn;{(Migranow)};1
+Septic thrombophlebitis;Septic thrombophlebitis;dsyn;{(Activase)};1
+Other disorders of bone;Other disorders of bone;dsyn;{(Absorica)};1
+Musculoskeletal symptom;Musculoskeletal symptom;sosy;{(Absorica)};1
+Coronary Artery Disease;Coronary Artery Disease;dsyn;{(Migranow)};1
+neurological condition;nervous system disorder;dsyn;{(Migranow)};1
+myocardial ischaemia;Coronary Arteriosclerosis;dsyn;{(Migranow)};1
+bleeding condition;Blood Coagulation Disorders;dsyn;{(Activase)};1
+bleeding complication;Complication, hemorrhage;dsyn;{(Activase)};1
+anaphylactoid reactions;Anaphylactoid reaction;patf;{(Migranow)};1
+Ileitis, Regional;Crohn's disease of the ileum;dsyn;{(Absorica)};1
+Cardiovascular disease;Cardiovascular Diseases;dsyn;{(Migranow)};1
+Cardiac rhythm disturbances;Cardiac Arrhythmia;patf;{(Migranow)};1
+respiratory insufficiency;Respiratory Failure;dsyn;{(Ambien)};1
+Respiratory Depression;Respiratory Depression;patf;{(Ambien)};1
+Churg-Strauss Syndrome;Churg-Strauss Syndrome;dsyn;{(SINGULAIR
+                        )};1
+enzyme inhibition;Enzyme inhibition disorder;dsyn;{(Warfarin Sodium)};1
+drug hypersensitivity reactions;Drug Allergy;dsyn;{(Migranow)};1
+Methotrexate Toxicity;Methotrexate poisoning;inpo;{(Arava)};1
+Intestinal disorders NOS;Intestinal Diseases;dsyn;{(Absorica)};1
+Dysplasia, Bone;Bone Diseases, Developmental;dsyn;{(Arava)};1
+Coronary Vasospasm;Coronary Artery Vasospasm;dsyn;{(Migranow)};1
+CEREBRAL INFARCTION;Cerebrovascular accident;dsyn;{(Activase)};1
+cardiac ischaemia;Coronary Arteriosclerosis;dsyn;{(Migranow)};1
+Subacute pericarditis;Subacute pericarditis;dsyn;{(Activase)};1
+Peripheral Neuropathy;Peripheral Neuropathy;dsyn;{(Arava)};1
+Difficulty swallowing;Deglutition Disorders;dsyn;{(7 Select Naproxen Sodium)};1
+Chronic liver disease;Chronic liver disease;dsyn;{(Arava)};1
+AUTONOMIC INSTABILITY;AUTONOMIC INSTABILITY;dsyn;{(Migranow)};1
+Symptoms of depression;Depressive Symptoms;sosy;{(Absorica)};1
+Spontaneous Abortions;Spontaneous abortion;patf;{(Absorica)};1
+Hypercholesterolaemia;Hypercholesterolemia;dsyn;{(Migranow)};1
+Cardiac complications;Cardiac complication;patf;{(SINGULAIR
+                        )};1
+coronary infarction;Myocardial Infarction;dsyn;{(Migranow)};1
+Vitamin K Deficiency;Vitamin K Deficiency;dsyn;{(Warfarin Sodium)};1
+Spontaneous abortion;Spontaneous abortion;patf;{(Warfarin Sodium)};1
+Rheumatoid Arthritis;Rheumatoid Arthritis;dsyn;{(Arava)};1
+Recurrence;Recurrence (disease attribute);patf;{(Plavix)};1
+Protein C Deficiency;Protein C Deficiency;dsyn;{(Warfarin Sodium)};1
+Mitral stenosis;Rheumatic mitral stenosis;dsyn;{(Activase)};1
+Infectious Diseases;Communicable Diseases;dsyn;{(Warfarin Sodium)};1
+Flu-like symptoms;Influenza-like symptoms;sosy;{(10 Person ANSI 
+                        )};1
+Deep Vein Thrombosis;Deep Vein Thrombosis;dsyn;{(Activase)};1
+Cholesterol Embolism;Cholesterol Embolism;dsyn;{(Activase)};1
+Acute Renal Failure;Kidney Failure, Acute;dsyn;{(Activase)};1
+Psychiatric symptoms;Psychiatric symptom;sosy;{(Ambien)};1
+Peripheral ischaemia;Peripheral ischemia;patf;{(Migranow)};1
+partial vision loss;partial vision loss;dsyn;{(Migranow)};1
+aspirin sensitivity;aspirin sensitivity;dsyn;{(SINGULAIR
+                        )};1
+Warfarin Resistance;Coumarin Resistance;dsyn;{(Warfarin Sodium)};1
+VASCULAR PROBLEM, NOS;Vascular Diseases;dsyn;{(Absorica)};1
+Pseudotumor Cerebri;Pseudotumor Cerebri;dsyn;{(Absorica)};1
+Myocardial Ischemia;Myocardial Ischemia;dsyn;{(Migranow)};1
+Hypertensive crisis;Hypertensive crisis;dsyn;{(Migranow)};1
+Erythema Multiforme;Erythema Multiforme;dsyn;{(Absorica)};1
+Emergency;Emergencies [Disease/Finding];patf;{(Ambien)};1
+Deep puncture wound;Deep puncture wound;inpo;{(10 Person ANSI 
+                        )};1
+Cerebral Infarction;Cerebral Infarction;dsyn;{(Activase)};1
+Cerebral Hemorrhage;Cerebral Hemorrhage;patf;{(Migranow)};1
+BP+ - Hypertension;Hypertensive disease;dsyn;{(Activase)};1
+Atrial Fibrillation;Atrial Fibrillation;patf;{(Activase)};1
+delayed healing;Impaired wound healing;patf;{(Absorica)};1
+Warfarin embryopathy;Warfarin syndrome;cgab;{(Warfarin Sodium)};1
+Visual disturbances;Visual disturbance;sosy;{(Absorica)};1
+Transient ischaemia;Transient ischemia;dsyn;{(Migranow)};1
+Drug reaction;Adverse reaction to drug;inpo;{(Arava)};1
+Bowel infarction;INTESTINAL INFARCTION;dsyn;{(Activase)};1
+Status Asthmaticus;Status Asthmaticus;dsyn;{(SINGULAIR
+                        )};1
+Serotonin Syndrome;Serotonin Syndrome;inpo;{(Migranow)};1
+Reactions, Allergic;Allergic Reaction;patf;{(Absorica)};1
+Pulmonary Embolism;Pulmonary Embolism;dsyn;{(Activase)};1
+Neurotoxicity;Neurotoxicity Syndromes;inpo;{(Arava)};1
+Mitral Stenosis;Mitral Valve Stenosis;dsyn;{(Activase)};1
+Livedo Reticularis;Livedo Reticularis;dsyn;{(Activase)};1
+Hepatic impairment;Hepatic impairment;dsyn;{(Warfarin Sodium)};1
+Hepatic dysfunction;Liver Dysfunction;patf;{(Activase)};1
+Headache, Migraine;Migraine Disorders;dsyn;{(Migranow)};1
+Cardiac ischaemia;Myocardial Ischemia;dsyn;{(Migranow)};1
+Airway Obstruction;Airway Obstruction;dsyn;{(Ambien)};1
+Acute pancreatitis;Acute pancreatitis;dsyn;{(Absorica)};1
+physical disorder;physical disorders;dsyn;{(Ambien)};1
+bleeding symptoms;hemorrhage symptom;dsyn;{(Warfarin Sodium)};1
+bleeding condition;Bleeding tendency;patf;{(Activase)};1
+Renal impairment;Renal Insufficiency;dsyn;{(Warfarin Sodium)};1
+Infection, NOS;Communicable Diseases;dsyn;{(Arava)};1
+Incoordination;Abnormal coordination;sosy;{(Migranow)};1
+Bloody diarrhea;Hemorrhagic diarrhea;dsyn;{(Migranow)};1
+poor nutritional state;Malnutrition;dsyn;{(Warfarin Sodium)};1
+familial disorders;Familial disease;dsyn;{(Absorica)};1
+Spondylolisthesis;Spondylolisthesis;dsyn;{(Absorica)};1
+Renal retinopathy;Renal retinopathy;dsyn;{(Activase)};1
+Reactions, Anaphylactic;anaphylaxis;patf;{(Absorica)};1
+Psychomotor Hyperactivity;Agitation;sosy;{(SINGULAIR
+                        )};1
+Myasthenia Gravis;Myasthenia Gravis;dsyn;{(Ambien)};1
+Diabetes Mellitus;Diabetes Mellitus;dsyn;{(Warfarin Sodium)};1
+Colonic ischaemia;Colitis, Ischemic;dsyn;{(Migranow)};1
+BREAK-THROUGH BLEEDING;Metrorrhagia;patf;{(Absorica)};1
+Allergic reactions;Hypersensitivity;patf;{(Absorica)};1
+physical symptoms;physical symptom;sosy;{(Absorica)};1
+complications;Complication Aspects;patf;{(Warfarin Sodium)};1
+Fetal haemorrhage;Fetal blood loss;dsyn;{(Warfarin Sodium)};1
+Dry eye;Keratoconjunctivitis Sicca;dsyn;{(Absorica)};1
+Decreased vision, NOS;Blind Vision;dsyn;{(Absorica)};1
+DISEASES OF THE LUNG;Lung diseases;dsyn;{(Arava)};1
+Apnea, Sleep;Sleep Apnea Syndromes;dsyn;{(Ambien)};1
+Adverse effect NOS;Adverse effects;patf;{(Ambien)};1
+Rectal bleeding;Rectal hemorrhage;patf;{(Absorica)};1
+Psychiatric sign;Psychiatric sign;sosy;{(Absorica)};1
+Familial disease;Familial disease;dsyn;{(Migranow)};1
+renal malfunction;Kidney Failure;dsyn;{(Plavix)};1
+hepatic disorders;Liver diseases;dsyn;{(Warfarin Sodium)};1
+Premature Births;Premature Birth;patf;{(Absorica)};1
+Ischaemic stroke;Ischemic stroke;dsyn;{(Activase)};1
+Infections;Communicable Diseases;dsyn;{(Arava)};1
+allergy aspirin;Aspirin allergy;patf;{(10 Person ANSI 
+                        )};1
+Venous puncture;Venous puncture;inpo;{(Activase)};1
+Vasculitic rash;Vasculitic rash;sosy;{(SINGULAIR
+                        )};1
+Thromboembolism;Thromboembolism;dsyn;{(Warfarin Sodium)};1
+TIA;Transient Cerebral Ischemia;dsyn;{(Plavix)};1
+Severe diarrhea;Severe diarrhea;sosy;{(Absorica)};1
+Renal Impairment;Kidney Failure;dsyn;{(Warfarin Sodium)};1
+Haemorrhagic eye;Eye Hemorrhage;patf;{(Activase)};1
+Disease, Cardiac;Heart Diseases;dsyn;{(Migranow)};1
+Agranulocytosis;Agranulocytosis;dsyn;{(Arava)};1
+reye 's syndrome;Reye Syndrome;dsyn;{(10 Person ANSI 
+                        )};1
+activity reduction;Hypokinesia;sosy;{(Plavix)};1
+Suppression;Visual Suppression;patf;{(Arava)};1
+drug mechanism;drug mechanism;patf;{(Warfarin Sodium)};1
+TIA;Transient Ischemic Attack;dsyn;{(Plavix)};1
+Renal disease;Kidney Diseases;dsyn;{(Activase)};1
+Pregnancy loss;Pregnancy loss;patf;{(Warfarin Sodium)};1
+Outcomes, Fatal;Fatal Outcome;patf;{(Arava)};1
+Hepatotoxicity;Hepatotoxicity;inpo;{(Arava)};1
+Cardiac Arrest;Cardiac Arrest;dsyn;{(Migranow)};1
+other asthmatic;Other asthma;dsyn;{(SINGULAIR
+                        )};1
+cardiac events;cardiac event;dsyn;{(Migranow)};1
+asthma attacks;Asthma attack;dsyn;{(SINGULAIR
+                        )};1
+SJS;Schwartz-Jampel Syndrome;cgab;{(Absorica)};1
+Retinopathy;Retinal Diseases;dsyn;{(Activase)};1
+Liver disease;Liver diseases;dsyn;{(10 Person ANSI 
+                        )};1
+Limb ischaemia;Limb ischemia;dsyn;{(Warfarin Sodium)};1
+LIVER INJURY;Injury of liver;inpo;{(Arava)};1
+Bronchospasm;Bronchial Spasm;dsyn;{(SINGULAIR
+                        )};1
+Atheromatous plaque;Atheroma;patf;{(Warfarin Sodium)};1
+Allergy;Allergic disposition;dsyn;{(7 Select Naproxen Sodium)};1
+Side Effect;Adverse effects;patf;{(Absorica)};1
+Recent trauma;Recent injury;inpo;{(Activase)};1
+Muscle sprain;Muscle sprain;inpo;{(Absorica)};1
+Migraine;Migraine Disorders;dsyn;{(Migranow)};1
+Liver Failure;Liver Failure;dsyn;{(Arava)};1
+Hip Fractures;Hip Fractures;inpo;{(Ambien)};1
+Decreased vision;Low Vision;dsyn;{(Absorica)};1
+Aspergillosis;Aspergillosis;dsyn;{(Arava)};1
+fatal result;Fatal Outcome;patf;{(Migranow)};1
+Tolerance;Immune Tolerance;patf;{(Ambien)};1
+Polycythaemia;Polycythemia;dsyn;{(Warfarin Sodium)};1
+Complications;Complication;patf;{(Warfarin Sodium)};1
+sequelae;sequelae aspects;patf;{(Warfarin Sodium)};1
+injuries;trauma qualifier;inpo;{(Ambien)};1
+Tuberculosis;Tuberculosis;dsyn;{(Arava)};1
+Toxic effect;Toxic effect;inpo;{(Absorica)};1
+Somnambulism;Somnambulism;dsyn;{(SINGULAIR
+                        )};1
+Pancytopenia;Pancytopenia;dsyn;{(Arava)};1
+PAIN STOMACH;Stomach ache;sosy;{(DragonTabs
+                        )};1
+Osteoporosis;Osteoporosis;dsyn;{(Absorica)};1
+Osteomalacia;Osteomalacia;dsyn;{(Absorica)};1
+Liver damage;Liver damage;patf;{(10 Person ANSI 
+                        )};1
+Injuries;Traumatic injury;inpo;{(Ambien)};1
+Hyperostosis;Hyperostosis;dsyn;{(Absorica)};1
+Hip Injuries;Hip Injuries;inpo;{(Ambien)};1
+Dry eye;Dry Eye Syndromes;dsyn;{(Absorica)};1
+Acute asthma;Acute asthma;dsyn;{(SINGULAIR
+                        )};1
+oxygen reduction;Hypoxia;patf;{(Ambien)};1
+fetal risk;Fetus at risk;patf;{(Arava)};1
+Nodular acne;Acne nodule;dsyn;{(Absorica)};1
+Fractures, Bone;Fracture;inpo;{(Absorica)};1
+Animal Bites;Animal bite;inpo;{(10 Person ANSI 
+                        )};1
+Allergy;Hypersensitivity;patf;{(7 Select Naproxen Sodium)};1
+skin reddening;Flushing;sosy;{(10 Person ANSI 
+                        )};1
+Steatorrhea;Steatorrhea;dsyn;{(Warfarin Sodium)};1
+Puncture;Puncture wound;inpo;{(Activase)};1
+Papilledema;Papilledema;dsyn;{(Absorica)};1
+Limb Injury;Limb Injury;inpo;{(Absorica)};1
+Fetal Death;Fetal Death;patf;{(Warfarin Sodium)};1
+Overdose;Drug Overdose;inpo;{(7 Select Naproxen Sodium)};1
+Haemorrhage;Hemorrhage;patf;{(Activase)};1
+Dehydrated;Dehydration;dsyn;{(Actidose)};1
+DRY EYE;Dryness of eye;sosy;{(Absorica)};1
+Chicken Pox;Chickenpox;dsyn;{(10 Person ANSI 
+                        )};1
+Blindness;Blind Vision;dsyn;{(Migranow)};1
+Arthralgias;Arthralgia;sosy;{(Absorica)};1
+hepatitis;Hepatitis A;dsyn;{(Absorica)};1
+Thrombosis;Thrombosis;patf;{(Warfarin Sodium)};1
+Osteopenia;Osteopenia;patf;{(Absorica)};1
+Neuropathy;Neuropathy;dsyn;{(SINGULAIR
+                        )};1
+Nephritides;Nephritis;dsyn;{(Warfarin Sodium)};1
+Arthralgia;Arthralgia;sosy;{(Absorica)};1
+occluded;Obstruction;patf;{(Activase)};1
+Sprue;Celiac Disease;dsyn;{(Warfarin Sodium)};1
+Bone Loss;Osteopenia;patf;{(Absorica)};1
+hip plate;hip plate;dsyn;{(Absorica)};1
+Hepatitis;Hepatitis;dsyn;{(Absorica)};1
+Gangrenous;Gangrene;dsyn;{(Activase)};1
+Arthritis;Arthritis;dsyn;{(10 Person ANSI 
+                        )};1
+toxic;Toxic effect;inpo;{(7 Select Naproxen Sodium)};1
+Headaches;Headache;sosy;{(Migranow)};1
+HEAD ACHE;Headache;sosy;{(Absorica)};1
+Bruises;Contusions;inpo;{(Absorica)};1
+BACKPAIN;Back Pain;sosy;{(Absorica)};1
+Acne;Acne Vulgaris;dsyn;{(Absorica)};1
+asthmatics;Asthma;dsyn;{(SINGULAIR
+                        )};1
+Thrombus;Thrombus;patf;{(Activase)};1
+Syndrome;Syndrome;dsyn;{(Warfarin Sodium)};1
+Sepsis;Septicemia;dsyn;{(Arava)};1
+Gangrene;Gangrene;dsyn;{(Warfarin Sodium)};1
+Eye pain;Eye pain;sosy;{(10 Person ANSI 
+                        )};1
+Burns;Burn injury;inpo;{(10 Person ANSI 
+                        )};1
+Block;Obstruction;patf;{(Warfarin Sodium)};1
+Asthenia;Asthenia;sosy;{(Xyzal)};1
+Anorexia;Anorexia;dsyn;{(Absorica)};1
+THROMBI;Thrombus;patf;{(Activase)};1
+Purpura;Purpura;dsyn;{(Absorica)};1
+Hives;Urticaria;dsyn;{(10 Person ANSI 
+                        )};1
+Cough;Coughing;sosy;{(Arava)};1
+Blisters;Bulla;patf;{(10 Person ANSI 
+                        )};1
+Anaemia;Anemia;dsyn;{(Warfarin Sodium)};1
+Weak;Asthenia;sosy;{(Arava)};1
+Tremor;Tremor;sosy;{(SINGULAIR
+                        )};1
+Sepsis;Sepsis;dsyn;{(Arava)};1
+Coma;Comatose;dsyn;{(Migranow)};1
+Sprue;Sprue;dsyn;{(Warfarin Sodium)};1
+Lysis;Lysis;patf;{(Activase)};1
+Acne;Acne;dsyn;{(Absorica)};1
