@@ -6,7 +6,9 @@ const dom        	      = require("xmldom").DOMParser,
 	  Drug       	 	  = require("../db/drug.model"),
 	  substanceModel      = require("../db/substance.model"),
 	  additionalInfoModel = require("../db/additional.info.model"),
-	  parseWarnings       = require("./warnings.parser");
+	  parseWarnings       = require("./warnings.parser"),
+	  connection          = require("../db/connection"),
+	  logger 			  = require("../logger/logger");
 
 function parseXml(xml, file) {
 	let deferred = q.defer();

@@ -39,14 +39,19 @@ drugQueries.removeAll()
 	return allZipFiles;
 })
 .then(zipFiles => {
-	return zipFiles.map(file => {
+	var promise = q.when({});
+
+	zipFiles.forEach(file => {
 		let zip = new AdmZip(file);
 
-		return zip.getEntries().filter(entry => entry.entryName.endsWith(".xml")).map(entry => zip.readAsText(entry.entryName));
-	}).reduce((prev, curr) => prev.concat(curr), []);
-})
-.then(xmls => {
-	return q.all(xmls.map(xml => parseXml(xml, "test")));
+		zip.getEntries().filter(entry => entry.entryName.endsWith(".xml")).forEach(entry => {
+			var xml = zip.readAsText(entry.entryName);
+
+			promise = promise.then(() => parseXml(xml, entry.entryName));
+		});
+	});
+
+	return promise;
 })
 .then(() => drugQueries.findAll())
 .then(drugs => {

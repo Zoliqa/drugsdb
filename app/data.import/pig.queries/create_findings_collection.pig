@@ -24,68 +24,11 @@ DESCRIBE ordered;
 findingsWithDrugs = FOREACH ordered GENERATE MIN(drugsFlatWithGroupDistinct.candidateMatched) AS candidateMatched,
 											 MIN(drugsFlatWithGroupDistinct.candidatePreferred) AS candidatePreferred,
 											 MIN(drugsFlatWithGroupDistinct.semType) AS semType,
-											 drugsFlatWithGroupDistinct.(name) AS drugs:{t:(name)},
+											 --drugsFlatWithGroupDistinct.(name) AS drugs:{t:(name)},
 											 count AS drugsCount;
 
 DESCRIBE findingsWithDrugs;
 
 STORE findingsWithDrugs INTO 'mongodb://localhost:27017/drugsdb.findings' USING com.mongodb.hadoop.pig.MongoStorage();
 
-
 STORE findingsWithDrugs INTO '/home/zoliqa/Documents/drugsdb/app/data.import/pig.queries/findings-stats.txt' USING PigStorage(';');
-
-/*
-findingsWithDrugs = FOREACH findingsGrouped GENERATE MIN(drugsFlatWithGroupDistinct.candidateMatched) AS candidateMatched,
-													 MIN(drugsFlatWithGroupDistinct.candidatePreferred) AS candidatePreferred,
-													 MIN(drugsFlatWithGroupDistinct.semType) AS semType,
-													 drugsFlatWithGroupDistinct.(name) AS drugs:{t:(name)};
-
-STORE findingsWithDrugs INTO 'mongodb://localhost:27017/drugsdb.findings' USING com.mongodb.hadoop.pig.MongoStorage();*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
---DUMP drugsFlat;
---STORE drugsFlat INTO '/home/zoliqa/Documents/drugsdb/app/data.import/pig.queries/result.txt' USING PigStorage(';');
-
-drugsFlatDistinct = DISTINCT drugsFlat;
-
---DUMP drugsFlatDistinct;
---STORE drugsFlatDistinct INTO '/home/zoliqa/Documents/drugsdb/app/data.import/pig.queries/result-distinct.txt' USING PigStorage(';');
-
-findingsGrouped = GROUP drugsFlatDistinct BY candidatePreferred;
-
-findingsWithDrugs = FOREACH findingsGrouped GENERATE MIN(drugsFlatDistinct.candidateMatched) AS candidateMatched,
-													 group AS candidatePreferred,
-													 MIN(drugsFlatDistinct.semType) AS semType,
-													 drugsFlatDistinct.(name) AS drugs:{t:(name)};
-
-DESCRIBE findingsWithDrugs;
-
-STORE findingsWithDrugs INTO 'mongodb://localhost:27017/drugsdb.findings' USING com.mongodb.hadoop.pig.MongoStorage();*/
