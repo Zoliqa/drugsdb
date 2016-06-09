@@ -40,5 +40,8 @@
     "winston-mongodb": "^1.4.0",
     "xmldom": "^0.1.22",
     "xpath": "0.0.22"
+  },
+  "scripts": {
+    "test": "karma start ./test.config/karma.config.js"
   }
 }
