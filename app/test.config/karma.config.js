@@ -12,7 +12,6 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ["jasmine", "requirejs"],
 
-
     // list of files / patterns to load in the browser
     files: [
         "test.config/test.main.js",
@@ -28,13 +27,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        "public/app/**/*.js": ["coverage"]
     },
 
 
     // test results reporter to use
     // possible values: "dots", "progress"
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ["progress"],
+    reporters: ["progress", "coverage"],
 
 
     // web server port
@@ -70,6 +70,15 @@ module.exports = function(config) {
     phantomjsLauncher: {
       // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
       exitOnResourceError: true
+    },
+
+    coverageReporter: {
+        reporters: [{
+            type : 'html',
+            dir : 'coverage/'
+        },{
+            type: "text-summary"
+        }]
     }
   })
 }
