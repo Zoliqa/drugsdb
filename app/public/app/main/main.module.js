@@ -54,7 +54,9 @@ define([
 			.factory("levenhsteinDistanceService", levenhsteinDistanceService)
 			.constant("_", _)
 			.constant("jquery", jquery)
+			.constant("Offline", Offline) //???
 			.constant("UNAUTHORIZED", "UNAUTHORIZED")
+			.constant("USER_LOGGED_IN", "USER_LOGGED_IN") // ???
 			.config(mainConfig)
 			.run(mainRun);
 	}

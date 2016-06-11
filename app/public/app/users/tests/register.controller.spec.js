@@ -6,10 +6,7 @@ define(["angularMocks", "app/users/register.controller"], function (angularMocks
 			locationMock,
 			bcryptMock,
 			userServiceMock,
-			registerController,
-			user = {
-				password: "currentPassword"
-			};
+			registerController;
 
 		beforeEach(inject(function (_$q_, _$rootScope_) {
 			$q = _$q_;
@@ -116,7 +113,7 @@ define(["angularMocks", "app/users/register.controller"], function (angularMocks
 			expect(locationMock.path.calls.argsFor(0)[0]).toBe("/login");
 		});
 
-		it("should define correct term service providers", function () {
+		it("should define correct term service provider", function () {
 			createRegisterController();
 
 			var fakeTermServiceProvider = "Service";

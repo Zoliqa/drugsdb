@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">90.74% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>50/50</span>
+        <span class='fraction'>49/54</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">78.95% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>17/17</span>
+        <span class='fraction'>15/19</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">90.74% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>50/50</span>
+        <span class='fraction'>49/54</span>
       </div>
     </div>
   </div>
@@ -157,7 +157,23 @@
 112
 113
 114
-115</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -227,23 +243,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -333,31 +365,47 @@
 		});
 &nbsp;
 		it("should allow access /user/profile route for authenticated users", function (done) {
+			var userServiceInstance = {
+				current: {
+					get: <span class="fstat-no" title="function not covered" >function () {</span>}
+				}
+			};
+&nbsp;
 			spyOn(userServiceInstance.current, "get").and.returnValue({
 				$promise: $q.when({
 					_id: 123
 				})
 			});
 &nbsp;
-			var auth = $route.routes["/user/profile"].resolve.auth;
+			var resolve = $route.routes["/user/profile"];
+&nbsp;
+			expect(resolve).toBeDefined();
+&nbsp;
+			var auth = resolve.auth;
 &nbsp;
 			expect(auth).toBeDefined();
 &nbsp;
 			var promise = auth($q, "UNAUTHORIZED", userServiceInstance),
 				resolvedValue = null;
 &nbsp;
-			promise.then(function (value) {
-				resolvedValue = value;
-			}).finally(function () {
-				expect(resolvedValue).toBe(true);
+<span class="cstat-no" title="statement not covered" >			promise.then(<span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >				resolvedValue = value;</span>
+			}).finally(<span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >				expect(resolvedValue).toBe(true);</span>
 &nbsp;
-				done();
+<span class="cstat-no" title="statement not covered" >				done();</span>
 			});
 &nbsp;
-			$rootScope.$apply();
+<span class="cstat-no" title="statement not covered" >			$rootScope.$apply();</span>
 		});
 &nbsp;
 		it("should not allow access /user/profile route for unauthenticated users", function () {
+			var userServiceInstance = {
+				current: {
+					get: <span class="fstat-no" title="function not covered" >function () {</span>}
+				}
+			};
+&nbsp;
 			spyOn(userServiceInstance.current, "get").and.returnValue({
 				$promise: $q.when({
 					_id: null
@@ -391,7 +439,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Jun 11 2016 19:19:22 GMT+0300 (EEST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Jun 11 2016 19:52:02 GMT+0300 (EEST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

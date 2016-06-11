@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for users/users.module.js</title>
+    <title>Code coverage report for main/main.module.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">all files</a> / <a href="index.html">users/</a> users.module.js
+      <a href="../index.html">all files</a> / <a href="index.html">main/</a> main.module.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -90,7 +90,33 @@
 45
 46
 47
-48</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -137,51 +163,73 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">﻿define([
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">define([
 	"angular",
 	"angularRoute",
-	"angularResource",
 	"underscore",
-	"bcrypt",
-	"offline",
-	"app/users/login.controller",
-	"app/users/register.controller",
-	"app/users/profile.controller",
-	"app/users/user.service",
-	"app/users/user.online.service",
-	"app/users/user.offline.service",
-	"app/users/users.config",
-	"app/users/users.run"],
+	"jquery",
+	"app/main/pageheader.controller",
+	"app/main/search.controller",
+	"app/main/history.controller",
+	"app/main/drug.details.controller",
+	"app/main/services/search.all.service",
+	"app/main/services/search.drug.service",
+	"app/main/services/search.producer.service",
+	"app/main/services/search.substance.service",
+	"app/main/services/search.entry.service",
+	"app/main/services/term.service",
+	"app/main/services/term.dbpedia.service",
+	"app/main/services/term.medlineplus.service",
+	"app/main/services/levenshtein.distance.service",
+	"app/main/main.config",
+	"app/main/main.run"],
 	function (angular,
 			  angularRoute,
-			  angularResource,
 			  _,
-			  bcrypt,
-			  offline,
-			  LoginController,
-			  RegisterController,
-			  ProfileController,
-			  userService,
-			  userOnlineService,
-			  userOfflineService,
-			  usersConfig,
-			  usersRun) {
+			  jquery,
+			  PageHeaderController,
+			  SearchController,
+			  HistoryController,
+			  DrugDetailsController,
+			  searchAllService,
+			  searchDrugService,
+			  searchProducerService,
+			  searchSubstanceService,
+			  searchEntryService,
+			  termService,
+			  termDbpediaService,
+			  termMedlinePlusService,
+			  levenhsteinDistanceService,
+			  mainConfig,
+			  mainRun) {
 &nbsp;
-		angular.module("users", ["ngRoute", "ngResource"])
-			.controller("LoginController", LoginController)
-			.controller("RegisterController", RegisterController)
-			.controller("ProfileController", ProfileController)
-			.factory("userService", userService)
-			.factory("userOnlineService", userOnlineService)
-			.factory("userOfflineService", userOfflineService)
-			.constant("UNAUTHORIZED", "UNAUTHORIZED") // ????
-			.constant("USER_LOGGED_IN", "USER_LOGGED_IN")
-			.constant("USER_LOGGED_OUT", "USER_LOGGED_OUT")
-			.constant("Offline", Offline)
+		angular.module("main", ["ngRoute"])
+			.controller("PageHeaderController", PageHeaderController)
+			.controller("SearchController", SearchController)
+			.controller("HistoryController", HistoryController)
+			.controller("DrugDetailsController", DrugDetailsController)
+			.factory("searchAllService", searchAllService)
+			.factory("searchDrugService", searchDrugService)
+			.factory("searchProducerService", searchProducerService)
+			.factory("searchSubstanceService", searchSubstanceService)
+			.factory("searchEntryService", searchEntryService)
+			.factory("termService", termService)
+			.factory("termDbpediaService", termDbpediaService)
+			.factory("termMedlinePlusService", termMedlinePlusService)
+			.factory("levenhsteinDistanceService", levenhsteinDistanceService)
 			.constant("_", _)
-			.constant("bcrypt", bcrypt)
-			.config(usersConfig)
-			.run(usersRun);
+			.constant("jquery", jquery)
+			.constant("Offline", Offline) //???
+			.constant("UNAUTHORIZED", "UNAUTHORIZED")
+			.constant("USER_LOGGED_IN", "USER_LOGGED_IN") // ???
+			.config(mainConfig)
+			.run(mainRun);
 	}
 );
 &nbsp;</pre></td></tr>

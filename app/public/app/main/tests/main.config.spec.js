@@ -1,6 +1,6 @@
-define(["angularMocks", "public/app/users/users.module"], function (angularMocks, usersModule) {
+define(["angularMocks", "app/main/main.module"], function (angularMocks, mainModule) {
 
-	describe("users module routes", function () {
+	describe("main module routes", function () {
 		var $q,
 			$route,
 			$rootScope,
@@ -8,11 +8,13 @@ define(["angularMocks", "public/app/users/users.module"], function (angularMocks
 			userServiceInstance;
 
 		beforeEach(function () {
-			module("users");
+			module("main");
 
-			angular.module("users")
+			angular.module("main")
 				.factory("cacheService", function () { return {}; })
-				.factory("dbService", function () { return {}; });
+				.factory("dbService", function () { return {}; })
+				.factory("userOnlineService", function () { return {}; })
+				.factory("userOfflineService", function () { return {}; });
 		});
 
 		beforeEach(inject(function (_$q_, _$route_, _$rootScope_, _$httpBackend_) {
@@ -35,31 +37,24 @@ define(["angularMocks", "public/app/users/users.module"], function (angularMocks
 				};
 			};
 
-			angular.module("users").factory("userService", userServiceMock);
+			angular.module("main").factory("userService", userServiceMock);
 		}));
 
-		it("should define /user/login route", function () {
-			expect($route.routes["/user/login"]).toBeDefined();
+		it("should define /search route", function () {
+			expect($route.routes["/search"]).toBeDefined();
 
-			expect($route.routes["/user/login"].controller).toBe("LoginController");
-			expect($route.routes["/user/login"].templateUrl).toBe("/public/app/users/login.html");
+			expect($route.routes["/search"].controller).toBe("SearchController");
+			expect($route.routes["/search"].templateUrl).toBe("/public/app/main/search.html");
 		});
 
-		it("should define /user/register route", function () {
-			expect($route.routes["/user/register"]).toBeDefined();
+		it("should define /history route", function () {
+			expect($route.routes["/history"]).toBeDefined();
 
-			expect($route.routes["/user/register"].controller).toBe("RegisterController");
-			expect($route.routes["/user/register"].templateUrl).toBe("/public/app/users/register.html");
+			expect($route.routes["/history"].controller).toBe("HistoryController");
+			expect($route.routes["/history"].templateUrl).toBe("/public/app/main/history.html");
 		});
 
-		it("should define /user/profile route", function () {
-			expect($route.routes["/user/profile"]).toBeDefined();
-
-			expect($route.routes["/user/profile"].controller).toBe("ProfileController");
-			expect($route.routes["/user/profile"].templateUrl).toBe("/public/app/users/profile.html");
-		});
-
-		it("should allow access /user/profile route for authenticated users", function (done) {
+		it("should allow access to /search route for authenticated users", function () {
 			var userServiceInstance = {
 				current: {
 					get: function () {}
@@ -72,11 +67,11 @@ define(["angularMocks", "public/app/users/users.module"], function (angularMocks
 				})
 			});
 
-			var resolve = $route.routes["/user/profile"];
+			var resolve = $route.routes["/search"].resolve;
 
 			expect(resolve).toBeDefined();
 
-			var auth = $route.routes["/user/profile"].resolve.auth;
+			var auth = resolve.auth;
 
 			expect(auth).toBeDefined();
 
@@ -94,7 +89,7 @@ define(["angularMocks", "public/app/users/users.module"], function (angularMocks
 			$rootScope.$apply();
 		});
 
-		it("should not allow access /user/profile route for unauthenticated users", function () {
+		it("should allow access to /history route for authenticated users", function () {
 			var userServiceInstance = {
 				current: {
 					get: function () {}
@@ -107,15 +102,13 @@ define(["angularMocks", "public/app/users/users.module"], function (angularMocks
 				})
 			});
 
-			var resolve = $route.routes["/user/profile"];
+			var resolve = $route.routes["/history"].resolve;
 
 			expect(resolve).toBeDefined();
 
-			var auth = $route.routes["/user/profile"].resolve.auth;
+			var auth = resolve.auth;
 
 			expect(auth).toBeDefined();
-
-			$httpBackend.expectGET("/public/app/users/login.html").respond(200);
 
 			var promise = auth($q, "UNAUTHORIZED", userServiceInstance),
 				resolvedValue = null;
