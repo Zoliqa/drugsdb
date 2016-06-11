@@ -42,7 +42,7 @@ define([], function () {
 				vm.shouldChangePassword = false;
 
 				// need to empty cache because next time we want to get the real user instead of empty object
-				cacheService.invalidate("/user")
+				cacheService.invalidate("/user");
 			});
 		};
 
