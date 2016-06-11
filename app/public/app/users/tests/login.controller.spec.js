@@ -25,9 +25,6 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 			userServiceMock = {
 				current: {
 				 	login: function () {
-						return {
-							$promise: $q.when({})
-						}
 					}
 				}
 			};
@@ -74,15 +71,11 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 				password: "123"
 			};
 
-			userServiceMock = {
-				current: {
-				 	login: function () {
-						return {
-							$promise: $q.when(user)
-						}
-					}
-				}
-			};
+			spyOn(userServiceMock.current, "login").and.callFake(function () {
+				return {
+					$promise: $q.when(user)
+				};
+			});
 
 			spyOn($rootScope, "$emit");
 			spyOn(cacheServiceMock, "invalidate");
@@ -105,17 +98,11 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 		});
 
 		it("should show error message for invalid user", function () {
-			userServiceMock = {
-				current: {
-				 	login: function () {
-						return {
-							$promise: $q.when({
-								_id: null
-							})
-						}
-					}
-				}
-			};
+			spyOn(userServiceMock.current, "login").and.callFake(function () {
+				return {
+					$promise: $q.when({})
+				};
+			});
 
 			spyOn(cacheServiceMock, "invalidate");
 
