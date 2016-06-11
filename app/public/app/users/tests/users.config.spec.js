@@ -112,12 +112,3 @@ define(["angularMocks", "public/app/users/users.module"], function (angularMocks
 		});
 	});
 });
-
-// define([], function () {
-//
-// 	describe("usersConfig", function () {
-// 		it("should be defined", function () {
-// 			expect(true).toBe(true);
-// 		});
-// 	});
-// });

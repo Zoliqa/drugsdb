@@ -24,6 +24,8 @@ define([], function () {
 		this.selectTermServiceProvider = selectTermServiceProvider;
 
 		function register() {
+			vm.errorMessage = "";
+
 			if (vm.user.password !== vm.user.confirmedPassword) {
 				vm.errorMessage = "Password and confirmed password don't match.";
 

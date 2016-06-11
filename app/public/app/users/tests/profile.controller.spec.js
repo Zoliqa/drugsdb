@@ -14,7 +14,8 @@ define(["angularMocks", "app/users/profile.controller"], function (angularMocks,
 				compareSync: function () {},
 				genSaltSync: function () {},
 				hashSync: function () {}
-			},
+			};
+			
 			userServiceMock = {
 				current: {
 				 	get: function () {
