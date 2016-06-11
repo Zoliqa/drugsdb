@@ -80,6 +80,8 @@ define(["angularMocks", "public/app/users/users.module"], function (angularMocks
 
 			expect(auth).toBeDefined();
 
+			$httpBackend.expectGET("/public/app/users/login.html").respond(200);
+
 			var promise = auth($q, "UNAUTHORIZED", userServiceInstance),
 				resolvedValue = null;
 

@@ -42,7 +42,7 @@ define([], function () {
 				}
 			}
 
-			// when hisory buttons are used (back or forward), this function will be called first, then the next function inside the watch which will
+			// when history buttons are used (back or forward), this function will be called first, then the next function inside the watch which will
 			// detect that the search params are the same; otherwise, if we set a new value for the search params the next function inside the watch will be called
 			// first, followed by this function
 			$scope.$on('$locationChangeSuccess', function(){
