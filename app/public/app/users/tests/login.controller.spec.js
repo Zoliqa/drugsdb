@@ -4,7 +4,10 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 		var $q,
 			$rootScope,
 			locationMock,
-			USER_LOGGED_IN = 1;
+			userServiceMock,
+			cacheServiceMock,
+			USER_LOGGED_IN = 1,
+			loginController;
 
 		beforeEach(inject(function (_$q_, _$rootScope_) {
 			$q = _$q_;
@@ -18,14 +21,32 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 				},
 				path: function () {}
 			};
+
+			userServiceMock = {
+				current: {
+				 	login: function () {
+						return {
+							$promise: $q.when({})
+						}
+					}
+				}
+			};
+
+			cacheServiceMock = {
+				invalidate: function () {}
+			}
 		}));
+
+		function createLoginController() {
+			loginController = new LoginController($rootScope, locationMock, userServiceMock, cacheServiceMock, USER_LOGGED_IN);
+		}
 
 		it("should be defined", function () {
 			expect(LoginController).toBeDefined();
 		});
 
 		it("should show error message if username is missing", function () {
-			var loginController = new LoginController($rootScope, locationMock);
+			createLoginController();
 
 			loginController.credentials.username = "";
 			loginController.credentials.password = "password";
@@ -36,7 +57,7 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 		});
 
 		it("should show error message if password is missing", function () {
-			var loginController = new LoginController($rootScope, locationMock);
+			createLoginController();
 
 			loginController.credentials.username = "username";
 			loginController.credentials.password = "";
@@ -51,7 +72,8 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 				_id: 123,
 				username: "Joe",
 				password: "123"
-			},
+			};
+
 			userServiceMock = {
 				current: {
 				 	login: function () {
@@ -60,15 +82,12 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 						}
 					}
 				}
-			},
-			cacheServiceMock = {
-				invalidate: function () {}
 			};
 
 			spyOn($rootScope, "$emit");
 			spyOn(cacheServiceMock, "invalidate");
 
-			var loginController = new LoginController($rootScope, locationMock, userServiceMock, cacheServiceMock, USER_LOGGED_IN);
+			createLoginController();
 
 			loginController.credentials.username = user.username;
 			loginController.credentials.password = user.password;
@@ -86,7 +105,7 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 		});
 
 		it("should show error message for invalid user", function () {
-			var userServiceMock = {
+			userServiceMock = {
 				current: {
 				 	login: function () {
 						return {
@@ -96,14 +115,11 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 						}
 					}
 				}
-			},
-			cacheServiceMock = {
-				invalidate: function () {}
 			};
 
 			spyOn(cacheServiceMock, "invalidate");
 
-			var loginController = new LoginController($rootScope, locationMock, userServiceMock, cacheServiceMock, USER_LOGGED_IN);
+			createLoginController();
 
 			loginController.credentials.username = "John";
 			loginController.credentials.password = "Password";
@@ -121,7 +137,7 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 		it("should redirect user to register page", function () {
 			spyOn(locationMock, "path");
 
-			var loginController = new LoginController($rootScope, locationMock);
+			createLoginController();
 
 			loginController.register();
 
