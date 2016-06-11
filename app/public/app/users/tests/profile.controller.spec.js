@@ -1,4 +1,4 @@
-define(["angularMocks", "public/app/users/profile.controller"], function (angularMocks, ProfileController) {
+define(["angularMocks", "app/users/profile.controller"], function (angularMocks, ProfileController) {
 
 	describe("ProfileController", function () {
 		var bcryptMock,

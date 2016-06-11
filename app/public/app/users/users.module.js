@@ -4,6 +4,7 @@
 	"angularResource",
 	"underscore",
 	"bcrypt",
+	"offline",
 	"app/users/login.controller",
 	"app/users/register.controller",
 	"app/users/profile.controller",
@@ -17,6 +18,7 @@
 			  angularResource,
 			  _,
 			  bcrypt,
+			  offline,
 			  LoginController,
 			  RegisterController,
 			  ProfileController,
@@ -33,6 +35,7 @@
 			.factory("userService", userService)
 			.factory("userOnlineService", userOnlineService)
 			.factory("userOfflineService", userOfflineService)
+			.constant("UNAUTHORIZED", "UNAUTHORIZED") // ????
 			.constant("USER_LOGGED_IN", "USER_LOGGED_IN")
 			.constant("USER_LOGGED_OUT", "USER_LOGGED_OUT")
 			.constant("Offline", Offline)

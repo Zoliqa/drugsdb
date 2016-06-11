@@ -1,4 +1,4 @@
-define(["angularMocks", "public/app/users/login.controller"], function (angularMocks, LoginController) {
+define(["angularMocks", "app/users/login.controller"], function (angularMocks, LoginController) {
 
 	describe("LoginController", function () {
 		var $q,
@@ -71,10 +71,8 @@ define(["angularMocks", "public/app/users/login.controller"], function (angularM
 				password: "123"
 			};
 
-			spyOn(userServiceMock.current, "login").and.callFake(function () {
-				return {
-					$promise: $q.when(user)
-				};
+			spyOn(userServiceMock.current, "login").and.returnValue({
+				$promise: $q.when(user)
 			});
 
 			spyOn($rootScope, "$emit");
