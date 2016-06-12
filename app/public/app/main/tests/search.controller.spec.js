@@ -128,7 +128,7 @@ define(["angularMocks", "app/main/search.controller"], function (angularMocks, S
 			expect(searchSubstanceServiceMock.search).toHaveBeenCalled();
 		});
 
-		it("should not search for invalid search type service", function () {
+		it("should not search on init for invalid search type service", function () {
 			spyOn(locationMock, "search").and.returnValue({
 				type: "invalidService",
 				term: "Some term"
@@ -148,6 +148,74 @@ define(["angularMocks", "app/main/search.controller"], function (angularMocks, S
 
 			expect(locationMock.search).toHaveBeenCalled();
 			expect(locationMock.search.calls.argsFor(2)).toEqual(["type", ""]);
+		});
+
+		it("should search when history has changed", function () {
+			var searchState = {
+				type: "invalidService",
+				term: "Some term"
+			};
+
+			spyOn(locationMock, "search").and.callFake(function () {
+				return searchState;
+			});
+
+			spyOn(injectorMock, "get").and.callFake(function (name) {
+				if (name === "invalidService")
+					throw new Error;
+				else
+					return searchDrugServiceMock;
+			});
+
+			searchController.searchService = searchDrugServiceMock;
+
+			spyOn(searchDrugServiceMock, "search").and.returnValue($q.reject({}));
+
+			createSearchController();
+
+			searchState = {
+				type: "searchDrugService",
+				term: "something else"
+			};
+
+			$rootScope.$broadcast('$locationChangeSuccess');
+
+			$rootScope.$apply();
+
+			expect(searchDrugServiceMock.search).toHaveBeenCalled();
+		});
+
+		it("should not search when history has not changed but the search string has changed", function () {
+			var searchState = {
+				type: "invalidService",
+				term: "Some term"
+			};
+
+			spyOn(locationMock, "search").and.callFake(function () {
+				return searchState;
+			});
+
+			spyOn(injectorMock, "get").and.callFake(function (name) {
+				if (name === "invalidService")
+					throw new Error;
+				else
+					return searchDrugServiceMock;
+			});
+
+			searchController.searchService = searchDrugServiceMock;
+
+			spyOn(searchDrugServiceMock, "search").and.returnValue($q.reject({}));
+
+			createSearchController();
+
+			searchState = {
+				type: "searchDrugService",
+				term: "something else"
+			};
+
+			$rootScope.$apply();
+
+			expect(searchDrugServiceMock.search).not.toHaveBeenCalled();
 		});
 
 		it("should support search by all", function () {
