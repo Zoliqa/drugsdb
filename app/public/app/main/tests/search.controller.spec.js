@@ -11,7 +11,7 @@ define(["angularMocks", "app/main/search.controller"], function (angularMocks, S
 			searchDrugServiceMock,
 			searchProducerServiceMock,
 			searchSubstanceServiceMock,
-			searchController = {};
+			searchController;
 
 		beforeEach(inject(function (_$q_, _$rootScope_) {
 			$q = _$q_;
