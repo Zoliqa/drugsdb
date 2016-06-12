@@ -10,6 +10,7 @@ module.exports = {
 			.click("#login button:nth-of-type(1)")
 			.pause(1000)
 			.assert.elementPresent("#search")
+			.assert.elementPresent(".navbar .navbar-right a")
 			.click(".navbar .navbar-right a")
 			.pause(1000)
 			.assert.elementPresent("#login")

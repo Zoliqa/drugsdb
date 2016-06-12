@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "karma start ./test.config/unit/karma.config.js",
-    "int-test": "nightwatch -c ./test.config/integration/nightwatch.json"
+    "int-test": "nightwatch -c ./test.config/integration/nightwatch.json" 
   },
   "author": "",
   "license": "ISC",
