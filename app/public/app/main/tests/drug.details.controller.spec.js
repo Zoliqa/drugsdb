@@ -28,7 +28,7 @@ define(["angularMocks", "underscore", "app/main/drug.details.controller"], funct
 		}
 
 		it("should be defined", function () {
-			expect(DrugDetailsController).toBeDefined();
+			expect(DrugDetailsController).not.toBeNull();
 		});
 
 		it("should filter the correct additional infos for the given drug", function () {

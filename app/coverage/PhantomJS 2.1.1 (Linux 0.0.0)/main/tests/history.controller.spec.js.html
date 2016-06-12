@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for main/services/search.drug.service.js</title>
+    <title>Code coverage report for main/tests/history.controller.spec.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">all files</a> / <a href="index.html">main/services/</a> search.drug.service.js
+      <a href="../../index.html">all files</a> / <a href="index.html">main/tests/</a> history.controller.spec.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40% </span>
+        <span class="strong">92.31% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/10</span>
+        <span class='fraction'>12/13</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">25% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/4</span>
+        <span class='fraction'>4/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40% </span>
+        <span class="strong">92.31% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/10</span>
+        <span class='fraction'>12/13</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -68,55 +68,88 @@
 23
 24
 25
-26</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">﻿define([], function () {
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">define(["angularMocks", "underscore", "app/main/history.controller"], function (angularMocks, _, HistoryController) {
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function searchDrugService($http, $q) {</span>
-<span class="cstat-no" title="statement not covered" >		var service = {</span>
-			search: search,
-			name: "searchDrugService",
-			description: "drug",
-			template: "drug"
-		};
+	describe("HistoryController", function () {
+		var $q,
+			$rootScope,
+			injectorMock,
+			locationMock,
+			searchEntryServiceMock,
+			historyController;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return service;</span>
+		beforeEach(inject(function (_$q_, _$rootScope_) {
+			$q = _$q_;
+			$rootScope = _$rootScope_;
 &nbsp;
-<span class="fstat-no" title="function not covered" >		function search(term) {</span>
-<span class="cstat-no" title="statement not covered" >			var deferred = $q.defer();</span>
+			injectorMock = {
+				get: <span class="fstat-no" title="function not covered" >function () {</span>}
+			};
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			$http.post("/main/searchdrug", { term: term }).then(<span class="fstat-no" title="function not covered" >function (result) {</span></span>
-<span class="cstat-no" title="statement not covered" >				deferred.resolve(result.data);</span>
-			}, deferred.reject);
+			locationMock = {
+				path: <span class="fstat-no" title="function not covered" >function () {</span>}
+			};
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			return deferred.promise;</span>
+			searchEntryMock = {
+				search: <span class="fstat-no" title="function not covered" >function () {</span>}
+			};
+		}));
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function createHistoryController() {</span>
+<span class="cstat-no" title="statement not covered" >			historyController = new HistoryController(injectorMock, locationMock, _, searchEntryMock);</span>
 		}
-	}
 &nbsp;
-	return searchDrugService;
+		it("should be defined", function () {
+			expect(HistoryController).not.toBeNull();
+		});
+	});
 });
 &nbsp;</pre></td></tr>
 </table></pre>

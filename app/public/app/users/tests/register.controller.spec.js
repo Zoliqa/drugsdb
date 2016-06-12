@@ -35,7 +35,7 @@ define(["angularMocks", "app/users/register.controller"], function (angularMocks
 		}
 
 		it("should be defined", function () {
-			expect(RegisterController).toBeDefined();
+			expect(RegisterController).not.toBeNull();
 		});
 
 		describe("register", function () {

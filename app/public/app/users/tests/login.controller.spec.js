@@ -39,7 +39,7 @@ define(["angularMocks", "app/users/login.controller"], function (angularMocks, L
 		}
 
 		it("should be defined", function () {
-			expect(LoginController).toBeDefined();
+			expect(LoginController).not.toBeNull();
 		});
 
 		it("should show error message if username is missing", function () {

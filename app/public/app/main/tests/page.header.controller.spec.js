@@ -29,7 +29,7 @@ define(["angularMocks", "app/main/pageheader.controller"], function (angularMock
 		}
 
 		it("should be defined", function () {
-			expect(PageHeaderController).toBeDefined();
+			expect(PageHeaderController).not.toBeNull();
 		});
 
 		it("should set logged in user", function () {

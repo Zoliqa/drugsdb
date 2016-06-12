@@ -15,7 +15,7 @@ define(["angularMocks", "app/users/profile.controller"], function (angularMocks,
 				genSaltSync: function () {},
 				hashSync: function () {}
 			};
-			
+
 			userServiceMock = {
 				current: {
 				 	get: function () {
@@ -37,7 +37,7 @@ define(["angularMocks", "app/users/profile.controller"], function (angularMocks,
 		}
 
 		it("should be defined", function () {
-			expect(ProfileController).toBeDefined();
+			expect(ProfileController).not.toBeNull();
 		});
 
 		describe("save", function () {

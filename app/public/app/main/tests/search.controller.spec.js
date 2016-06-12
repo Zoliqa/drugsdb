@@ -28,7 +28,7 @@ define(["angularMocks", "app/main/search.controller"], function (angularMocks, S
 
 			injectorMock = {
 				get: function () {}
-			}
+			};
 
 			uibModalMock = {
 				open: function () {}
@@ -65,7 +65,7 @@ define(["angularMocks", "app/main/search.controller"], function (angularMocks, S
 		}
 
 		it("should be defined", function () {
-			expect(SearchController).toBeDefined();
+			expect(SearchController).not.toBeNull();
 		});
 
 		it("should search on init if type is set to 'searchDrugService' and term is set to 'DragonTabs'", function () {
