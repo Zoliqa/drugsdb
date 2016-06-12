@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">43.75% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/16</span>
+        <span class='fraction'>16/16</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">20% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/10</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">43.75% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/16</span>
+        <span class='fraction'>16/16</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -88,28 +88,28 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,30 +123,30 @@ define([], function () {
 	// mainRun.$inject = ["$rootScope", "$location", "USER_LOGGED_IN", "Offline"];
 &nbsp;
 	function mainRun(
-		$rootScope, $location, $q, USER_LOGGED_IN, UNAUTHORIZED, Offline, userOnlineService, userOfflineService) {
+		$rootScope, $location, USER_LOGGED_IN, UNAUTHORIZED, Offline, userOnlineService, userOfflineService) {
 &nbsp;
-		$rootScope.$on(USER_LOGGED_IN, <span class="fstat-no" title="function not covered" >function (event, data) {</span>
-<span class="cstat-no" title="statement not covered" >			$location.path("/search");</span>
+		$rootScope.$on(USER_LOGGED_IN, function (event, data) {
+			$location.path("/search");
 		});
 &nbsp;
-		$rootScope.$on("$routeChangeError", <span class="fstat-no" title="function not covered" >function (event, current, previous, rejection) {</span>
-<span class="cstat-no" title="statement not covered" >			if (rejection === UNAUTHORIZED) {</span>
-<span class="cstat-no" title="statement not covered" >				$location.path("/user/login");</span>
+		$rootScope.$on("$routeChangeError", function (event, current, previous, rejection) {
+			<span class="missing-if-branch" title="else path not taken" >E</span>if (rejection === UNAUTHORIZED) {
+				$location.path("/user/login");
 			}
 		});
 &nbsp;
-		Offline.on("down", <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >			$rootScope.$apply(<span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >				userOfflineService.logout().$promise.finally(<span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >					$location.path("/user/login");</span>
+		Offline.on("down", function () {
+			$rootScope.$apply(function () {
+				userOfflineService.logout().$promise.finally(function () {
+					$location.path("/user/login");
 				});
 			});
 		});
 &nbsp;
-		Offline.on("up", <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >			$rootScope.$apply(<span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >				userOnlineService.logout().$promise.finally(<span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >					$location.path("/user/login");</span>
+		Offline.on("up", function () {
+			$rootScope.$apply(function () {
+				userOnlineService.logout().$promise.finally(function () {
+					$location.path("/user/login");
 				});
 			});
 		});
@@ -160,7 +160,7 @@ define([], function () {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 12 2016 16:55:55 GMT+0300 (EEST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 12 2016 19:11:14 GMT+0300 (EEST)
 </div>
 </div>
 <script src="../prettify.js"></script>
