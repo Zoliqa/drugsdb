@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "karma start ./test.config/karma.config.js"
+    "test": "karma start ./test.config/unit/karma.config.js",
+    "int-test": "nightwatch -c ./test.config/integration/nightwatch.json"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-requirejs": "^0.2.3",
     "load-grunt-tasks": "^3.3.0",
+    "nightwatch": "^0.9.3",
     "phantomjs-prebuilt": "^2.1.7"
   },
   "dependencies": {
