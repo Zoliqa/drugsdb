@@ -12,14 +12,12 @@ define([], function () {
 			userService.current.get().$promise.then(function (user) {
 				if (user._id) {
 					vm.isDisabled = false;
-					// vm.isAdmin = user.isAdmin;
 					vm.user = user;
 				}
 			});
 
 			$rootScope.$on(USER_LOGGED_IN, function (event, data) {
 				vm.isDisabled = false;
-				// vm.isAdmin = data.isAdmin;
 				vm.user = data;
 			});
 		})();
