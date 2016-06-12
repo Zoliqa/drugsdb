@@ -2,83 +2,86 @@
 // Generated on Thu Jun 09 2016 22:42:18 GMT+0300 (EEST)
 
 module.exports = function(config) {
-  config.set({
+    config.set({
 
-    // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: "../",
-
-
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ["jasmine", "requirejs"],
-
-    // list of files / patterns to load in the browser
-    files: [
-        "test.config/test.main.js",
-		{ pattern: "public/**/*.js", included: false }
-    ],
+        // base path that will be used to resolve all patterns (eg. files, exclude)
+        basePath: "../",
 
 
-    // list of files to exclude
-    exclude: [
-    ],
+        // frameworks to use
+        // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+        frameworks: ["jasmine", "requirejs"],
+
+        // list of files / patterns to load in the browser
+        files: [
+            "test.config/test.main.js",
+        	{ pattern: "public/**/*.js", included: false }
+        ],
 
 
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-        "public/app/**/*.js": ["coverage"]
-    },
+        // list of files to exclude
+        exclude: [
+        ],
 
 
-    // test results reporter to use
-    // possible values: "dots", "progress"
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ["progress"],
+        // preprocess matching files before serving them to the browser
+        // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+        preprocessors: {
+            "public/app/**/*.js": ["coverage"]
+        },
 
 
-    // web server port
-    port: 9876,
+        // test results reporter to use
+        // possible values: "dots", "progress"
+        // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+        reporters: ["progress", "coverage"],
 
 
-    // enable / disable colors in the output (reporters and logs)
-    colors: true,
+        // web server port
+        port: 9876,
 
 
-    // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+        // enable / disable colors in the output (reporters and logs)
+        colors: true,
 
 
-    // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+        // level of logging
+        // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+        logLevel: config.LOG_INFO,
 
 
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ["Chrome"],
+        // enable / disable watching file and executing tests whenever any file changes
+        autoWatch: true,
 
 
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+        // start these browsers
+        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+        browsers: ["PhantomJS"],
 
-    // Concurrency level
-    // how many browser should be started simultaneous
-    concurrency: Infinity,
 
-    phantomjsLauncher: {
-      // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
-      exitOnResourceError: true
-    },
+        // Continuous Integration mode
+        // if true, Karma captures browsers, runs the tests and exits
+        singleRun: false,
 
-    coverageReporter: {
-        reporters: [{
-            type : 'html',
-            dir : 'coverage/'
-        },{
-            type: "text-summary"
-        }]
-    }
-  })
+        // Concurrency level
+        // how many browser should be started simultaneous
+        concurrency: Infinity,
+
+        phantomjsLauncher: {
+          // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
+          exitOnResourceError: true
+        },
+
+        coverageReporter: {
+            reporters: [{
+                type : 'html',
+                dir : 'coverage/'
+            }, {
+                type: "text-summary"
+            }],
+            instrumenterOptions: {
+                istanbul: { noCompact: true }
+            }
+        }
+    })
 }
