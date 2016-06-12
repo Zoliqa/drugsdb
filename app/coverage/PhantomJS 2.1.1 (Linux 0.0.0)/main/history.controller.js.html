@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">23.81% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/21</span>
+        <span class='fraction'>21/21</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">11.11% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/9</span>
+        <span class='fraction'>9/9</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">23.81% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/21</span>
+        <span class='fraction'>21/21</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -91,42 +91,42 @@
 46</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,43 +135,43 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">define([], function () {
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function HistoryController($injector, $location, _, searchEntryService) {</span>
-<span class="cstat-no" title="statement not covered" >		var vm = this;</span>
+	function HistoryController($injector, $location, _, searchEntryService) {
+		var vm = this;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		this.searchEntries = [];</span>
-<span class="cstat-no" title="statement not covered" >		this.selectEntry = selectEntry;</span>
-<span class="cstat-no" title="statement not covered" >		this.removeEntry = removeEntry;</span>
+		this.searchEntries = [];
+		this.selectEntry = selectEntry;
+		this.removeEntry = removeEntry;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		(<span class="fstat-no" title="function not covered" >function init() {</span></span>
-<span class="cstat-no" title="statement not covered" >			searchEntryService.query().$promise.then(<span class="fstat-no" title="function not covered" >function (searchEntries) {</span></span>
-<span class="cstat-no" title="statement not covered" >				_.each(searchEntries, <span class="fstat-no" title="function not covered" >function (searchEntry) {</span></span>
-<span class="cstat-no" title="statement not covered" >					try {</span>
-<span class="cstat-no" title="statement not covered" >						var service = $injector.get(searchEntry.type);</span>
+		(function init() {
+			searchEntryService.query().$promise.then(function (searchEntries) {
+				_.each(searchEntries, function (searchEntry) {
+					try {
+						var service = $injector.get(searchEntry.type);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >						searchEntry.service = service;</span>
+						searchEntry.service = service;
 					}
 					catch (e) {
 					}
 				});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				vm.searchEntries = searchEntries;</span>
+				vm.searchEntries = searchEntries;
 			});
 		}());
 &nbsp;
-<span class="fstat-no" title="function not covered" >		function selectEntry(searchEntry) {</span>
-<span class="cstat-no" title="statement not covered" >			$location.path("/search").search({</span>
+		function selectEntry(searchEntry) {
+			$location.path("/search").search({
 				type: searchEntry.service.name,
 				term: searchEntry.term
 			});
 		}
 &nbsp;
-<span class="fstat-no" title="function not covered" >		function removeEntry(searchEntry) {</span>
-<span class="cstat-no" title="statement not covered" >			searchEntryService.remove({ id: searchEntry._id }).$promise.then(<span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >				var index = _.findIndex(vm.searchEntries, <span class="fstat-no" title="function not covered" >function (searchEntry2) {</span></span>
-<span class="cstat-no" title="statement not covered" >					return searchEntry2._id === searchEntry._id;</span>
+		function removeEntry(searchEntry) {
+			searchEntryService.remove({ id: searchEntry._id }).$promise.then(function () {
+				var index = _.findIndex(vm.searchEntries, function (searchEntry2) {
+					return searchEntry2._id === searchEntry._id;
 				});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				vm.searchEntries.splice(index, 1);</span>
+				vm.searchEntries.splice(index, 1);
 			});
 		}
 	}
@@ -184,7 +184,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 12 2016 15:35:11 GMT+0300 (EEST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 12 2016 16:55:55 GMT+0300 (EEST)
 </div>
 </div>
 <script src="../prettify.js"></script>
