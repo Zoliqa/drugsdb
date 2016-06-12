@@ -1,6 +1,6 @@
 {
   "src_folders" : ["public/app/integration.tests"],
-  "output_folder" : "reports",
+  "output_folder" : "",
   "custom_commands_path" : "",
   "custom_assertions_path" : "",
   "page_objects_path" : "",
@@ -8,12 +8,12 @@
 
   "selenium" : {
     "start_process" : true,
-    "server_path" : "bin/selenium-server-standalone-2.53.0.jar",
-    "log_path" : false,
+    "server_path" : "test.config/integration/bin/selenium-server-standalone-2.53.0.jar",
+    "log_path" : "",
     "host" : "127.0.0.1",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "bin/chromedriver",
+      "webdriver.chrome.driver" : "test.config/integration/bin/chromedriver",
       "webdriver.ie.driver" : ""
     }
   },
