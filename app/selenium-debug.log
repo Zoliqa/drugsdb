@@ -1,117 +1,119 @@
-00:18:46.313 INFO - Launching a standalone Selenium Server
+12:57:23.410 INFO - Launching a standalone Selenium Server
 Setting system property webdriver.chrome.driver to test.config/integration/bin/chromedriver
-00:18:46.336 INFO - Java: Oracle Corporation 24.95-b01
-00:18:46.336 INFO - OS: Linux 3.19.0-61-generic amd64
-00:18:46.344 INFO - v2.53.0, with Core v2.53.0. Built from revision 35ae25b
-00:18:46.389 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+12:57:23.433 INFO - Java: Oracle Corporation 24.95-b01
+12:57:23.433 INFO - OS: Linux 3.19.0-61-generic amd64
+12:57:23.440 INFO - v2.53.0, with Core v2.53.0. Built from revision 35ae25b
+12:57:23.485 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
 registration capabilities Capabilities [{platform=WINDOWS, ensureCleanSession=true, browserName=internet explorer, version=}] does not match the current platform LINUX
-00:18:46.390 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+12:57:23.485 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
 registration capabilities Capabilities [{platform=WINDOWS, browserName=MicrosoftEdge, version=}] does not match the current platform LINUX
-00:18:46.390 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-00:18:46.390 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-00:18:46.391 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+12:57:23.485 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+12:57:23.486 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+12:57:23.486 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
 registration capabilities Capabilities [{platform=MAC, browserName=safari, version=}] does not match the current platform LINUX
-00:18:46.391 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
-00:18:46.391 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
-00:18:46.428 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-00:18:46.428 INFO - Selenium Server is up and running
-00:18:46.609 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Login Tests}]])
-00:18:46.618 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Login Tests}]
-Starting ChromeDriver (v2.9.248304) on port 29081
+12:57:23.487 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+12:57:23.487 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+12:57:23.524 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+12:57:23.524 INFO - Selenium Server is up and running
+12:57:23.706 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Login Tests}]])
+12:57:23.715 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Login Tests}]
+Starting ChromeDriver (v2.9.248304) on port 27281
 [0,054][WARNING]: PAC support disabled because there is no system implementation
-00:18:47.442 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Login Tests}]]
-00:18:47.466 INFO - Executing: [get: http://localhost:4000])
-00:18:48.342 INFO - Done: [get: http://localhost:4000]
-00:18:48.352 INFO - Executing: [find elements: By.cssSelector: #login])
-00:18:48.382 INFO - Done: [find elements: By.cssSelector: #login]
-00:18:48.886 INFO - Executing: [find elements: By.cssSelector: #login])
-00:18:48.914 INFO - Done: [find elements: By.cssSelector: #login]
-00:18:48.917 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login]])
-00:18:48.933 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login]]
-00:18:48.937 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='text']])
-00:18:48.951 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='text']]
-00:18:48.953 INFO - Executing: [clear: 1 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login input.form-control[type='text']]])
-00:18:48.976 INFO - Done: [clear: 1 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login input.form-control[type='text']]]
-00:18:48.979 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='text']])
-00:18:48.993 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='text']]
-00:18:48.996 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login input.form-control[type='text']], [a]])
-00:18:49.035 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login input.form-control[type='text']], [a]]
-00:18:49.039 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='password']])
-00:18:49.052 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='password']]
-00:18:49.054 INFO - Executing: [clear: 2 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login input.form-control[type='password']]])
-00:18:49.073 INFO - Done: [clear: 2 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login input.form-control[type='password']]]
-00:18:49.075 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='password']])
-00:18:49.088 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='password']]
-00:18:49.091 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login input.form-control[type='password']], [a]])
-00:18:49.129 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login input.form-control[type='password']], [a]]
-00:18:49.132 INFO - Executing: [find element: By.cssSelector: #login button:nth-of-type(1)])
-00:18:49.146 INFO - Done: [find element: By.cssSelector: #login button:nth-of-type(1)]
-00:18:49.148 INFO - Executing: [click: 3 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login button:nth-of-type(1)]])
-00:18:49.175 INFO - Done: [click: 3 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: #login button:nth-of-type(1)]]
-00:18:50.184 INFO - Executing: [find elements: By.cssSelector: #search])
-00:18:50.212 INFO - Done: [find elements: By.cssSelector: #search]
-00:18:50.220 INFO - Executing: [find elements: By.cssSelector: .navbar .navbar-right a])
-00:18:50.245 INFO - Done: [find elements: By.cssSelector: .navbar .navbar-right a]
-00:18:50.249 INFO - Executing: [find element: By.cssSelector: .navbar .navbar-right a])
-00:18:50.270 INFO - Done: [find element: By.cssSelector: .navbar .navbar-right a]
-00:18:50.273 INFO - Executing: [click: 5 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: .navbar .navbar-right a]])
-00:18:50.313 INFO - Done: [click: 5 [[ChromeDriver: chrome on LINUX (79547d2a266fc6f213e69f56cfcd35f1)] -> css selector: .navbar .navbar-right a]]
-00:18:51.323 INFO - Executing: [find elements: By.cssSelector: #login])
-00:18:51.335 INFO - Done: [find elements: By.cssSelector: #login]
-00:18:51.341 INFO - Executing: [delete session: ae1ec8a2-cf95-4a5c-9344-d7d1236a57eb])
-00:18:51.410 INFO - Done: [delete session: ae1ec8a2-cf95-4a5c-9344-d7d1236a57eb]
-00:18:51.438 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Search Tests}]])
-00:18:51.439 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Search Tests}]
-Starting ChromeDriver (v2.9.248304) on port 6032
-[0,008][WARNING]: PAC support disabled because there is no system implementation
-00:18:51.947 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Search Tests}]]
-00:18:51.952 INFO - Executing: [get: http://localhost:4000])
-00:18:52.894 INFO - Done: [get: http://localhost:4000]
-00:18:52.900 INFO - Executing: [find elements: By.cssSelector: #login])
-00:18:52.925 INFO - Done: [find elements: By.cssSelector: #login]
-00:18:53.429 INFO - Executing: [find elements: By.cssSelector: #login])
-00:18:53.465 INFO - Done: [find elements: By.cssSelector: #login]
-00:18:53.474 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login]])
-00:18:53.501 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login]]
-00:18:53.505 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='text']])
-00:18:53.520 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='text']]
-00:18:53.522 INFO - Executing: [clear: 1 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login input.form-control[type='text']]])
-00:18:53.547 INFO - Done: [clear: 1 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login input.form-control[type='text']]]
-00:18:53.551 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='text']])
-00:18:53.566 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='text']]
-00:18:53.569 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login input.form-control[type='text']], [a]])
-00:18:53.608 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login input.form-control[type='text']], [a]]
-00:18:53.610 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='password']])
-00:18:53.628 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='password']]
-00:18:53.631 INFO - Executing: [clear: 2 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login input.form-control[type='password']]])
-00:18:53.650 INFO - Done: [clear: 2 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login input.form-control[type='password']]]
-00:18:53.653 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='password']])
-00:18:53.667 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='password']]
-00:18:53.670 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login input.form-control[type='password']], [a]])
-00:18:53.711 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login input.form-control[type='password']], [a]]
-00:18:53.714 INFO - Executing: [find element: By.cssSelector: #login button:nth-of-type(1)])
-00:18:53.729 INFO - Done: [find element: By.cssSelector: #login button:nth-of-type(1)]
-00:18:53.731 INFO - Executing: [click: 3 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login button:nth-of-type(1)]])
-00:18:53.760 INFO - Done: [click: 3 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #login button:nth-of-type(1)]]
-00:18:54.770 INFO - Executing: [get: http://localhost:4000/#/search])
-00:18:54.795 INFO - Done: [get: http://localhost:4000/#/search]
-00:18:54.800 INFO - Executing: [find elements: By.cssSelector: #search])
-00:18:54.826 INFO - Done: [find elements: By.cssSelector: #search]
-00:18:54.830 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #search]])
-00:18:54.856 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #search]]
-00:18:54.864 INFO - Executing: [find element: By.cssSelector: #search input.form-control])
-00:18:54.886 INFO - Done: [find element: By.cssSelector: #search input.form-control]
-00:18:54.891 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #search input.form-control], [D, r, a, g, o, n, T, a, b, s]])
-00:18:54.954 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #search input.form-control], [D, r, a, g, o, n, T, a, b, s]]
-00:18:54.957 INFO - Executing: [find element: By.cssSelector: #search span.glyphicon-search])
-00:18:54.975 INFO - Done: [find element: By.cssSelector: #search span.glyphicon-search]
-00:18:54.978 INFO - Executing: [click: 6 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #search span.glyphicon-search]])
-00:18:55.011 INFO - Done: [click: 6 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #search span.glyphicon-search]]
-00:18:55.014 INFO - Executing: [find elements: By.cssSelector: #search table])
-00:18:55.032 INFO - Done: [find elements: By.cssSelector: #search table]
-00:18:55.538 INFO - Executing: [find elements: By.cssSelector: #search table])
-00:18:55.567 INFO - Done: [find elements: By.cssSelector: #search table]
-00:18:55.571 INFO - Executing: [is displayed: 7 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #search table]])
-00:18:55.596 INFO - Done: [is displayed: 7 [[ChromeDriver: chrome on LINUX (78bac9cb1f86f340e8f689f9e767c558)] -> css selector: #search table]]
-00:18:55.600 INFO - Executing: [delete session: f8c3ff7c-abc4-4dcb-8702-a20350a0e35e])
-00:18:55.665 INFO - Done: [delete session: f8c3ff7c-abc4-4dcb-8702-a20350a0e35e]
+12:57:24.476 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Login Tests}]]
+12:57:24.496 INFO - Executing: [get: http://localhost:4000])
+12:57:25.374 INFO - Done: [get: http://localhost:4000]
+12:57:25.381 INFO - Executing: [find elements: By.cssSelector: #login])
+12:57:25.408 INFO - Done: [find elements: By.cssSelector: #login]
+12:57:25.914 INFO - Executing: [find elements: By.cssSelector: #login])
+12:57:25.947 INFO - Done: [find elements: By.cssSelector: #login]
+12:57:25.949 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login]])
+12:57:25.964 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login]]
+12:57:25.969 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='text']])
+12:57:25.985 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='text']]
+12:57:25.988 INFO - Executing: [clear: 1 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login input.form-control[type='text']]])
+12:57:26.012 INFO - Done: [clear: 1 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login input.form-control[type='text']]]
+12:57:26.015 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='text']])
+12:57:26.029 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='text']]
+12:57:26.031 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login input.form-control[type='text']], [a]])
+12:57:26.072 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login input.form-control[type='text']], [a]]
+12:57:26.075 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='password']])
+12:57:26.089 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='password']]
+12:57:26.091 INFO - Executing: [clear: 2 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login input.form-control[type='password']]])
+12:57:26.111 INFO - Done: [clear: 2 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login input.form-control[type='password']]]
+12:57:26.113 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='password']])
+12:57:26.132 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='password']]
+12:57:26.135 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login input.form-control[type='password']], [a]])
+12:57:26.190 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login input.form-control[type='password']], [a]]
+12:57:26.194 INFO - Executing: [find element: By.cssSelector: #login button:nth-of-type(1)])
+12:57:26.209 INFO - Done: [find element: By.cssSelector: #login button:nth-of-type(1)]
+12:57:26.212 INFO - Executing: [click: 3 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login button:nth-of-type(1)]])
+12:57:26.242 INFO - Done: [click: 3 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: #login button:nth-of-type(1)]]
+12:57:27.250 INFO - Executing: [find elements: By.cssSelector: #search])
+12:57:27.278 INFO - Done: [find elements: By.cssSelector: #search]
+12:57:27.285 INFO - Executing: [find elements: By.cssSelector: .navbar .navbar-right a])
+12:57:27.309 INFO - Done: [find elements: By.cssSelector: .navbar .navbar-right a]
+12:57:27.313 INFO - Executing: [find element: By.cssSelector: .navbar .navbar-right a])
+12:57:27.335 INFO - Done: [find element: By.cssSelector: .navbar .navbar-right a]
+12:57:27.337 INFO - Executing: [click: 5 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: .navbar .navbar-right a]])
+12:57:27.379 INFO - Done: [click: 5 [[ChromeDriver: chrome on LINUX (2b3cc01afc0afd373e9beb576a11b0ed)] -> css selector: .navbar .navbar-right a]]
+12:57:28.388 INFO - Executing: [find elements: By.cssSelector: #login])
+12:57:28.399 INFO - Done: [find elements: By.cssSelector: #login]
+12:57:28.405 INFO - Executing: [delete session: ca7e6bb5-4e63-4014-965b-2344781f6f2f])
+12:57:28.478 INFO - Done: [delete session: ca7e6bb5-4e63-4014-965b-2344781f6f2f]
+12:57:28.505 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Search Tests}]])
+12:57:28.506 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Search Tests}]
+Starting ChromeDriver (v2.9.248304) on port 7271
+[0,014][WARNING]: PAC support disabled because there is no system implementation
+12:57:28.948 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Search Tests}]]
+12:57:28.953 INFO - Executing: [get: http://localhost:4000])
+12:57:29.830 INFO - Done: [get: http://localhost:4000]
+12:57:29.835 INFO - Executing: [find elements: By.cssSelector: #login])
+12:57:29.861 INFO - Done: [find elements: By.cssSelector: #login]
+12:57:30.366 INFO - Executing: [find elements: By.cssSelector: #login])
+12:57:30.396 INFO - Done: [find elements: By.cssSelector: #login]
+12:57:30.901 INFO - Executing: [find elements: By.cssSelector: #login])
+12:57:30.914 INFO - Done: [find elements: By.cssSelector: #login]
+12:57:30.918 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login]])
+12:57:30.945 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login]]
+12:57:30.950 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='text']])
+12:57:30.974 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='text']]
+12:57:30.978 INFO - Executing: [clear: 1 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login input.form-control[type='text']]])
+12:57:31.014 INFO - Done: [clear: 1 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login input.form-control[type='text']]]
+12:57:31.019 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='text']])
+12:57:31.041 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='text']]
+12:57:31.044 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login input.form-control[type='text']], [a]])
+12:57:31.094 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login input.form-control[type='text']], [a]]
+12:57:31.097 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='password']])
+12:57:31.114 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='password']]
+12:57:31.117 INFO - Executing: [clear: 2 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login input.form-control[type='password']]])
+12:57:31.140 INFO - Done: [clear: 2 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login input.form-control[type='password']]]
+12:57:31.143 INFO - Executing: [find element: By.cssSelector: #login input.form-control[type='password']])
+12:57:31.157 INFO - Done: [find element: By.cssSelector: #login input.form-control[type='password']]
+12:57:31.160 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login input.form-control[type='password']], [a]])
+12:57:31.202 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login input.form-control[type='password']], [a]]
+12:57:31.205 INFO - Executing: [find element: By.cssSelector: #login button:nth-of-type(1)])
+12:57:31.219 INFO - Done: [find element: By.cssSelector: #login button:nth-of-type(1)]
+12:57:31.222 INFO - Executing: [click: 3 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login button:nth-of-type(1)]])
+12:57:31.255 INFO - Done: [click: 3 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #login button:nth-of-type(1)]]
+12:57:32.264 INFO - Executing: [get: http://localhost:4000/#/search])
+12:57:32.294 INFO - Done: [get: http://localhost:4000/#/search]
+12:57:32.299 INFO - Executing: [find elements: By.cssSelector: #search])
+12:57:32.327 INFO - Done: [find elements: By.cssSelector: #search]
+12:57:32.330 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #search]])
+12:57:32.353 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #search]]
+12:57:32.357 INFO - Executing: [find element: By.cssSelector: #search input.form-control])
+12:57:32.377 INFO - Done: [find element: By.cssSelector: #search input.form-control]
+12:57:32.381 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #search input.form-control], [D, r, a, g, o, n, T, a, b, s]])
+12:57:32.442 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #search input.form-control], [D, r, a, g, o, n, T, a, b, s]]
+12:57:32.446 INFO - Executing: [find element: By.cssSelector: #search span.glyphicon-search])
+12:57:32.464 INFO - Done: [find element: By.cssSelector: #search span.glyphicon-search]
+12:57:32.467 INFO - Executing: [click: 6 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #search span.glyphicon-search]])
+12:57:32.498 INFO - Done: [click: 6 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #search span.glyphicon-search]]
+12:57:32.504 INFO - Executing: [find elements: By.cssSelector: #search table])
+12:57:32.519 INFO - Done: [find elements: By.cssSelector: #search table]
+12:57:33.024 INFO - Executing: [find elements: By.cssSelector: #search table])
+12:57:33.049 INFO - Done: [find elements: By.cssSelector: #search table]
+12:57:33.053 INFO - Executing: [is displayed: 7 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #search table]])
+12:57:33.076 INFO - Done: [is displayed: 7 [[ChromeDriver: chrome on LINUX (e15d64f7bc2bd60ca32513e58599449a)] -> css selector: #search table]]
+12:57:33.080 INFO - Executing: [delete session: c9a7c64a-36df-4645-9a0c-7deabed14537])
+12:57:33.146 INFO - Done: [delete session: c9a7c64a-36df-4645-9a0c-7deabed14537]
