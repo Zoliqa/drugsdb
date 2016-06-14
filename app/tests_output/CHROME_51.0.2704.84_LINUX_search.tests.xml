@@ -5,14 +5,14 @@
 
   <testsuite name="search.tests"
     errors="0" failures="0" hostname="" id="" package="search.tests" skipped="0"
-    tests="2" time="4.647" timestamp="Mon, 13 Jun 2016 09:57:28 GMT">
+    tests="2" time="4.261" timestamp="Mon, 13 Jun 2016 16:32:55 GMT">
   
-    <testcase name="Login" time="3.757" assertions="1">
+    <testcase name="Login" time="3.377" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Search for DragonTabs and check if results are found" time="0.8900" assertions="2">
+    <testcase name="Search for DragonTabs and check if results are found" time="0.8840" assertions="2">
 
     
 

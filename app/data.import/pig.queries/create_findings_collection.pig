@@ -24,11 +24,11 @@ DESCRIBE ordered;
 findingsWithDrugs = FOREACH ordered GENERATE MIN(drugsFlatWithGroupDistinct.candidateMatched) AS candidateMatched,
 											 MIN(drugsFlatWithGroupDistinct.candidatePreferred) AS candidatePreferred,
 											 MIN(drugsFlatWithGroupDistinct.semType) AS semType,
-											 --drugsFlatWithGroupDistinct.(name) AS drugs:{t:(name)},
+											 drugsFlatWithGroupDistinct.(name) AS drugs:{t:(name)},
 											 count AS drugsCount;
 
 DESCRIBE findingsWithDrugs;
 
 STORE findingsWithDrugs INTO 'mongodb://localhost:27017/drugsdb.findings' USING com.mongodb.hadoop.pig.MongoStorage();
 
-STORE findingsWithDrugs INTO '/home/zoliqa/Documents/drugsdb/app/data.import/pig.queries/findings-stats.txt' USING PigStorage(';');
+-- STORE findingsWithDrugs INTO '/home/zoliqa/Documents/drugsdb/app/data.import/pig.queries/findings-stats.txt' USING PigStorage(';');
