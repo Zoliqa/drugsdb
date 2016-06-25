@@ -9,7 +9,7 @@
       <w>130</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>user.module</panel_attributes>
+    <panel_attributes>users.module</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -20,7 +20,7 @@
       <w>130</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>user.run</panel_attributes>
+    <panel_attributes>users.run</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -31,7 +31,7 @@
       <w>130</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>user.config</panel_attributes>
+    <panel_attributes>users.config</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
