@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="49cm" height="15cm" viewBox="35 84 965 299" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="36.6" y="198" width="336.8" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="36.6" y="198" width="336.8" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="205" y="220.9">
+      <tspan x="205" y="220.9">:Category:Symptoms_and_signs:_Urinary_system</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="222.75" y="260" width="104.5" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="222.75" y="260" width="104.5" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="275" y="282.9">
+      <tspan x="275" y="282.9">skos:broader</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="227.1" y="343" width="423.8" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="227.1" y="343" width="423.8" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="439" y="365.9">
+      <tspan x="439" y="365.9">&lt;http://dbpedia.org/resource/Category:Symptoms_and_signs&gt;</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="242.444" y1="259.001" x2="205" y2="236"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="399.501" y1="342.01" x2="314.499" y2="298.99"/>
+  <g>
+    <rect style="fill: #ffffff" x="309.125" y="138" width="109.75" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="309.125" y="138" width="109.75" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="364" y="160.9">
+      <tspan x="364" y="160.9">terms:subject</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="464" y="85" width="138" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="464" y="85" width="138" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="533" y="107.9">
+      <tspan x="533" y="107.9">:Urinary_retention</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="419.876" y1="139.477" x2="469.254" y2="123.991"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="257.987" y1="197.005" x2="311.013" y2="176.995"/>
+  <g>
+    <rect style="fill: #ffffff" x="572.35" y="151" width="107.65" height="43.2"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="572.35" y="151" width="107.65" height="43.2"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="626.175" y="176.5">
+      <tspan x="626.175" y="176.5">rdfs:label</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="560.172" y1="124.006" x2="595.488" y2="150.007"/>
+  <g>
+    <rect style="fill: #ffffff" x="640.587" y="215.2" width="171.95" height="42.8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="640.587" y="215.2" width="171.95" height="42.8"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="726.562" y="240.5">
+      <tspan x="726.562" y="240.5">"Urinary retention"@en</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="661.627" y1="195.202" x2="691.442" y2="214.209"/>
+  <g>
+    <rect style="fill: #ffffff" x="454.9" y="215.1" width="111.45" height="43.2"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="454.9" y="215.1" width="111.45" height="43.2"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="510.625" y="240.6">
+      <tspan x="510.625" y="240.6">rdfs:comment</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="397.387" y="280.3" width="601.25" height="42.8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="397.387" y="280.3" width="601.25" height="42.8"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="698.012" y="305.6">
+      <tspan x="698.012" y="305.6">"Urinary retention, also known as ischuria, is an inability to completely empty the bladder.</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="567.171" y1="256.314" x2="633.507" y2="279.325"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="514.432" y1="214.119" x2="529.628" y2="123.997"/>
+</svg>
